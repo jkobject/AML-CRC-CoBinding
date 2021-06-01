@@ -1,0 +1,294 @@
+<!doctype html>
+<!--
+  ~ Copyright 2013-2019, Centre for Genomic Regulation (CRG)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + prot + "code.jquery.com/jquery-latest.min.js' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "d3js.org/d3.v3.min.js' charset='utf-8' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "cdn.rawgit.com/nextflow-io/d3-timeline/82622c4cc35bac7283b3a317826b0709ac1ae476/src/d3-timeline.js' type='text/javascript' %3E%3C/script%3E"));
+</script>
+<style type="text/css">
+* {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+div#timeline g text {
+  font-size: 13px;
+}
+
+text.timeline-label {
+  font-size: 13px;
+}
+
+#timeline2 .axis {
+  transform: translate(0px,30px);
+  -ms-transform: translate(0px,30px); /* IE 9 */
+  -webkit-transform: translate(0px,30px); /* Safari and Chrome */
+  -o-transform: translate(0px,30px); /* Opera */
+  -moz-transform: translate(0px,30px); /* Firefox */
+}
+
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+
+#footer {
+  padding-top: 3em; color: #bfbfbf; font-size: 13px;
+}
+
+#footer a:visited {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+var handler=null;
+// see https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c
+var colors = d3.scale.category20c().domain(d3.range(0,20)).range()
+
+function c0(index) { return "#9c9c9c"; }
+function c1(index) { return "#bdbdbd"; }
+function c2(index) { return colors[index % 16]; } // <-- note: uses only the first 16 colors
+
+var elapsed="1h 21m 44s"
+var beginningMillis=1604618868901;
+var endingMillis=1604704994097;
+var data=[
+{"label": "output_documentation", "times": [{"starting_time": 1604618870296, "ending_time": 1604618876013, "color":c1(0)}, {"starting_time": 1604618876013, "ending_time": 1604618876369, "color":c0(0), "label": "3m 15s \/ 14.7 MB \/ CACHED"}, {"starting_time": 1604618876369, "ending_time": 1604619065093, "color":c1(0)}]},
+{"label": "CHECK_DESIGN (Cobinding_ChIP_paired_end_design.csv)", "times": [{"starting_time": 1604700098033, "ending_time": 1604700104102, "color":c1(1)}, {"starting_time": 1604700104102, "ending_time": 1604700104170, "color":c2(1), "label": "2m 56s \/ 3.1 MB"}, {"starting_time": 1604700104170, "ending_time": 1604700274294, "color":c1(1)}]},
+{"label": "get_software_versions", "times": [{"starting_time": 1604700098942, "ending_time": 1604700104603, "color":c1(2)}, {"starting_time": 1604700104603, "ending_time": 1604700110567, "color":c2(2), "label": "3m 15s \/ 91.8 MB"}, {"starting_time": 1604700110567, "ending_time": 1604700294282, "color":c1(2)}]},
+{"label": "MAKE_GENOME_FILTER (genome.fa)", "times": [{"starting_time": 1604618868901, "ending_time": 1604618875070, "color":c1(3)}, {"starting_time": 1604618875070, "ending_time": 1604618892165, "color":c0(3), "label": "4m 36s \/ 4.5 MB \/ CACHED"}, {"starting_time": 1604618892165, "ending_time": 1604619144775, "color":c1(3)}]},
+{"label": "FASTQC (mp299-MV411-CEBPA_R1_T1)", "times": [{"starting_time": 1604700275671, "ending_time": 1604700284287, "color":c1(4)}, {"starting_time": 1604700284287, "ending_time": 1604700577998, "color":c2(4), "label": "7m 59s \/ 1.1 GB"}, {"starting_time": 1604700577998, "ending_time": 1604700754353, "color":c1(4)}]},
+{"label": "FASTQC (mp301-MV411-PU1_R1_T1)", "times": [{"starting_time": 1604619047906, "ending_time": 1604619055917, "color":c1(4)}, {"starting_time": 1604619055917, "ending_time": 1604619232709, "color":c0(4), "label": "5m 57s \/ 1010.8 MB \/ CACHED"}, {"starting_time": 1604619232709, "ending_time": 1604619404725, "color":c1(4)}]},
+{"label": "FASTQC (mp319-MV411-FLI1_R1_T1)", "times": [{"starting_time": 1604619049796, "ending_time": 1604619057238, "color":c1(4)}, {"starting_time": 1604619057238, "ending_time": 1604619273997, "color":c0(4), "label": "6m 45s \/ 1006.7 MB \/ CACHED"}, {"starting_time": 1604619273997, "ending_time": 1604619454805, "color":c1(4)}]},
+{"label": "FASTQC (mp321-MV411-GFI1_R1_T1)", "times": [{"starting_time": 1604619051617, "ending_time": 1604619058507, "color":c1(4)}, {"starting_time": 1604619058507, "ending_time": 1604619264361, "color":c0(4), "label": "6m 45s \/ 1017 MB \/ CACHED"}, {"starting_time": 1604619264361, "ending_time": 1604619456413, "color":c1(4)}]},
+{"label": "FASTQC (mp320-MV411-ZEB2_R1_T1)", "times": [{"starting_time": 1604619050437, "ending_time": 1604619057660, "color":c1(4)}, {"starting_time": 1604619057660, "ending_time": 1604619225311, "color":c0(4), "label": "5m 45s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619225311, "ending_time": 1604619395443, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp299-MV411-CEBPA_R1_T1)", "times": [{"starting_time": 1604700276330, "ending_time": 1604700284713, "color":c1(5)}, {"starting_time": 1604700284713, "ending_time": 1604701319641, "color":c2(5), "label": "20m 48s \/ 3.4 GB"}, {"starting_time": 1604701319641, "ending_time": 1604701524234, "color":c1(5)}]},
+{"label": "FASTQC (mp325-MV411-SP1_R1_T1)", "times": [{"starting_time": 1604619053516, "ending_time": 1604619059646, "color":c1(4)}, {"starting_time": 1604619059646, "ending_time": 1604619256399, "color":c0(4), "label": "6m 13s \/ 1008.3 MB \/ CACHED"}, {"starting_time": 1604619256399, "ending_time": 1604619426773, "color":c1(4)}]},
+{"label": "FASTQC (mp875-MV411_MEF2C_NT-FLAG_MEF2C_R1_T1)", "times": [{"starting_time": 1604619058376, "ending_time": 1604619070345, "color":c1(4)}, {"starting_time": 1604619070345, "ending_time": 1604619690184, "color":c0(4), "label": "14m 7s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619690184, "ending_time": 1604619905435, "color":c1(4)}]},
+{"label": "FASTQC (mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1604619057232, "ending_time": 1604619069471, "color":c1(4)}, {"starting_time": 1604619069471, "ending_time": 1604619583348, "color":c0(4), "label": "12m 18s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619583348, "ending_time": 1604619795622, "color":c1(4)}]},
+{"label": "FASTQC (mp324-MV411-MEF2D_R1_T1)", "times": [{"starting_time": 1604619054773, "ending_time": 1604619068064, "color":c1(4)}, {"starting_time": 1604619068064, "ending_time": 1604619227918, "color":c0(4), "label": "5m 31s \/ 1006.2 MB \/ CACHED"}, {"starting_time": 1604619227918, "ending_time": 1604619385747, "color":c1(4)}]},
+{"label": "FASTQC (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1604619056000, "ending_time": 1604619068766, "color":c1(4)}, {"starting_time": 1604619068766, "ending_time": 1604619773610, "color":c0(4), "label": "15m 39s \/ 1 GB \/ CACHED"}, {"starting_time": 1604619773610, "ending_time": 1604619994846, "color":c1(4)}]},
+{"label": "FASTQC (mp877-MV411-PLAGL2_R1_T1)", "times": [{"starting_time": 1604619060296, "ending_time": 1604619071473, "color":c1(4)}, {"starting_time": 1604619071473, "ending_time": 1604619522341, "color":c0(4), "label": "11m 6s \/ 1.2 GB \/ CACHED"}, {"starting_time": 1604619522341, "ending_time": 1604619726010, "color":c1(4)}]},
+{"label": "FASTQC (mp876-MV411-ZFP281_R1_T1)", "times": [{"starting_time": 1604619059007, "ending_time": 1604619070616, "color":c1(4)}, {"starting_time": 1604619070616, "ending_time": 1604619615475, "color":c0(4), "label": "12m 46s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619615475, "ending_time": 1604619825432, "color":c1(4)}]},
+{"label": "FASTQC (mp878-MV411-HEX_R1_T1)", "times": [{"starting_time": 1604619062074, "ending_time": 1604619072763, "color":c1(4)}, {"starting_time": 1604619072763, "ending_time": 1604620508875, "color":c0(4), "label": "30m 33s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604620508875, "ending_time": 1604620895133, "color":c1(4)}]},
+{"label": "FASTQC (mp879-MV411-FOSL2_R1_T1)", "times": [{"starting_time": 1604619063310, "ending_time": 1604619073522, "color":c1(4)}, {"starting_time": 1604619073522, "ending_time": 1604619483421, "color":c0(4), "label": "10m 23s \/ 1.2 GB \/ CACHED"}, {"starting_time": 1604619483421, "ending_time": 1604619686357, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp319-MV411-FLI1_R1_T1)", "times": [{"starting_time": 1604619049244, "ending_time": 1604619056803, "color":c1(5)}, {"starting_time": 1604619056803, "ending_time": 1604619779713, "color":c0(5), "label": "15m 35s \/ 2.4 GB \/ CACHED"}, {"starting_time": 1604619779713, "ending_time": 1604619984567, "color":c1(5)}]},
+{"label": "FASTQC (mp914-MV411-RXRA_R1_T1)", "times": [{"starting_time": 1604619066640, "ending_time": 1604619081536, "color":c1(4)}, {"starting_time": 1604619081536, "ending_time": 1604619712570, "color":c0(4), "label": "14m 33s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619712570, "ending_time": 1604619939911, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp320-MV411-ZEB2_R1_T1)", "times": [{"starting_time": 1604619051018, "ending_time": 1604619058084, "color":c1(5)}, {"starting_time": 1604619058084, "ending_time": 1604619660574, "color":c0(5), "label": "13m 7s \/ 1.9 GB \/ CACHED"}, {"starting_time": 1604619660574, "ending_time": 1604619838318, "color":c1(5)}]},
+{"label": "FASTQC (mp913-MV411-TFP4_R1_T1)", "times": [{"starting_time": 1604619065876, "ending_time": 1604619081112, "color":c1(4)}, {"starting_time": 1604619081112, "ending_time": 1604622404562, "color":c0(4), "label": "1h 8m 39s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604622404562, "ending_time": 1604623184978, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp301-MV411-PU1_R1_T1)", "times": [{"starting_time": 1604619048546, "ending_time": 1604619056342, "color":c1(5)}, {"starting_time": 1604619056342, "ending_time": 1604619587374, "color":c0(5), "label": "12m 6s \/ 1.7 GB \/ CACHED"}, {"starting_time": 1604619587374, "ending_time": 1604619774603, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp300-MV411-RUNX1_R1_T1)", "times": [{"starting_time": 1604700276995, "ending_time": 1604700285173, "color":c1(5)}, {"starting_time": 1604700285173, "ending_time": 1604700871916, "color":c2(5), "label": "12m 47s \/ 1.8 GB"}, {"starting_time": 1604700871916, "ending_time": 1604701044480, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp321-MV411-GFI1_R1_T1)", "times": [{"starting_time": 1604619052851, "ending_time": 1604619059213, "color":c1(5)}, {"starting_time": 1604619059213, "ending_time": 1604619755125, "color":c0(5), "label": "14m 42s \/ 2.5 GB \/ CACHED"}, {"starting_time": 1604619755125, "ending_time": 1604619934594, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp324-MV411-MEF2D_R1_T1)", "times": [{"starting_time": 1604619052271, "ending_time": 1604619058940, "color":c1(5)}, {"starting_time": 1604619058940, "ending_time": 1604619651031, "color":c0(5), "label": "13m 22s \/ 1.7 GB \/ CACHED"}, {"starting_time": 1604619651031, "ending_time": 1604619854753, "color":c1(5)}]},
+{"label": "FASTQC (mp915-MV411_MEF2C_NT-MEF2C_R1_T1)", "times": [{"starting_time": 1604619068233, "ending_time": 1604619082643, "color":c1(4)}, {"starting_time": 1604619082643, "ending_time": 1604619727439, "color":c0(4), "label": "14m 33s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619727439, "ending_time": 1604619941121, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1604619056618, "ending_time": 1604619069044, "color":c1(5)}, {"starting_time": 1604619069044, "ending_time": 1604620531433, "color":c0(5), "label": "28m 38s \/ 3.7 GB \/ CACHED"}, {"starting_time": 1604620531433, "ending_time": 1604620774679, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp875-MV411_MEF2C_NT-FLAG_MEF2C_R1_T1)", "times": [{"starting_time": 1604619057786, "ending_time": 1604619069923, "color":c1(5)}, {"starting_time": 1604619069923, "ending_time": 1604620888625, "color":c0(5), "label": "35m 7s \/ 3.9 GB \/ CACHED"}, {"starting_time": 1604620888625, "ending_time": 1604621164752, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1604619055380, "ending_time": 1604619068337, "color":c1(5)}, {"starting_time": 1604619068337, "ending_time": 1604621139479, "color":c0(5), "label": "39m 29s \/ 4 GB \/ CACHED"}, {"starting_time": 1604621139479, "ending_time": 1604621424627, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp879-MV411-FOSL2_R1_T1)", "times": [{"starting_time": 1604619062704, "ending_time": 1604619073091, "color":c1(5)}, {"starting_time": 1604619073091, "ending_time": 1604620180426, "color":c0(5), "label": "22m 13s \/ 3.3 GB \/ CACHED"}, {"starting_time": 1604620180426, "ending_time": 1604620395407, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp877-MV411-PLAGL2_R1_T1)", "times": [{"starting_time": 1604619061008, "ending_time": 1604619071903, "color":c1(5)}, {"starting_time": 1604619071903, "ending_time": 1604620262167, "color":c0(5), "label": "23m 44s \/ 3.6 GB \/ CACHED"}, {"starting_time": 1604620262167, "ending_time": 1604620484861, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp876-MV411-ZFP281_R1_T1)", "times": [{"starting_time": 1604619059597, "ending_time": 1604619071047, "color":c1(5)}, {"starting_time": 1604619071047, "ending_time": 1604620719918, "color":c0(5), "label": "32m 5s \/ 3.9 GB \/ CACHED"}, {"starting_time": 1604620719918, "ending_time": 1604620984827, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp878-MV411-HEX_R1_T1)", "times": [{"starting_time": 1604619061532, "ending_time": 1604619072335, "color":c1(5)}, {"starting_time": 1604619072335, "ending_time": 1604623135547, "color":c0(5), "label": "1h 14m 43s \/ 4.1 GB \/ CACHED"}, {"starting_time": 1604623135547, "ending_time": 1604623544868, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp913-MV411-TFP4_R1_T1)", "times": [{"starting_time": 1604619065258, "ending_time": 1604619080678, "color":c1(5)}, {"starting_time": 1604619080678, "ending_time": 1604628460677, "color":c0(5), "label": "2h 49m 10s \/ 4.2 GB \/ CACHED"}, {"starting_time": 1604628460677, "ending_time": 1604629215219, "color":c1(5)}]},
+{"label": "FASTQC (mp300-MV411-RUNX1_R1_T1)", "times": [{"starting_time": 1604700277594, "ending_time": 1604700285674, "color":c1(4)}, {"starting_time": 1604700285674, "ending_time": 1604700478418, "color":c2(4), "label": "5m 57s \/ 1.1 GB"}, {"starting_time": 1604700478418, "ending_time": 1604700634927, "color":c1(4)}]},
+{"label": "TRIMGALORE (mp914-MV411-RXRA_R1_T1)", "times": [{"starting_time": 1604619067179, "ending_time": 1604619081958, "color":c1(5)}, {"starting_time": 1604619081958, "ending_time": 1604620834377, "color":c0(5), "label": "33m 28s \/ 3.9 GB \/ CACHED"}, {"starting_time": 1604620834377, "ending_time": 1604621075085, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp915-MV411_MEF2C_NT-MEF2C_R1_T1)", "times": [{"starting_time": 1604619067825, "ending_time": 1604619082372, "color":c1(5)}, {"starting_time": 1604619082372, "ending_time": 1604621065910, "color":c0(5), "label": "37m 37s \/ 3.9 GB \/ CACHED"}, {"starting_time": 1604621065910, "ending_time": 1604621325128, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp880-MV411-RARA_R1_T1)", "times": [{"starting_time": 1604619064622, "ending_time": 1604619080247, "color":c1(5)}, {"starting_time": 1604619080247, "ending_time": 1604620407357, "color":c0(5), "label": "26m 1s \/ 3.6 GB \/ CACHED"}, {"starting_time": 1604620407357, "ending_time": 1604620625225, "color":c1(5)}]},
+{"label": "BWA_MEM (mp320-MV411-ZEB2_R1_T1)", "times": [{"starting_time": 1604621918030, "ending_time": 1604621928086, "color":c1(6)}, {"starting_time": 1604621928086, "ending_time": 1604625067455, "color":c0(6), "label": "1h 6m 8s \/ 17.2 GB \/ CACHED"}, {"starting_time": 1604625067455, "ending_time": 1604625885941, "color":c1(6)}]},
+{"label": "BWA_MEM (mp321-MV411-GFI1_R1_T1)", "times": [{"starting_time": 1604621912130, "ending_time": 1604621916176, "color":c1(6)}, {"starting_time": 1604621916176, "ending_time": 1604625360761, "color":c0(6), "label": "1h 9m 13s \/ 17.5 GB \/ CACHED"}, {"starting_time": 1604625360761, "ending_time": 1604626064998, "color":c1(6)}]},
+{"label": "BWA_MEM (mp301-MV411-PU1_R1_T1)", "times": [{"starting_time": 1604621915371, "ending_time": 1604621926673, "color":c1(6)}, {"starting_time": 1604621926673, "ending_time": 1604624251726, "color":c0(6), "label": "51m 51s \/ 15.4 GB \/ CACHED"}, {"starting_time": 1604624251726, "ending_time": 1604625026096, "color":c1(6)}]},
+{"label": "BWA_MEM (mp324-MV411-MEF2D_R1_T1)", "times": [{"starting_time": 1604621912698, "ending_time": 1604621916312, "color":c1(6)}, {"starting_time": 1604621916312, "ending_time": 1604624430202, "color":c0(6), "label": "55m 13s \/ 17.2 GB \/ CACHED"}, {"starting_time": 1604624430202, "ending_time": 1604625225478, "color":c1(6)}]},
+{"label": "BWA_MEM (mp876-MV411-ZFP281_R1_T1)", "times": [{"starting_time": 1604621910589, "ending_time": 1604621915722, "color":c1(6)}, {"starting_time": 1604621915722, "ending_time": 1604625371467, "color":c0(6), "label": "1h 12m 54s \/ 7.6 GB \/ CACHED"}, {"starting_time": 1604625371467, "ending_time": 1604626285052, "color":c1(6)}]},
+{"label": "BWA_MEM (mp877-MV411-PLAGL2_R1_T1)", "times": [{"starting_time": 1604621918507, "ending_time": 1604621928189, "color":c1(6)}, {"starting_time": 1604621928189, "ending_time": 1604624910068, "color":c0(6), "label": "1h 4m 7s \/ 7.7 GB \/ CACHED"}, {"starting_time": 1604624910068, "ending_time": 1604625765992, "color":c1(6)}]},
+{"label": "BWA_MEM (mp319-MV411-FLI1_R1_T1)", "times": [{"starting_time": 1604621918934, "ending_time": 1604621928602, "color":c1(6)}, {"starting_time": 1604621928602, "ending_time": 1604624853085, "color":c0(6), "label": "1h 27s \/ 16 GB \/ CACHED"}, {"starting_time": 1604624853085, "ending_time": 1604625546025, "color":c1(6)}]},
+{"label": "BWA_MEM (mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1604621914566, "ending_time": 1604621926413, "color":c1(6)}, {"starting_time": 1604621926413, "ending_time": 1604625131533, "color":c0(6), "label": "1h 7m 21s \/ 7.8 GB \/ CACHED"}, {"starting_time": 1604625131533, "ending_time": 1604625955550, "color":c1(6)}]},
+{"label": "BWA_MEM (mp913-MV411-TFP4_R1_T1)", "times": [{"starting_time": 1604629220137, "ending_time": 1604629225211, "color":c1(6)}, {"starting_time": 1604629225211, "ending_time": 1604649524312, "color":c0(6), "label": "6h 10m 17s \/ 7.6 GB \/ CACHED"}, {"starting_time": 1604649524312, "ending_time": 1604651436725, "color":c1(6)}]},
+{"label": "BWA_MEM (mp915-MV411_MEF2C_NT-MEF2C_R1_T1)", "times": [{"starting_time": 1604621914038, "ending_time": 1604621916885, "color":c1(6)}, {"starting_time": 1604621916885, "ending_time": 1604626385749, "color":c0(6), "label": "1h 28m 31s \/ 7.8 GB \/ CACHED"}, {"starting_time": 1604626385749, "ending_time": 1604627225498, "color":c1(6)}]},
+{"label": "BWA_MEM (mp880-MV411-RARA_R1_T1)", "times": [{"starting_time": 1604621917367, "ending_time": 1604621927920, "color":c1(6)}, {"starting_time": 1604621927920, "ending_time": 1604625440292, "color":c0(6), "label": "1h 12m 8s \/ 7.8 GB \/ CACHED"}, {"starting_time": 1604625440292, "ending_time": 1604626245506, "color":c1(6)}]},
+{"label": "BWA_MEM (mp879-MV411-FOSL2_R1_T1)", "times": [{"starting_time": 1604621909155, "ending_time": 1604621915171, "color":c1(6)}, {"starting_time": 1604621915171, "ending_time": 1604624497535, "color":c0(6), "label": "57m 46s \/ 7.7 GB \/ CACHED"}, {"starting_time": 1604624497535, "ending_time": 1604625375076, "color":c1(6)}]},
+{"label": "BWA_MEM (mp914-MV411-RXRA_R1_T1)", "times": [{"starting_time": 1604621913303, "ending_time": 1604621916597, "color":c1(6)}, {"starting_time": 1604621916597, "ending_time": 1604625516521, "color":c0(6), "label": "1h 13m 42s \/ 7.6 GB \/ CACHED"}, {"starting_time": 1604625516521, "ending_time": 1604626335127, "color":c1(6)}]},
+{"label": "BWA_MEM (mp875-MV411_MEF2C_NT-FLAG_MEF2C_R1_T1)", "times": [{"starting_time": 1604623036969, "ending_time": 1604623046739, "color":c1(6)}, {"starting_time": 1604623046739, "ending_time": 1604626414919, "color":c0(6), "label": "1h 12m 48s \/ 8.6 GB \/ CACHED"}, {"starting_time": 1604626414919, "ending_time": 1604627405113, "color":c1(6)}]},
+{"label": "BWA_MEM (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1604621909909, "ending_time": 1604621915465, "color":c1(6)}, {"starting_time": 1604621915465, "ending_time": 1604630108076, "color":c0(6), "label": "2h 33m 25s \/ 12.5 GB \/ CACHED"}, {"starting_time": 1604630108076, "ending_time": 1604631115261, "color":c1(6)}]},
+{"label": "BWA_MEM (mp878-MV411-HEX_R1_T1)", "times": [{"starting_time": 1604623549983, "ending_time": 1604623555897, "color":c1(6)}, {"starting_time": 1604623555897, "ending_time": 1604633404287, "color":c0(6), "label": "3h 2m 56s \/ 8 GB \/ CACHED"}, {"starting_time": 1604633404287, "ending_time": 1604634525495, "color":c1(6)}]},
+{"label": "SORT_BAM (mp324-MV411-MEF2D_R1_T1)", "times": [{"starting_time": 1604625226638, "ending_time": 1604625236455, "color":c1(7)}, {"starting_time": 1604625236455, "ending_time": 1604625423856, "color":c0(7), "label": "6m 29s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604625423856, "ending_time": 1604625615834, "color":c1(7)}]},
+{"label": "SORT_BAM (mp876-MV411-ZFP281_R1_T1)", "times": [{"starting_time": 1604626286427, "ending_time": 1604626296098, "color":c1(7)}, {"starting_time": 1604626296098, "ending_time": 1604626835035, "color":c0(7), "label": "14m 9s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604626835035, "ending_time": 1604627135735, "color":c1(7)}]},
+{"label": "SORT_BAM (mp321-MV411-GFI1_R1_T1)", "times": [{"starting_time": 1604626066184, "ending_time": 1604626076095, "color":c1(7)}, {"starting_time": 1604626076095, "ending_time": 1604626405185, "color":c0(7), "label": "9m 30s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604626405185, "ending_time": 1604626636246, "color":c1(7)}]},
+{"label": "SORT_BAM (mp319-MV411-FLI1_R1_T1)", "times": [{"starting_time": 1604625547525, "ending_time": 1604625555894, "color":c1(7)}, {"starting_time": 1604625555894, "ending_time": 1604625807653, "color":c0(7), "label": "7m 48s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604625807653, "ending_time": 1604626015975, "color":c1(7)}]},
+{"label": "SORT_BAM (mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1604625957180, "ending_time": 1604625965844, "color":c1(7)}, {"starting_time": 1604625965844, "ending_time": 1604626445529, "color":c0(7), "label": "12m 39s \/ 5.1 GB \/ CACHED"}, {"starting_time": 1604626445529, "ending_time": 1604626715763, "color":c1(7)}]},
+{"label": "SORT_BAM (mp915-MV411_MEF2C_NT-MEF2C_R1_T1)", "times": [{"starting_time": 1604627226956, "ending_time": 1604627235532, "color":c1(7)}, {"starting_time": 1604627235532, "ending_time": 1604627978031, "color":c0(7), "label": "18m 49s \/ 5.1 GB \/ CACHED"}, {"starting_time": 1604627978031, "ending_time": 1604628355687, "color":c1(7)}]},
+{"label": "SORT_BAM (mp913-MV411-TFP4_R1_T1)", "times": [{"starting_time": 1604651438398, "ending_time": 1604651446451, "color":c1(7)}, {"starting_time": 1604651446451, "ending_time": 1604654787460, "color":c0(7), "label": "1h 11m 49s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604654787460, "ending_time": 1604655746901, "color":c1(7)}]},
+{"label": "COUNTS (mp324-MV411-MEF2D_R1_T1)", "times": [{"starting_time": 1604625618661, "ending_time": 1604625626017, "color":c1(8)}, {"starting_time": 1604625626017, "ending_time": 1604625626038, "color":c0(8), "label": "3m 8s \/ 3 MB \/ CACHED"}, {"starting_time": 1604625626038, "ending_time": 1604625806259, "color":c1(8)}]},
+{"label": "COUNTS (mp321-MV411-GFI1_R1_T1)", "times": [{"starting_time": 1604626639167, "ending_time": 1604626646938, "color":c1(8)}, {"starting_time": 1604626646938, "ending_time": 1604626646955, "color":c0(8), "label": "3m 27s \/ 3 MB \/ CACHED"}, {"starting_time": 1604626646955, "ending_time": 1604626846279, "color":c1(8)}]},
+{"label": "SORT_BAM (mp875-MV411_MEF2C_NT-FLAG_MEF2C_R1_T1)", "times": [{"starting_time": 1604627407138, "ending_time": 1604627415774, "color":c1(7)}, {"starting_time": 1604627415774, "ending_time": 1604628058870, "color":c0(7), "label": "16m 8s \/ 5.1 GB \/ CACHED"}, {"starting_time": 1604628058870, "ending_time": 1604628375556, "color":c1(7)}]},
+{"label": "COUNTS (mp876-MV411-ZFP281_R1_T1)", "times": [{"starting_time": 1604627138634, "ending_time": 1604627145915, "color":c1(8)}, {"starting_time": 1604627145915, "ending_time": 1604627145931, "color":c0(8), "label": "4m 7s \/ 0 \/ CACHED"}, {"starting_time": 1604627145931, "ending_time": 1604627385554, "color":c1(8)}]},
+{"label": "SORT_BAM (mp914-MV411-RXRA_R1_T1)", "times": [{"starting_time": 1604626336812, "ending_time": 1604626345803, "color":c1(7)}, {"starting_time": 1604626345803, "ending_time": 1604626959326, "color":c0(7), "label": "15m 49s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604626959326, "ending_time": 1604627285569, "color":c1(7)}]},
+{"label": "SORT_BAM (mp879-MV411-FOSL2_R1_T1)", "times": [{"starting_time": 1604625376366, "ending_time": 1604625385929, "color":c1(7)}, {"starting_time": 1604625385929, "ending_time": 1604625754560, "color":c0(7), "label": "10m 19s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604625754560, "ending_time": 1604625995666, "color":c1(7)}]},
+{"label": "COUNTS (mp319-MV411-FLI1_R1_T1)", "times": [{"starting_time": 1604626019160, "ending_time": 1604626026101, "color":c1(8)}, {"starting_time": 1604626026101, "ending_time": 1604626026119, "color":c0(8), "label": "3m 48s \/ 3 MB \/ CACHED"}, {"starting_time": 1604626026119, "ending_time": 1604626247313, "color":c1(8)}]},
+{"label": "COUNTS (mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1604626718777, "ending_time": 1604626726450, "color":c1(8)}, {"starting_time": 1604626726450, "ending_time": 1604626726466, "color":c0(8), "label": "3m 57s \/ 3 MB \/ CACHED"}, {"starting_time": 1604626726466, "ending_time": 1604626955830, "color":c1(8)}]},
+{"label": "SORT_BAM (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1604631116760, "ending_time": 1604631125614, "color":c1(7)}, {"starting_time": 1604631125614, "ending_time": 1604632022143, "color":c0(7), "label": "21m 19s \/ 5.3 GB \/ CACHED"}, {"starting_time": 1604632022143, "ending_time": 1604632395620, "color":c1(7)}]},
+{"label": "SORT_BAM (mp878-MV411-HEX_R1_T1)", "times": [{"starting_time": 1604634526997, "ending_time": 1604634535558, "color":c1(7)}, {"starting_time": 1604634535558, "ending_time": 1604635960089, "color":c0(7), "label": "32m 39s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604635960089, "ending_time": 1604636485686, "color":c1(7)}]},
+{"label": "SORT_BAM (mp877-MV411-PLAGL2_R1_T1)", "times": [{"starting_time": 1604625767338, "ending_time": 1604625776004, "color":c1(7)}, {"starting_time": 1604625776004, "ending_time": 1604626249863, "color":c0(7), "label": "13m 49s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604626249863, "ending_time": 1604626595988, "color":c1(7)}]},
+{"label": "SORT_BAM (mp301-MV411-PU1_R1_T1)", "times": [{"starting_time": 1604625027523, "ending_time": 1604625036468, "color":c1(7)}, {"starting_time": 1604625036468, "ending_time": 1604625244854, "color":c0(7), "label": "7m 9s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604625244854, "ending_time": 1604625456344, "color":c1(7)}]},
+{"label": "COUNTS (mp915-MV411_MEF2C_NT-MEF2C_R1_T1)", "times": [{"starting_time": 1604628357910, "ending_time": 1604628365744, "color":c1(8)}, {"starting_time": 1604628365744, "ending_time": 1604628365760, "color":c0(8), "label": "4m 18s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604628365760, "ending_time": 1604628615624, "color":c1(8)}]},
+{"label": "COUNTS (mp913-MV411-TFP4_R1_T1)", "times": [{"starting_time": 1604655749382, "ending_time": 1604655756776, "color":c1(8)}, {"starting_time": 1604655756776, "ending_time": 1604655756812, "color":c0(8), "label": "8m 47s \/ 3 MB \/ CACHED"}, {"starting_time": 1604655756812, "ending_time": 1604656276796, "color":c1(8)}]},
+{"label": "SORT_BAM (mp880-MV411-RARA_R1_T1)", "times": [{"starting_time": 1604626247165, "ending_time": 1604626255756, "color":c1(7)}, {"starting_time": 1604626255756, "ending_time": 1604626765069, "color":c0(7), "label": "13m 29s \/ 5.2 GB \/ CACHED"}, {"starting_time": 1604626765069, "ending_time": 1604627055763, "color":c1(7)}]},
+{"label": "COUNTS (mp875-MV411_MEF2C_NT-FLAG_MEF2C_R1_T1)", "times": [{"starting_time": 1604628377842, "ending_time": 1604628385754, "color":c1(8)}, {"starting_time": 1604628385754, "ending_time": 1604628385770, "color":c0(8), "label": "4m 28s \/ 3.2 MB \/ CACHED"}, {"starting_time": 1604628385770, "ending_time": 1604628645681, "color":c1(8)}]},
+{"label": "COUNTS (mp879-MV411-FOSL2_R1_T1)", "times": [{"starting_time": 1604625997678, "ending_time": 1604626005773, "color":c1(8)}, {"starting_time": 1604626005773, "ending_time": 1604626005789, "color":c0(8), "label": "3m 8s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604626005789, "ending_time": 1604626186135, "color":c1(8)}]},
+{"label": "COUNTS (mp914-MV411-RXRA_R1_T1)", "times": [{"starting_time": 1604627287952, "ending_time": 1604627295844, "color":c1(8)}, {"starting_time": 1604627295844, "ending_time": 1604627295861, "color":c0(8), "label": "4m 38s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604627295861, "ending_time": 1604627565537, "color":c1(8)}]},
+{"label": "COUNTS (mp878-MV411-HEX_R1_T1)", "times": [{"starting_time": 1604636488294, "ending_time": 1604636495668, "color":c1(8)}, {"starting_time": 1604636495668, "ending_time": 1604636495690, "color":c0(8), "label": "5m 48s \/ 3 MB \/ CACHED"}, {"starting_time": 1604636495690, "ending_time": 1604636835849, "color":c1(8)}]},
+{"label": "COUNTS (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1604632398597, "ending_time": 1604632405495, "color":c1(8)}, {"starting_time": 1604632405495, "ending_time": 1604632405512, "color":c0(8), "label": "5m 37s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604632405512, "ending_time": 1604632735860, "color":c1(8)}]},
+{"label": "COUNTS (mp880-MV411-RARA_R1_T1)", "times": [{"starting_time": 1604627058556, "ending_time": 1604627065508, "color":c1(8)}, {"starting_time": 1604627065508, "ending_time": 1604627065523, "color":c0(8), "label": "3m 37s \/ 3 MB \/ CACHED"}, {"starting_time": 1604627065523, "ending_time": 1604627275827, "color":c1(8)}]},
+{"label": "COUNTS (mp301-MV411-PU1_R1_T1)", "times": [{"starting_time": 1604625459000, "ending_time": 1604625466918, "color":c1(8)}, {"starting_time": 1604625466918, "ending_time": 1604625466936, "color":c0(8), "label": "2m 57s \/ 3.2 MB \/ CACHED"}, {"starting_time": 1604625466936, "ending_time": 1604625636235, "color":c1(8)}]},
+{"label": "COUNTS (mp877-MV411-PLAGL2_R1_T1)", "times": [{"starting_time": 1604626598433, "ending_time": 1604626606630, "color":c1(8)}, {"starting_time": 1604626606630, "ending_time": 1604626606646, "color":c0(8), "label": "3m 38s \/ 3 MB \/ CACHED"}, {"starting_time": 1604626606646, "ending_time": 1604626816847, "color":c1(8)}]},
+{"label": "TRIMGALORE (mp325-MV411-SP1_R1_T1)", "times": [{"starting_time": 1604619054169, "ending_time": 1604619060084, "color":c1(5)}, {"starting_time": 1604619060084, "ending_time": 1604619840839, "color":c0(5), "label": "16m 31s \/ 2.6 GB \/ CACHED"}, {"starting_time": 1604619840839, "ending_time": 1604620044676, "color":c1(5)}]},
+{"label": "BWA_MEM (mp325-MV411-SP1_R1_T1)", "times": [{"starting_time": 1604622306481, "ending_time": 1604622316503, "color":c1(6)}, {"starting_time": 1604622316503, "ending_time": 1604624701342, "color":c0(6), "label": "52m 40s \/ 19.5 GB \/ CACHED"}, {"starting_time": 1604624701342, "ending_time": 1604625466015, "color":c1(6)}]},
+{"label": "SORT_BAM (mp325-MV411-SP1_R1_T1)", "times": [{"starting_time": 1604625467184, "ending_time": 1604625476419, "color":c1(7)}, {"starting_time": 1604625476419, "ending_time": 1604625813964, "color":c0(7), "label": "9m 39s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604625813964, "ending_time": 1604626045924, "color":c1(7)}]},
+{"label": "COUNTS (mp325-MV411-SP1_R1_T1)", "times": [{"starting_time": 1604626048456, "ending_time": 1604626056227, "color":c1(8)}, {"starting_time": 1604626056227, "ending_time": 1604626056247, "color":c0(8), "label": "3m 38s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604626056247, "ending_time": 1604626266037, "color":c1(8)}]},
+{"label": "SORT_BAM (mp320-MV411-ZEB2_R1_T1)", "times": [{"starting_time": 1604625887353, "ending_time": 1604625896305, "color":c1(7)}, {"starting_time": 1604625896305, "ending_time": 1604626170017, "color":c0(7), "label": "9m 8s \/ 5.4 GB \/ CACHED"}, {"starting_time": 1604626170017, "ending_time": 1604626435606, "color":c1(7)}]},
+{"label": "COUNTS (mp320-MV411-ZEB2_R1_T1)", "times": [{"starting_time": 1604626437715, "ending_time": 1604626445924, "color":c1(8)}, {"starting_time": 1604626445924, "ending_time": 1604626445944, "color":c0(8), "label": "4m 9s \/ 3.1 MB \/ CACHED"}, {"starting_time": 1604626445944, "ending_time": 1604626686455, "color":c1(8)}]},
+{"label": "FASTQC (mp880-MV411-RARA_R1_T1)", "times": [{"starting_time": 1604619063925, "ending_time": 1604619073942, "color":c1(4)}, {"starting_time": 1604619073942, "ending_time": 1604619592785, "color":c0(4), "label": "12m 22s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1604619592785, "ending_time": 1604619805579, "color":c1(4)}]},
+{"label": "BWA_MEM (mp300-MV411-RUNX1_R1_T1)", "times": [{"starting_time": 1604701049850, "ending_time": 1604701054337, "color":c1(6)}, {"starting_time": 1604701054337, "ending_time": 1604703829595, "color":c2(6), "label": "58m 15s \/ 16.5 GB"}, {"starting_time": 1604703829595, "ending_time": 1604704544462, "color":c1(6)}]},
+{"label": "BWA_MEM (mp299-MV411-CEBPA_R1_T1)", "times": [{"starting_time": 1604701529139, "ending_time": 1604701534349, "color":c1(6)}]},
+{"label": "SORT_BAM (mp300-MV411-RUNX1_R1_T1)", "times": [{"starting_time": 1604704545959, "ending_time": 1604704554476, "color":c1(7)}]}
+]
+
+
+function getTickFormat() {
+  var MIN = 1000 * 60
+  var HOUR = MIN * 60
+  var DAY = HOUR * 24
+  var delta = (endingMillis - beginningMillis)
+
+  if( delta < 2 * MIN ) {
+    return {
+      format: d3.time.format("%S"),
+      tickTime: d3.time.seconds,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * HOUR ) {
+    return {
+      format: d3.time.format("%M"),
+      tickTime: d3.time.minutes,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * DAY ) {
+    return {
+      format: d3.time.format("%H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 1,
+      tickSize: 6
+    }
+  }
+
+  if( delta <= 7 * DAY ) {
+    return {
+      format: d3.time.format("%b %e %H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 6,
+      tickSize: 6
+    }
+  }
+
+  return {
+    format: d3.time.format("%b %e"),
+    tickTime: d3.time.days,
+    tickInterval: 1,
+    tickSize: 6
+  }
+}
+
+function getLabelMargin(scale) {
+    $('<span class="labelSpan" style="display: none"></span>').appendTo('body');
+
+    var labelMargin = 0
+    $.each(data, function (key, value) {
+      labelMargin = Math.max(labelMargin, $('.labelSpan').html(value.label).width());
+    });
+
+    $('.labelSpan').remove();
+
+    return (labelMargin * scale);
+}
+
+function render() {
+  handler=null;
+  $("#timeline").empty()
+  $('#label_elapsed').text(elapsed)
+  $('#label_launch').text( d3.time.format('%d %b %Y %H:%M')(new Date(beginningMillis)) )
+
+  var width = $(window).width();
+  var chart = d3.timeline()
+    .stack() // toggles graph stacking
+    .margin({left:getLabelMargin(0.85), right:100, top:0, bottom:0})
+    .tickFormat( getTickFormat() )
+    .rowSeperators('#f5f5f5')
+    .showTimeAxisTick()
+    ;
+  var svg = d3.select("#timeline").append("svg").attr("width", width).datum(data).call(chart);
+}
+
+function hrz() {
+if( handler != null ) clearTimeout(handler)
+  handler = setTimeout(render, 150);
+}
+
+$(document).ready(render)
+$(window).resize(hrz); // resize the applet on window resize
+</script>
+</head>
+
+<body>
+<div>
+  <h3>Processes execution timeline</h3>
+  <p>
+    Launch time: <span id='label_launch'> </span><br>
+    Elapsed time: <span id='label_elapsed'> </span><br>
+    Legend: job wall time / memory usage (RAM) <span id='label_legend'> </span>
+  </p>
+  <div id="timeline"></div>
+</div>
+
+<div id='footer'>
+  Created with Nextflow -- <a href='http://www.nextflow.io' target='_blank'>http://nextflow.io</a>
+</div>
+
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Clink href='" + prot + "fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' %3E%3C/link%3E"));
+</script>
+</body>
+</html>

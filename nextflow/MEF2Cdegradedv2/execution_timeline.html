@@ -1,0 +1,409 @@
+<!doctype html>
+<!--
+  ~ Copyright 2013-2019, Centre for Genomic Regulation (CRG)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + prot + "code.jquery.com/jquery-latest.min.js' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "d3js.org/d3.v3.min.js' charset='utf-8' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "cdn.rawgit.com/nextflow-io/d3-timeline/82622c4cc35bac7283b3a317826b0709ac1ae476/src/d3-timeline.js' type='text/javascript' %3E%3C/script%3E"));
+</script>
+<style type="text/css">
+* {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+div#timeline g text {
+  font-size: 13px;
+}
+
+text.timeline-label {
+  font-size: 13px;
+}
+
+#timeline2 .axis {
+  transform: translate(0px,30px);
+  -ms-transform: translate(0px,30px); /* IE 9 */
+  -webkit-transform: translate(0px,30px); /* Safari and Chrome */
+  -o-transform: translate(0px,30px); /* Opera */
+  -moz-transform: translate(0px,30px); /* Firefox */
+}
+
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+
+#footer {
+  padding-top: 3em; color: #bfbfbf; font-size: 13px;
+}
+
+#footer a:visited {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+var handler=null;
+// see https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c
+var colors = d3.scale.category20c().domain(d3.range(0,20)).range()
+
+function c0(index) { return "#9c9c9c"; }
+function c1(index) { return "#bdbdbd"; }
+function c2(index) { return colors[index % 16]; } // <-- note: uses only the first 16 colors
+
+var elapsed="7h 26m 50s"
+var beginningMillis=1610132055144;
+var endingMillis=1610158864649;
+var data=[
+{"label": "get_software_versions", "times": [{"starting_time": 1610132065727, "ending_time": 1610132071205, "color":c1(0)}, {"starting_time": 1610132071205, "ending_time": 1610132075971, "color":c2(0), "label": "2m 56s \/ 70.9 MB"}, {"starting_time": 1610132075971, "ending_time": 1610132241239, "color":c1(0)}]},
+{"label": "CHECK_DESIGN (chipseq_MF2C_degraded_v2_design.csv)", "times": [{"starting_time": 1610132066198, "ending_time": 1610132071388, "color":c1(1)}, {"starting_time": 1610132071388, "ending_time": 1610132071464, "color":c2(1), "label": "2m 55s \/ 3.2 MB"}, {"starting_time": 1610132071464, "ending_time": 1610132241600, "color":c1(1)}]},
+{"label": "output_documentation", "times": [{"starting_time": 1610132068962, "ending_time": 1610132071685, "color":c1(2)}, {"starting_time": 1610132071685, "ending_time": 1610132072040, "color":c2(2), "label": "3m 2s \/ 14.9 MB"}, {"starting_time": 1610132072040, "ending_time": 1610132251266, "color":c1(2)}]},
+{"label": "FASTQC (INPUT_R1_T1)", "times": [{"starting_time": 1610132242542, "ending_time": 1610132251458, "color":c1(3)}, {"starting_time": 1610132251458, "ending_time": 1610132887194, "color":c2(3), "label": "14m 39s \/ 1 GB"}, {"starting_time": 1610132887194, "ending_time": 1610133121296, "color":c1(3)}]},
+{"label": "TRIMGALORE (INPUT_R1_T1)", "times": [{"starting_time": 1610132243022, "ending_time": 1610132251570, "color":c1(4)}, {"starting_time": 1610132251570, "ending_time": 1610134015811, "color":c2(4), "label": "34m 18s \/ 4 GB"}, {"starting_time": 1610134015811, "ending_time": 1610134301413, "color":c1(4)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610132243462, "ending_time": 1610132251701, "color":c1(4)}, {"starting_time": 1610132251701, "ending_time": 1610133667508, "color":c2(4), "label": "28m 8s \/ 3.6 GB"}, {"starting_time": 1610133667508, "ending_time": 1610133931470, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610132243999, "ending_time": 1610132251859, "color":c1(3)}, {"starting_time": 1610132251859, "ending_time": 1610132701652, "color":c2(3), "label": "11m 17s \/ 1.2 GB"}, {"starting_time": 1610132701652, "ending_time": 1610132921454, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610132244551, "ending_time": 1610132251973, "color":c1(4)}, {"starting_time": 1610132251973, "ending_time": 1610133674376, "color":c2(4), "label": "28m 8s \/ 3.6 GB"}, {"starting_time": 1610133674376, "ending_time": 1610133932977, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610132245142, "ending_time": 1610132252082, "color":c1(3)}, {"starting_time": 1610132252082, "ending_time": 1610132759908, "color":c2(3), "label": "12m 16s \/ 1.1 GB"}, {"starting_time": 1610132759908, "ending_time": 1610132981548, "color":c1(3)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610132245623, "ending_time": 1610132252235, "color":c1(3)}, {"starting_time": 1610132252235, "ending_time": 1610132684926, "color":c2(3), "label": "10m 46s \/ 1.1 GB"}, {"starting_time": 1610132684926, "ending_time": 1610132891872, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610132246042, "ending_time": 1610132252359, "color":c1(4)}, {"starting_time": 1610132252359, "ending_time": 1610133763537, "color":c2(4), "label": "29m 55s \/ 3.6 GB"}, {"starting_time": 1610133763537, "ending_time": 1610134041446, "color":c1(4)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610132246666, "ending_time": 1610132252492, "color":c1(4)}, {"starting_time": 1610132252492, "ending_time": 1610134075567, "color":c2(4), "label": "35m 35s \/ 3.9 GB"}, {"starting_time": 1610134075567, "ending_time": 1610134381374, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610132247119, "ending_time": 1610132252759, "color":c1(3)}, {"starting_time": 1610132252759, "ending_time": 1610132832640, "color":c2(3), "label": "13m 45s \/ 1.1 GB"}, {"starting_time": 1610132832640, "ending_time": 1610133071634, "color":c1(3)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610132247497, "ending_time": 1610132252887, "color":c1(3)}, {"starting_time": 1610132252887, "ending_time": 1610132828841, "color":c2(3), "label": "14m 24s \/ 1.1 GB"}, {"starting_time": 1610132828841, "ending_time": 1610133111694, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610132248035, "ending_time": 1610132253009, "color":c1(4)}, {"starting_time": 1610132253009, "ending_time": 1610133990058, "color":c2(4), "label": "33m 34s \/ 3.7 GB"}, {"starting_time": 1610133990058, "ending_time": 1610134261576, "color":c1(4)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610132248499, "ending_time": 1610132253189, "color":c1(4)}, {"starting_time": 1610132253189, "ending_time": 1610134020457, "color":c2(4), "label": "35m 13s \/ 3.9 GB"}, {"starting_time": 1610134020457, "ending_time": 1610134361593, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610132248892, "ending_time": 1610132253310, "color":c1(3)}, {"starting_time": 1610132253310, "ending_time": 1610132830159, "color":c2(3), "label": "13m 33s \/ 1.2 GB"}, {"starting_time": 1610132830159, "ending_time": 1610133062093, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610132249390, "ending_time": 1610132253433, "color":c1(4)}, {"starting_time": 1610132253433, "ending_time": 1610134137912, "color":c2(4), "label": "36m 32s \/ 4 GB"}, {"starting_time": 1610134137912, "ending_time": 1610134441390, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610132249857, "ending_time": 1610132253548, "color":c1(3)}, {"starting_time": 1610132253548, "ending_time": 1610132932513, "color":c2(3), "label": "15m 32s \/ 1.1 GB"}, {"starting_time": 1610132932513, "ending_time": 1610133181820, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610132250341, "ending_time": 1610132253668, "color":c1(4)}, {"starting_time": 1610132253668, "ending_time": 1610134192921, "color":c2(4), "label": "37m 31s \/ 3.9 GB"}, {"starting_time": 1610134192921, "ending_time": 1610134501415, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610132250942, "ending_time": 1610132253779, "color":c1(3)}, {"starting_time": 1610132253779, "ending_time": 1610132851555, "color":c2(3), "label": "14m 1s \/ 1.1 GB"}, {"starting_time": 1610132851555, "ending_time": 1610133092051, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610132251465, "ending_time": 1610132262915, "color":c1(4)}, {"starting_time": 1610132262915, "ending_time": 1610133813953, "color":c2(4), "label": "30m 50s \/ 3.6 GB"}, {"starting_time": 1610133813953, "ending_time": 1610134101809, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610132251853, "ending_time": 1610132263036, "color":c1(3)}, {"starting_time": 1610132263036, "ending_time": 1610132738742, "color":c2(3), "label": "11m 30s \/ 1.1 GB"}, {"starting_time": 1610132738742, "ending_time": 1610132942313, "color":c1(3)}]},
+{"label": "TRIMGALORE (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610132252237, "ending_time": 1610132263187, "color":c1(4)}, {"starting_time": 1610132263187, "ending_time": 1610133926190, "color":c2(4), "label": "32m 20s \/ 3.7 GB"}, {"starting_time": 1610133926190, "ending_time": 1610134191959, "color":c1(4)}]},
+{"label": "FASTQC (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610132252711, "ending_time": 1610132263307, "color":c1(3)}, {"starting_time": 1610132263307, "ending_time": 1610132835276, "color":c2(3), "label": "14m \/ 1.1 GB"}, {"starting_time": 1610132835276, "ending_time": 1610133092789, "color":c1(3)}]},
+{"label": "MAKE_GENOME_FILTER (genome.fa)", "times": [{"starting_time": 1610132391313, "ending_time": 1610132402867, "color":c1(5)}, {"starting_time": 1610132402867, "ending_time": 1610132420463, "color":c2(5), "label": "4m 52s \/ 4.5 MB"}, {"starting_time": 1610132420463, "ending_time": 1610132682870, "color":c1(5)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610136012326, "ending_time": 1610136021451, "color":c1(6)}, {"starting_time": 1610136021451, "ending_time": 1610139633493, "color":c2(6), "label": "1h 13m 40s \/ 7.6 GB"}, {"starting_time": 1610139633493, "ending_time": 1610140431833, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610136012912, "ending_time": 1610136021609, "color":c1(6)}, {"starting_time": 1610136021609, "ending_time": 1610139516246, "color":c2(6), "label": "1h 13m 59s \/ 7.8 GB"}, {"starting_time": 1610139516246, "ending_time": 1610140451671, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610136013411, "ending_time": 1610136021751, "color":c1(6)}, {"starting_time": 1610136021751, "ending_time": 1610140458223, "color":c2(6), "label": "1h 31m 48s \/ 7.8 GB"}, {"starting_time": 1610140458223, "ending_time": 1610141521879, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610136013996, "ending_time": 1610136021864, "color":c1(6)}, {"starting_time": 1610136021864, "ending_time": 1610140194002, "color":c2(6), "label": "1h 24m 8s \/ 7.8 GB"}, {"starting_time": 1610140194002, "ending_time": 1610141061761, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610136014615, "ending_time": 1610136021985, "color":c1(6)}, {"starting_time": 1610136021985, "ending_time": 1610138719051, "color":c2(6), "label": "56m 37s \/ 7.8 GB"}, {"starting_time": 1610138719051, "ending_time": 1610139411870, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610136015111, "ending_time": 1610136022096, "color":c1(6)}, {"starting_time": 1610136022096, "ending_time": 1610140134123, "color":c2(6), "label": "1h 24m 7s \/ 7.7 GB"}, {"starting_time": 1610140134123, "ending_time": 1610141062361, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610136015613, "ending_time": 1610136022234, "color":c1(6)}, {"starting_time": 1610136022234, "ending_time": 1610138805896, "color":c2(6), "label": "1h 1m 26s \/ 7.4 GB"}, {"starting_time": 1610138805896, "ending_time": 1610139701990, "color":c1(6)}]},
+{"label": "BWA_MEM (INPUT_R1_T1)", "times": [{"starting_time": 1610136016204, "ending_time": 1610136022403, "color":c1(6)}, {"starting_time": 1610136022403, "ending_time": 1610143300353, "color":c2(6), "label": "2h 15m 6s \/ 12.5 GB"}, {"starting_time": 1610143300353, "ending_time": 1610144121788, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610136016749, "ending_time": 1610136022507, "color":c1(6)}, {"starting_time": 1610136022507, "ending_time": 1610139673255, "color":c2(6), "label": "1h 18m 5s \/ 7.7 GB"}, {"starting_time": 1610139673255, "ending_time": 1610140702040, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610136017212, "ending_time": 1610136022625, "color":c1(6)}, {"starting_time": 1610136022625, "ending_time": 1610139538358, "color":c2(6), "label": "1h 14m 25s \/ 7.3 GB"}, {"starting_time": 1610139538358, "ending_time": 1610140482111, "color":c1(6)}]},
+{"label": "BWA_MEM (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610136017690, "ending_time": 1610136022760, "color":c1(6)}, {"starting_time": 1610136022760, "ending_time": 1610139839666, "color":c2(6), "label": "1h 21m 34s \/ 7.6 GB"}, {"starting_time": 1610139839666, "ending_time": 1610140911909, "color":c1(6)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610139412695, "ending_time": 1610139422115, "color":c1(7)}, {"starting_time": 1610139422115, "ending_time": 1610139895674, "color":c2(7), "label": "12m 40s \/ 5.1 GB"}, {"starting_time": 1610139895674, "ending_time": 1610140172580, "color":c1(7)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610139702867, "ending_time": 1610139712138, "color":c1(7)}, {"starting_time": 1610139712138, "ending_time": 1610140171949, "color":c2(7), "label": "12m 30s \/ 5.1 GB"}, {"starting_time": 1610140171949, "ending_time": 1610140453335, "color":c1(7)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610140173956, "ending_time": 1610140182176, "color":c1(8)}, {"starting_time": 1610140182176, "ending_time": 1610140382797, "color":c2(8), "label": "3m 29s \/ -"}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610140383445, "ending_time": 1610140393216, "color":c1(8)}, {"starting_time": 1610140393216, "ending_time": 1610140393233, "color":c2(8), "label": "3m 29s \/ 3 MB"}, {"starting_time": 1610140393233, "ending_time": 1610140592519, "color":c1(8)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610140432808, "ending_time": 1610140442779, "color":c1(7)}, {"starting_time": 1610140442779, "ending_time": 1610141038295, "color":c2(7), "label": "15m 19s \/ 5.1 GB"}, {"starting_time": 1610141038295, "ending_time": 1610141351824, "color":c1(7)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610140452427, "ending_time": 1610140462722, "color":c1(7)}, {"starting_time": 1610140462722, "ending_time": 1610140951221, "color":c2(7), "label": "13m 39s \/ 5.1 GB"}, {"starting_time": 1610140951221, "ending_time": 1610141271865, "color":c1(7)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610140454778, "ending_time": 1610140462990, "color":c1(8)}, {"starting_time": 1610140462990, "ending_time": 1610140463009, "color":c2(8), "label": "4m 8s \/ 3.1 MB"}, {"starting_time": 1610140463009, "ending_time": 1610140702768, "color":c1(8)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610140482942, "ending_time": 1610140493718, "color":c1(7)}, {"starting_time": 1610140493718, "ending_time": 1610141109800, "color":c2(7), "label": "16m 39s \/ 5.1 GB"}, {"starting_time": 1610141109800, "ending_time": 1610141481862, "color":c1(7)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610140684526, "ending_time": 1610140692407, "color":c1(9)}, {"starting_time": 1610140692407, "ending_time": 1610141772722, "color":c2(9), "label": "23m 47s \/ 12.5 GB"}, {"starting_time": 1610141772722, "ending_time": 1610142111828, "color":c1(9)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610140702776, "ending_time": 1610140712070, "color":c1(7)}, {"starting_time": 1610140712070, "ending_time": 1610141211041, "color":c2(7), "label": "13m 19s \/ 5.1 GB"}, {"starting_time": 1610141211041, "ending_time": 1610141501877, "color":c1(7)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-MYC_R1_T1)", "times": [{"starting_time": 1610140704336, "ending_time": 1610140712178, "color":c1(9)}, {"starting_time": 1610140712178, "ending_time": 1610141862466, "color":c2(9), "label": "23m 47s \/ 12.3 GB"}, {"starting_time": 1610141862466, "ending_time": 1610142131799, "color":c1(9)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610140912684, "ending_time": 1610140922326, "color":c1(7)}, {"starting_time": 1610140922326, "ending_time": 1610141561393, "color":c2(7), "label": "15m 39s \/ 5.1 GB"}, {"starting_time": 1610141561393, "ending_time": 1610141852049, "color":c1(7)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610141062660, "ending_time": 1610141072084, "color":c1(7)}, {"starting_time": 1610141072084, "ending_time": 1610141719960, "color":c2(7), "label": "16m 39s \/ 5.1 GB"}, {"starting_time": 1610141719960, "ending_time": 1610142061937, "color":c1(7)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610141063184, "ending_time": 1610141072187, "color":c1(7)}, {"starting_time": 1610141072187, "ending_time": 1610141809511, "color":c2(7), "label": "19m 29s \/ 5.1 GB"}, {"starting_time": 1610141809511, "ending_time": 1610142231809, "color":c1(7)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610141273182, "ending_time": 1610141282313, "color":c1(8)}, {"starting_time": 1610141282313, "ending_time": 1610141282331, "color":c2(8), "label": "3m 30s \/ 3 MB"}, {"starting_time": 1610141282331, "ending_time": 1610141483407, "color":c1(8)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610141353046, "ending_time": 1610141362701, "color":c1(8)}, {"starting_time": 1610141362701, "ending_time": 1610141362718, "color":c2(8), "label": "4m 9s \/ 3.1 MB"}, {"starting_time": 1610141362718, "ending_time": 1610141602073, "color":c1(8)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610141483276, "ending_time": 1610141492094, "color":c1(8)}, {"starting_time": 1610141492094, "ending_time": 1610141492115, "color":c2(8), "label": "3m 59s \/ 3.1 MB"}, {"starting_time": 1610141492115, "ending_time": 1610141722653, "color":c1(8)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1_T1)", "times": [{"starting_time": 1610141484979, "ending_time": 1610141492393, "color":c1(9)}, {"starting_time": 1610141492393, "ending_time": 1610142605171, "color":c2(9), "label": "23m 17s \/ 12.2 GB"}, {"starting_time": 1610142605171, "ending_time": 1610142881981, "color":c1(9)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610141503069, "ending_time": 1610141512659, "color":c1(8)}, {"starting_time": 1610141512659, "ending_time": 1610141512676, "color":c2(8), "label": "3m 59s \/ 3 MB"}, {"starting_time": 1610141512676, "ending_time": 1610141742359, "color":c1(8)}]},
+{"label": "SORT_BAM (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610141522568, "ending_time": 1610141532352, "color":c1(7)}, {"starting_time": 1610141532352, "ending_time": 1610142059256, "color":c2(7), "label": "14m 9s \/ 5.1 GB"}, {"starting_time": 1610142059256, "ending_time": 1610142371829, "color":c1(7)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1_T1)", "times": [{"starting_time": 1610141603836, "ending_time": 1610141612334, "color":c1(9)}, {"starting_time": 1610141612334, "ending_time": 1610142924486, "color":c2(9), "label": "28m 38s \/ 12.4 GB"}, {"starting_time": 1610142924486, "ending_time": 1610143321808, "color":c1(9)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1_T1)", "times": [{"starting_time": 1610141724359, "ending_time": 1610141732340, "color":c1(9)}, {"starting_time": 1610141732340, "ending_time": 1610142999302, "color":c2(9), "label": "25m 28s \/ 12.3 GB"}, {"starting_time": 1610142999302, "ending_time": 1610143251996, "color":c1(9)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1_T1)", "times": [{"starting_time": 1610141743932, "ending_time": 1610141752148, "color":c1(9)}, {"starting_time": 1610141752148, "ending_time": 1610143087369, "color":c2(9), "label": "28m 58s \/ 12.3 GB"}, {"starting_time": 1610143087369, "ending_time": 1610143481832, "color":c1(9)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610141853229, "ending_time": 1610141862160, "color":c1(8)}, {"starting_time": 1610141862160, "ending_time": 1610141862178, "color":c2(8), "label": "3m 59s \/ 3 MB"}, {"starting_time": 1610141862178, "ending_time": 1610142092298, "color":c1(8)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610142063271, "ending_time": 1610142072491, "color":c1(8)}, {"starting_time": 1610142072491, "ending_time": 1610142072510, "color":c2(8), "label": "4m 19s \/ 3.1 MB"}, {"starting_time": 1610142072510, "ending_time": 1610142322053, "color":c1(8)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1_T1)", "times": [{"starting_time": 1610142093968, "ending_time": 1610142102347, "color":c1(9)}, {"starting_time": 1610142102347, "ending_time": 1610143398530, "color":c2(9), "label": "26m 58s \/ 13.2 GB"}, {"starting_time": 1610143398530, "ending_time": 1610143711847, "color":c1(9)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610142233896, "ending_time": 1610142242106, "color":c1(8)}, {"starting_time": 1610142242106, "ending_time": 1610142242124, "color":c2(8), "label": "4m 8s \/ 3.1 MB"}, {"starting_time": 1610142242124, "ending_time": 1610142482102, "color":c1(8)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1_T1)", "times": [{"starting_time": 1610142323693, "ending_time": 1610142332090, "color":c1(9)}, {"starting_time": 1610142332090, "ending_time": 1610143742237, "color":c2(9), "label": "28m 38s \/ 12.3 GB"}, {"starting_time": 1610143742237, "ending_time": 1610144042015, "color":c1(9)}]},
+{"label": "COUNTS (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610142373031, "ending_time": 1610142382127, "color":c1(8)}, {"starting_time": 1610142382127, "ending_time": 1610142382140, "color":c2(8), "label": "3m 49s \/ 3.1 MB"}, {"starting_time": 1610142382140, "ending_time": 1610142602085, "color":c1(8)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610142483756, "ending_time": 1610142492262, "color":c1(9)}, {"starting_time": 1610142492262, "ending_time": 1610143012097, "color":c2(9), "label": "8m 48s \/ -"}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1_T1)", "times": [{"starting_time": 1610142604224, "ending_time": 1610142612150, "color":c1(9)}, {"starting_time": 1610142612150, "ending_time": 1610144064779, "color":c2(9), "label": "28m 58s \/ 12.5 GB"}, {"starting_time": 1610144064779, "ending_time": 1610144341780, "color":c1(9)}]},
+{"label": "spiking (MV411_MEF2D_NT_SC_63_VHL-MED1_R1_T1)", "times": [{"starting_time": 1610143012901, "ending_time": 1610143022075, "color":c1(9)}, {"starting_time": 1610143022075, "ending_time": 1610144244258, "color":c2(9), "label": "26m 19s \/ 16 GB"}, {"starting_time": 1610144244258, "ending_time": 1610144591928, "color":c1(9)}]},
+{"label": "SORT_BAM (INPUT_R1_T1)", "times": [{"starting_time": 1610144122727, "ending_time": 1610144131959, "color":c1(7)}, {"starting_time": 1610144131959, "ending_time": 1610145022909, "color":c2(7), "label": "22m 9s \/ 5.4 GB"}, {"starting_time": 1610145022909, "ending_time": 1610145451803, "color":c1(7)}]},
+{"label": "COUNTS (INPUT_R1_T1)", "times": [{"starting_time": 1610145453068, "ending_time": 1610145461727, "color":c1(8)}, {"starting_time": 1610145461727, "ending_time": 1610145461745, "color":c2(8), "label": "4m 59s \/ 3.1 MB"}, {"starting_time": 1610145461745, "ending_time": 1610145751836, "color":c1(8)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610145453641, "ending_time": 1610145461845, "color":c1(10)}, {"starting_time": 1610145461845, "ending_time": 1610147481060, "color":c2(10), "label": "38m 38s \/ 29 GB"}, {"starting_time": 1610147481060, "ending_time": 1610147771856, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610145454381, "ending_time": 1610145462159, "color":c1(10)}, {"starting_time": 1610145462159, "ending_time": 1610146864165, "color":c2(10), "label": "28m 18s \/ 26.5 GB"}, {"starting_time": 1610146864165, "ending_time": 1610147151894, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610145454859, "ending_time": 1610145462265, "color":c1(10)}, {"starting_time": 1610145462265, "ending_time": 1610147030375, "color":c2(10), "label": "31m 17s \/ 22.5 GB"}, {"starting_time": 1610147030375, "ending_time": 1610147331902, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610145455481, "ending_time": 1610145462384, "color":c1(10)}, {"starting_time": 1610145462384, "ending_time": 1610146915484, "color":c2(10), "label": "29m 6s \/ 24.8 GB"}, {"starting_time": 1610146915484, "ending_time": 1610147201979, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610145455927, "ending_time": 1610145462533, "color":c1(10)}, {"starting_time": 1610145462533, "ending_time": 1610147168837, "color":c2(10), "label": "33m 56s \/ 27.8 GB"}, {"starting_time": 1610147168837, "ending_time": 1610147491989, "color":c1(10)}]},
+{"label": "MERGED_BAM (INPUT_R1)", "times": [{"starting_time": 1610145456345, "ending_time": 1610145462648, "color":c1(10)}, {"starting_time": 1610145462648, "ending_time": 1610148036690, "color":c2(10), "label": "48m 56s \/ 22.1 GB"}, {"starting_time": 1610148036690, "ending_time": 1610148391873, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610145456856, "ending_time": 1610145462920, "color":c1(10)}, {"starting_time": 1610145462920, "ending_time": 1610146944019, "color":c2(10), "label": "29m 55s \/ 25.7 GB"}, {"starting_time": 1610146944019, "ending_time": 1610147252105, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610145457367, "ending_time": 1610145463089, "color":c1(10)}, {"starting_time": 1610145463089, "ending_time": 1610147281484, "color":c2(10), "label": "35m 45s \/ 28.9 GB"}, {"starting_time": 1610147281484, "ending_time": 1610147601973, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610145457759, "ending_time": 1610145463504, "color":c1(10)}, {"starting_time": 1610145463504, "ending_time": 1610147183430, "color":c2(10), "label": "33m 24s \/ 27.5 GB"}, {"starting_time": 1610147183430, "ending_time": 1610147462224, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610145458223, "ending_time": 1610145463973, "color":c1(10)}, {"starting_time": 1610145463973, "ending_time": 1610147501361, "color":c2(10), "label": "39m 4s \/ 29.8 GB"}, {"starting_time": 1610147501361, "ending_time": 1610147801935, "color":c1(10)}]},
+{"label": "MERGED_BAM (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610145458775, "ending_time": 1610145464085, "color":c1(10)}, {"starting_time": 1610145464085, "ending_time": 1610147303655, "color":c2(10), "label": "35m 13s \/ 27.5 GB"}, {"starting_time": 1610147303655, "ending_time": 1610147572066, "color":c1(10)}]},
+{"label": "spiking (INPUT_R1_T1)", "times": [{"starting_time": 1610145753769, "ending_time": 1610145762842, "color":c1(9)}, {"starting_time": 1610145762842, "ending_time": 1610147253165, "color":c2(9), "label": "29m 29s \/ 12.3 GB"}, {"starting_time": 1610147253165, "ending_time": 1610147522284, "color":c1(9)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610147153525, "ending_time": 1610147162879, "color":c1(11)}, {"starting_time": 1610147162879, "ending_time": 1610148322051, "color":c2(11), "label": "22m 48s \/ 17.2 MB"}, {"starting_time": 1610148322051, "ending_time": 1610148521876, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610147153966, "ending_time": 1610147163143, "color":c1(12)}, {"starting_time": 1610147163143, "ending_time": 1610148222952, "color":c2(12), "label": "22m 58s \/ 5.1 GB"}, {"starting_time": 1610148222952, "ending_time": 1610148531856, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610147203781, "ending_time": 1610147212612, "color":c1(11)}, {"starting_time": 1610147212612, "ending_time": 1610148248783, "color":c2(11), "label": "21m 8s \/ 23.6 MB"}, {"starting_time": 1610148248783, "ending_time": 1610148471968, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610147204605, "ending_time": 1610147212766, "color":c1(12)}, {"starting_time": 1610147212766, "ending_time": 1610148513617, "color":c2(12), "label": "28m 27s \/ 5.1 GB"}, {"starting_time": 1610148513617, "ending_time": 1610148911874, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610147253798, "ending_time": 1610147262750, "color":c1(11)}, {"starting_time": 1610147262750, "ending_time": 1610148254918, "color":c2(11), "label": "20m 8s \/ 23.9 MB"}, {"starting_time": 1610148254918, "ending_time": 1610148462073, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610147254595, "ending_time": 1610147262852, "color":c1(12)}, {"starting_time": 1610147262852, "ending_time": 1610148703849, "color":c2(12), "label": "30m 27s \/ 5.1 GB"}, {"starting_time": 1610148703849, "ending_time": 1610149081877, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610147333632, "ending_time": 1610147342582, "color":c1(11)}, {"starting_time": 1610147342582, "ending_time": 1610148647333, "color":c2(11), "label": "25m 48s \/ 23.9 MB"}, {"starting_time": 1610148647333, "ending_time": 1610148881999, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610147334102, "ending_time": 1610147342728, "color":c1(12)}, {"starting_time": 1610147342728, "ending_time": 1610148677025, "color":c2(12), "label": "27m 18s \/ 5.1 GB"}, {"starting_time": 1610148677025, "ending_time": 1610148971952, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610147464017, "ending_time": 1610147472919, "color":c1(11)}, {"starting_time": 1610147472919, "ending_time": 1610148565822, "color":c2(11), "label": "22m 38s \/ 23.8 MB"}, {"starting_time": 1610148565822, "ending_time": 1610148822068, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610147464560, "ending_time": 1610147473032, "color":c1(12)}, {"starting_time": 1610147473032, "ending_time": 1610149182371, "color":c2(12), "label": "34m 37s \/ 5.1 GB"}, {"starting_time": 1610149182371, "ending_time": 1610149541903, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610147493620, "ending_time": 1610147502916, "color":c1(11)}, {"starting_time": 1610147502916, "ending_time": 1610148988080, "color":c2(11), "label": "29m 28s \/ 23.7 MB"}, {"starting_time": 1610148988080, "ending_time": 1610149261932, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610147494358, "ending_time": 1610147503022, "color":c1(12)}, {"starting_time": 1610147503022, "ending_time": 1610149128308, "color":c2(12), "label": "33m 48s \/ 5.1 GB"}, {"starting_time": 1610149128308, "ending_time": 1610149521947, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610147573773, "ending_time": 1610147582636, "color":c1(11)}, {"starting_time": 1610147582636, "ending_time": 1610149023712, "color":c2(11), "label": "28m 9s \/ 24.1 MB"}, {"starting_time": 1610149023712, "ending_time": 1610149262730, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610147574209, "ending_time": 1610147582902, "color":c1(12)}, {"starting_time": 1610147582902, "ending_time": 1610148824561, "color":c2(12), "label": "27m 38s \/ 5.1 GB"}, {"starting_time": 1610148824561, "ending_time": 1610149232100, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610147603623, "ending_time": 1610147612911, "color":c1(11)}, {"starting_time": 1610147612911, "ending_time": 1610149050458, "color":c2(11), "label": "28m 8s \/ 24.1 MB"}, {"starting_time": 1610149050458, "ending_time": 1610149291986, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610147604171, "ending_time": 1610147613016, "color":c1(12)}, {"starting_time": 1610147613016, "ending_time": 1610149345737, "color":c2(12), "label": "35m 38s \/ 5.1 GB"}, {"starting_time": 1610149345737, "ending_time": 1610149742072, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610147773459, "ending_time": 1610147782900, "color":c1(11)}, {"starting_time": 1610147782900, "ending_time": 1610149278652, "color":c2(11), "label": "29m 48s \/ 24.1 MB"}, {"starting_time": 1610149278652, "ending_time": 1610149561926, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610147773998, "ending_time": 1610147783049, "color":c1(12)}, {"starting_time": 1610147783049, "ending_time": 1610149327562, "color":c2(12), "label": "31m 38s \/ 5.1 GB"}, {"starting_time": 1610149327562, "ending_time": 1610149671941, "color":c1(12)}]},
+{"label": "PRESEQ (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610147803609, "ending_time": 1610147813125, "color":c1(11)}, {"starting_time": 1610147813125, "ending_time": 1610149150580, "color":c2(11), "label": "26m 29s \/ 23.8 MB"}, {"starting_time": 1610149150580, "ending_time": 1610149392175, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610147804077, "ending_time": 1610147813227, "color":c1(12)}, {"starting_time": 1610147813227, "ending_time": 1610149778724, "color":c2(12), "label": "40m 8s \/ 5.1 GB"}, {"starting_time": 1610149778724, "ending_time": 1610150211890, "color":c1(12)}]},
+{"label": "PRESEQ (INPUT_R1)", "times": [{"starting_time": 1610148393419, "ending_time": 1610148403197, "color":c1(11)}, {"starting_time": 1610148403197, "ending_time": 1610150839145, "color":c2(11), "label": "45m 49s \/ 63.8 MB"}, {"starting_time": 1610150839145, "ending_time": 1610151141941, "color":c1(11)}]},
+{"label": "MERGED_BAM_FILTER (INPUT_R1)", "times": [{"starting_time": 1610148394001, "ending_time": 1610148403312, "color":c1(12)}, {"starting_time": 1610148403312, "ending_time": 1610151258027, "color":c2(12), "label": "57m 8s \/ 5.3 GB"}, {"starting_time": 1610151258027, "ending_time": 1610151821937, "color":c1(12)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610148533425, "ending_time": 1610148542979, "color":c1(13)}, {"starting_time": 1610148542979, "ending_time": 1610149030259, "color":c2(13), "label": "13m 19s \/ 5.1 GB"}, {"starting_time": 1610149030259, "ending_time": 1610149332577, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610148914275, "ending_time": 1610148922748, "color":c1(13)}, {"starting_time": 1610148922748, "ending_time": 1610149597825, "color":c2(13), "label": "17m 18s \/ 5.1 GB"}, {"starting_time": 1610149597825, "ending_time": 1610149952047, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610148973368, "ending_time": 1610148982911, "color":c1(13)}, {"starting_time": 1610148982911, "ending_time": 1610149801896, "color":c2(13), "label": "23m 9s \/ 5.1 GB"}, {"starting_time": 1610149801896, "ending_time": 1610150362052, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610149083593, "ending_time": 1610149092838, "color":c1(13)}, {"starting_time": 1610149092838, "ending_time": 1610149930222, "color":c2(13), "label": "20m 18s \/ 5.1 GB"}, {"starting_time": 1610149930222, "ending_time": 1610150302065, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610149233641, "ending_time": 1610149242929, "color":c1(13)}, {"starting_time": 1610149242929, "ending_time": 1610149898290, "color":c2(13), "label": "16m 38s \/ 5.1 GB"}, {"starting_time": 1610149898290, "ending_time": 1610150232110, "color":c1(13)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610149334316, "ending_time": 1610149342679, "color":c1(14)}, {"starting_time": 1610149342679, "ending_time": 1610149681847, "color":c2(14), "label": "9m 8s \/ 1.9 GB"}, {"starting_time": 1610149681847, "ending_time": 1610149882486, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610149334883, "ending_time": 1610149342799, "color":c1(15)}, {"starting_time": 1610149342799, "ending_time": 1610150129063, "color":c2(15), "label": "16m 27s \/ 1.6 GB"}, {"starting_time": 1610150129063, "ending_time": 1610150322087, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610149335419, "ending_time": 1610149342916, "color":c1(16)}, {"starting_time": 1610149342916, "ending_time": 1610149683312, "color":c2(16), "label": "11m 7s \/ 1.4 GB"}, {"starting_time": 1610149683312, "ending_time": 1610150002263, "color":c1(16)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610149523561, "ending_time": 1610149532766, "color":c1(13)}, {"starting_time": 1610149532766, "ending_time": 1610150372281, "color":c2(13), "label": "21m 38s \/ 5.1 GB"}, {"starting_time": 1610150372281, "ending_time": 1610150822018, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610149543500, "ending_time": 1610149552724, "color":c1(13)}, {"starting_time": 1610149552724, "ending_time": 1610150433272, "color":c2(13), "label": "26m 19s \/ 5.1 GB"}, {"starting_time": 1610150433272, "ending_time": 1610151122060, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610149673812, "ending_time": 1610149682846, "color":c1(13)}, {"starting_time": 1610149682846, "ending_time": 1610150348303, "color":c2(13), "label": "17m 58s \/ 5.1 GB"}, {"starting_time": 1610150348303, "ending_time": 1610150752108, "color":c1(13)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610149743760, "ending_time": 1610149752696, "color":c1(13)}, {"starting_time": 1610149752696, "ending_time": 1610150748055, "color":c2(13), "label": "23m 48s \/ 5.1 GB"}, {"starting_time": 1610150748055, "ending_time": 1610151172013, "color":c1(13)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1)", "times": [{"starting_time": 1610149886404, "ending_time": 1610149893198, "color":c1(17)}, {"starting_time": 1610149893198, "ending_time": 1610150770158, "color":c2(17), "label": "17m 16s \/ 3.6 GB"}, {"starting_time": 1610150770158, "ending_time": 1610150922093, "color":c1(17)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610149953696, "ending_time": 1610149962702, "color":c1(14)}, {"starting_time": 1610149962702, "ending_time": 1610150401491, "color":c2(14), "label": "11m 9s \/ 1.9 GB"}, {"starting_time": 1610150401491, "ending_time": 1610150622250, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610149954198, "ending_time": 1610149962819, "color":c1(15)}, {"starting_time": 1610149962819, "ending_time": 1610151104194, "color":c2(15), "label": "22m 28s \/ 2.2 GB"}, {"starting_time": 1610151104194, "ending_time": 1610151301953, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610149954753, "ending_time": 1610149962947, "color":c1(16)}, {"starting_time": 1610149962947, "ending_time": 1610150370368, "color":c2(16), "label": "11m 28s \/ 1.3 GB"}, {"starting_time": 1610150370368, "ending_time": 1610150642501, "color":c1(16)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610150213555, "ending_time": 1610150225174, "color":c1(13)}, {"starting_time": 1610150225174, "ending_time": 1610151181560, "color":c2(13), "label": "23m 9s \/ 5.1 GB"}, {"starting_time": 1610151181560, "ending_time": 1610151602166, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610150233663, "ending_time": 1610150242980, "color":c1(15)}, {"starting_time": 1610150242980, "ending_time": 1610151205535, "color":c2(15), "label": "19m 38s \/ 1.9 GB"}, {"starting_time": 1610151205535, "ending_time": 1610151412015, "color":c1(15)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610150234214, "ending_time": 1610150243111, "color":c1(14)}, {"starting_time": 1610150243111, "ending_time": 1610150632179, "color":c2(14), "label": "10m 28s \/ 1.9 GB"}, {"starting_time": 1610150632179, "ending_time": 1610150862314, "color":c1(14)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610150234760, "ending_time": 1610150243208, "color":c1(16)}, {"starting_time": 1610150243208, "ending_time": 1610150622376, "color":c2(16), "label": "11m 58s \/ 1.5 GB"}, {"starting_time": 1610150622376, "ending_time": 1610150952397, "color":c1(16)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610150303825, "ending_time": 1610150312927, "color":c1(14)}, {"starting_time": 1610150312927, "ending_time": 1610150769926, "color":c2(14), "label": "11m 18s \/ 1.9 GB"}, {"starting_time": 1610150769926, "ending_time": 1610150982292, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610150304227, "ending_time": 1610150313047, "color":c1(15)}, {"starting_time": 1610150313047, "ending_time": 1610151349790, "color":c2(15), "label": "20m 48s \/ 2 GB"}, {"starting_time": 1610151349790, "ending_time": 1610151552025, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610150304716, "ending_time": 1610150313173, "color":c1(16)}, {"starting_time": 1610150313173, "ending_time": 1610150717089, "color":c2(16), "label": "11m 19s \/ 1.2 GB"}, {"starting_time": 1610150717089, "ending_time": 1610150983252, "color":c1(16)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610150363808, "ending_time": 1610150372805, "color":c1(14)}, {"starting_time": 1610150372805, "ending_time": 1610150793411, "color":c2(14), "label": "10m 59s \/ 1.9 GB"}, {"starting_time": 1610150793411, "ending_time": 1610151022501, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610150364319, "ending_time": 1610150372969, "color":c1(15)}, {"starting_time": 1610150372969, "ending_time": 1610151507532, "color":c2(15), "label": "22m 28s \/ 2.1 GB"}, {"starting_time": 1610151507532, "ending_time": 1610151712027, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610150364788, "ending_time": 1610150373071, "color":c1(16)}, {"starting_time": 1610150373071, "ending_time": 1610150824041, "color":c2(16), "label": "12m 40s \/ 1.2 GB"}, {"starting_time": 1610150824041, "ending_time": 1610151124363, "color":c1(16)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610150624201, "ending_time": 1610150633467, "color":c1(17)}, {"starting_time": 1610150633467, "ending_time": 1610151586007, "color":c2(17), "label": "18m 38s \/ 3.6 GB"}, {"starting_time": 1610151586007, "ending_time": 1610151742028, "color":c1(17)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610150753860, "ending_time": 1610150762987, "color":c1(14)}, {"starting_time": 1610150762987, "ending_time": 1610151352396, "color":c2(14), "label": "9m 59s \/ -"}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610150754417, "ending_time": 1610150763260, "color":c1(15)}, {"starting_time": 1610150763260, "ending_time": 1610151847102, "color":c2(15), "label": "21m 58s \/ 2.1 GB"}, {"starting_time": 1610151847102, "ending_time": 1610152071920, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610150754900, "ending_time": 1610150763398, "color":c1(16)}, {"starting_time": 1610150763398, "ending_time": 1610151219608, "color":c2(16), "label": "12m 8s \/ 1.4 GB"}, {"starting_time": 1610151219608, "ending_time": 1610151482417, "color":c1(16)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610150823821, "ending_time": 1610150833045, "color":c1(14)}, {"starting_time": 1610150833045, "ending_time": 1610151219316, "color":c2(14), "label": "9m 50s \/ 1.9 GB"}, {"starting_time": 1610151219316, "ending_time": 1610151413487, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610150824325, "ending_time": 1610150833317, "color":c1(15)}, {"starting_time": 1610150833317, "ending_time": 1610151957477, "color":c2(15), "label": "22m 28s \/ 2.1 GB"}, {"starting_time": 1610151957477, "ending_time": 1610152172125, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610150824817, "ending_time": 1610150833440, "color":c1(16)}, {"starting_time": 1610150833440, "ending_time": 1610151317716, "color":c2(16), "label": "12m 48s \/ 1.2 GB"}, {"starting_time": 1610151317716, "ending_time": 1610151592552, "color":c1(16)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1)", "times": [{"starting_time": 1610150864367, "ending_time": 1610150873317, "color":c1(17)}, {"starting_time": 1610150873317, "ending_time": 1610151733983, "color":c2(17), "label": "16m 58s \/ 3.6 GB"}, {"starting_time": 1610151733983, "ending_time": 1610151882072, "color":c1(17)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1)", "times": [{"starting_time": 1610150984492, "ending_time": 1610150993063, "color":c1(17)}, {"starting_time": 1610150993063, "ending_time": 1610151928464, "color":c2(17), "label": "18m 28s \/ 3.6 GB"}, {"starting_time": 1610151928464, "ending_time": 1610152092321, "color":c1(17)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_VHL-MYC_R1)", "times": [{"starting_time": 1610151024364, "ending_time": 1610151033047, "color":c1(17)}, {"starting_time": 1610151033047, "ending_time": 1610151926600, "color":c2(17), "label": "17m 29s \/ 3.6 GB"}, {"starting_time": 1610151926600, "ending_time": 1610152073183, "color":c1(17)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610151124235, "ending_time": 1610151132983, "color":c1(14)}, {"starting_time": 1610151132983, "ending_time": 1610151708266, "color":c2(14), "label": "13m 38s \/ 1.9 GB"}, {"starting_time": 1610151708266, "ending_time": 1610151942320, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610151124789, "ending_time": 1610151133091, "color":c1(15)}, {"starting_time": 1610151133091, "ending_time": 1610151272986, "color":c2(15), "label": "2m 28s \/ -"}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610151125367, "ending_time": 1610151133204, "color":c1(16)}, {"starting_time": 1610151133204, "ending_time": 1610151722271, "color":c2(16), "label": "15m 7s \/ 1.3 GB"}, {"starting_time": 1610151722271, "ending_time": 1610152032155, "color":c1(16)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610151173883, "ending_time": 1610151182910, "color":c1(14)}, {"starting_time": 1610151182910, "ending_time": 1610151632096, "color":c2(14), "label": "11m 9s \/ 1.9 GB"}, {"starting_time": 1610151632096, "ending_time": 1610151842456, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610151174508, "ending_time": 1610151183024, "color":c1(15)}, {"starting_time": 1610151183024, "ending_time": 1610152423464, "color":c2(15), "label": "24m 7s \/ 2.6 GB"}, {"starting_time": 1610152423464, "ending_time": 1610152621991, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610151175057, "ending_time": 1610151183129, "color":c1(16)}, {"starting_time": 1610151183129, "ending_time": 1610151704893, "color":c2(16), "label": "14m 47s \/ 1 GB"}, {"starting_time": 1610151704893, "ending_time": 1610152062239, "color":c1(16)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610151273590, "ending_time": 1610151283638, "color":c1(15)}, {"starting_time": 1610151283638, "ending_time": 1610152760516, "color":c2(15), "label": "29m 8s \/ 2.5 GB"}, {"starting_time": 1610152760516, "ending_time": 1610153021997, "color":c1(15)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610151353206, "ending_time": 1610151363309, "color":c1(14)}, {"starting_time": 1610151363309, "ending_time": 1610151777958, "color":c2(14), "label": "10m 29s \/ 1.9 GB"}, {"starting_time": 1610151777958, "ending_time": 1610151982512, "color":c1(14)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1)", "times": [{"starting_time": 1610151415463, "ending_time": 1610151423448, "color":c1(17)}, {"starting_time": 1610151423448, "ending_time": 1610152121772, "color":c2(17), "label": "14m 27s \/ 3.7 GB"}, {"starting_time": 1610152121772, "ending_time": 1610152282123, "color":c1(17)}]},
+{"label": "BIGWIG (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610151603798, "ending_time": 1610151613263, "color":c1(14)}, {"starting_time": 1610151613263, "ending_time": 1610152202858, "color":c2(14), "label": "13m 48s \/ 1.9 GB"}, {"starting_time": 1610152202858, "ending_time": 1610152432075, "color":c1(14)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610151604419, "ending_time": 1610151613537, "color":c1(15)}, {"starting_time": 1610151613537, "ending_time": 1610152799117, "color":c2(15), "label": "23m 39s \/ 2.4 GB"}, {"starting_time": 1610152799117, "ending_time": 1610153023036, "color":c1(15)}]},
+{"label": "PICARD_METRICS (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610151604844, "ending_time": 1610151613637, "color":c1(16)}, {"starting_time": 1610151613637, "ending_time": 1610152167089, "color":c2(16), "label": "15m 8s \/ 1 GB"}, {"starting_time": 1610152167089, "ending_time": 1610152512387, "color":c1(16)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (INPUT_R1)", "times": [{"starting_time": 1610151823524, "ending_time": 1610151833053, "color":c1(13)}, {"starting_time": 1610151833053, "ending_time": 1610153565126, "color":c2(13), "label": "38m 59s \/ 5.3 GB"}, {"starting_time": 1610153565126, "ending_time": 1610154162170, "color":c1(13)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_VHL-MED1_R1)", "times": [{"starting_time": 1610151844584, "ending_time": 1610151852756, "color":c1(17)}, {"starting_time": 1610151852756, "ending_time": 1610152755191, "color":c2(17), "label": "17m 58s \/ 3.6 GB"}, {"starting_time": 1610152755191, "ending_time": 1610152922187, "color":c1(17)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1)", "times": [{"starting_time": 1610151944335, "ending_time": 1610151952944, "color":c1(17)}, {"starting_time": 1610151952944, "ending_time": 1610152944050, "color":c2(17), "label": "19m 28s \/ 3.6 GB"}, {"starting_time": 1610152944050, "ending_time": 1610153112211, "color":c1(17)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1)", "times": [{"starting_time": 1610151984512, "ending_time": 1610151992695, "color":c1(17)}, {"starting_time": 1610151992695, "ending_time": 1610152913978, "color":c2(17), "label": "18m 18s \/ 3.6 GB"}, {"starting_time": 1610152913978, "ending_time": 1610153082131, "color":c1(17)}]},
+{"label": "PLOTPROFILE (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1)", "times": [{"starting_time": 1610152434023, "ending_time": 1610152442376, "color":c1(17)}, {"starting_time": 1610152442376, "ending_time": 1610153336370, "color":c2(17), "label": "17m 38s \/ 3.6 GB"}, {"starting_time": 1610153336370, "ending_time": 1610153492058, "color":c1(17)}]},
+{"label": "BIGWIG (INPUT_R1)", "times": [{"starting_time": 1610154163955, "ending_time": 1610154171940, "color":c1(14)}, {"starting_time": 1610154171940, "ending_time": 1610154621978, "color":c2(14), "label": "7m 38s \/ -"}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154164710, "ending_time": 1610154172069, "color":c1(18)}, {"starting_time": 1610154172069, "ending_time": 1610154412572, "color":c2(18), "label": "9m 27s \/ 1.2 GB"}, {"starting_time": 1610154412572, "ending_time": 1610154732170, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154165308, "ending_time": 1610154172228, "color":c1(18)}, {"starting_time": 1610154172228, "ending_time": 1610154487590, "color":c2(18), "label": "12m 27s \/ 1.2 GB"}, {"starting_time": 1610154487590, "ending_time": 1610154912035, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154166016, "ending_time": 1610154172332, "color":c1(18)}, {"starting_time": 1610154172332, "ending_time": 1610154382790, "color":c2(18), "label": "8m 36s \/ 1.2 GB"}, {"starting_time": 1610154382790, "ending_time": 1610154682141, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_VHL-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154166558, "ending_time": 1610154172435, "color":c1(18)}, {"starting_time": 1610154172435, "ending_time": 1610154442044, "color":c2(18), "label": "10m 36s \/ 1.2 GB"}, {"starting_time": 1610154442044, "ending_time": 1610154802383, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_VHL-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154167145, "ending_time": 1610154172568, "color":c1(18)}, {"starting_time": 1610154172568, "ending_time": 1610154482394, "color":c2(18), "label": "11m 15s \/ 1.2 GB"}, {"starting_time": 1610154482394, "ending_time": 1610154842398, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154167599, "ending_time": 1610154172702, "color":c1(18)}, {"starting_time": 1610154172702, "ending_time": 1610154438674, "color":c2(18), "label": "10m 15s \/ 1.2 GB"}, {"starting_time": 1610154438674, "ending_time": 1610154782681, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154168276, "ending_time": 1610154172897, "color":c1(18)}, {"starting_time": 1610154172897, "ending_time": 1610154436149, "color":c2(18), "label": "9m 44s \/ 1.2 GB"}, {"starting_time": 1610154436149, "ending_time": 1610154752732, "color":c1(18)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (INPUT_R1)", "times": [{"starting_time": 1610154168755, "ending_time": 1610154172991, "color":c1(15)}, {"starting_time": 1610154172991, "ending_time": 1610157022000, "color":c2(15), "label": "51m 53s \/ 5.9 GB"}, {"starting_time": 1610157022000, "ending_time": 1610157282126, "color":c1(15)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154169255, "ending_time": 1610154173260, "color":c1(18)}, {"starting_time": 1610154173260, "ending_time": 1610154419544, "color":c2(18), "label": "9m 14s \/ 1.2 GB"}, {"starting_time": 1610154419544, "ending_time": 1610154723196, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154169718, "ending_time": 1610154173527, "color":c1(18)}, {"starting_time": 1610154173527, "ending_time": 1610154461219, "color":c2(18), "label": "11m 23s \/ 1.2 GB"}, {"starting_time": 1610154461219, "ending_time": 1610154852450, "color":c1(18)}]},
+{"label": "PLOTFINGERPRINT (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154170153, "ending_time": 1610154173798, "color":c1(18)}, {"starting_time": 1610154173798, "ending_time": 1610154380772, "color":c2(18), "label": "8m 34s \/ 1.2 GB"}, {"starting_time": 1610154380772, "ending_time": 1610154683707, "color":c1(18)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154170625, "ending_time": 1610154173938, "color":c1(19)}, {"starting_time": 1610154173938, "ending_time": 1610156909358, "color":c2(19), "label": "52m 2s \/ 4.1 GB"}, {"starting_time": 1610156909358, "ending_time": 1610157292127, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154171416, "ending_time": 1610154174050, "color":c1(19)}, {"starting_time": 1610154174050, "ending_time": 1610155781720, "color":c2(19), "label": "32m 11s \/ 4.1 GB"}, {"starting_time": 1610155781720, "ending_time": 1610156102230, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_VHL-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154172072, "ending_time": 1610154183451, "color":c1(19)}, {"starting_time": 1610154183451, "ending_time": 1610155874366, "color":c2(19), "label": "33m 50s \/ 4.1 GB"}, {"starting_time": 1610155874366, "ending_time": 1610156202212, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154172716, "ending_time": 1610154183716, "color":c1(19)}, {"starting_time": 1610154183716, "ending_time": 1610155784839, "color":c2(19), "label": "32m \/ 4.1 GB"}, {"starting_time": 1610155784839, "ending_time": 1610156092317, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154173376, "ending_time": 1610154183838, "color":c1(19)}, {"starting_time": 1610154183838, "ending_time": 1610156774557, "color":c2(19), "label": "49m 29s \/ 4.1 GB"}, {"starting_time": 1610156774557, "ending_time": 1610157142202, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_VHL-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154173922, "ending_time": 1610154183962, "color":c1(19)}, {"starting_time": 1610154183962, "ending_time": 1610156428495, "color":c2(19), "label": "42m 18s \/ 4 GB"}, {"starting_time": 1610156428495, "ending_time": 1610156712257, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154174389, "ending_time": 1610154184225, "color":c1(19)}, {"starting_time": 1610154184225, "ending_time": 1610156656233, "color":c2(19), "label": "46m 48s \/ 4 GB"}, {"starting_time": 1610156656233, "ending_time": 1610156982423, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154175088, "ending_time": 1610154184340, "color":c1(19)}, {"starting_time": 1610154184340, "ending_time": 1610156501678, "color":c2(19), "label": "44m 47s \/ 4 GB"}, {"starting_time": 1610156501678, "ending_time": 1610156862366, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154175694, "ending_time": 1610154184451, "color":c1(19)}, {"starting_time": 1610154184451, "ending_time": 1610156903080, "color":c2(19), "label": "50m 57s \/ 4.1 GB"}, {"starting_time": 1610156903080, "ending_time": 1610157232268, "color":c1(19)}]},
+{"label": "MACS2 (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610154176394, "ending_time": 1610154184704, "color":c1(19)}, {"starting_time": 1610154184704, "ending_time": 1610156572781, "color":c2(19), "label": "45m 16s \/ 4 GB"}, {"starting_time": 1610156572781, "ending_time": 1610156892386, "color":c1(19)}]},
+{"label": "PICARD_METRICS (INPUT_R1)", "times": [{"starting_time": 1610154176921, "ending_time": 1610154184829, "color":c1(16)}, {"starting_time": 1610154184829, "ending_time": 1610154989590, "color":c2(16), "label": "18m 36s \/ 1 GB"}, {"starting_time": 1610154989590, "ending_time": 1610155293093, "color":c1(16)}]},
+{"label": "BIGWIG (INPUT_R1)", "times": [{"starting_time": 1610154622598, "ending_time": 1610154633554, "color":c1(14)}, {"starting_time": 1610154633554, "ending_time": 1610155627034, "color":c2(14), "label": "21m 20s \/ 1.9 GB"}, {"starting_time": 1610155627034, "ending_time": 1610155902962, "color":c1(14)}]},
+{"label": "PLOTPROFILE (INPUT_R1)", "times": [{"starting_time": 1610155904943, "ending_time": 1610155912826, "color":c1(17)}, {"starting_time": 1610155912826, "ending_time": 1610156853518, "color":c2(17), "label": "18m 47s \/ 3.7 GB"}, {"starting_time": 1610156853518, "ending_time": 1610157032299, "color":c1(17)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_VHL-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156115958, "ending_time": 1610156122528, "color":c1(20)}, {"starting_time": 1610156122528, "ending_time": 1610156382116, "color":c2(20), "label": "8m 17s \/ 2.5 GB"}, {"starting_time": 1610156382116, "ending_time": 1610156612596, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156116460, "ending_time": 1610156122645, "color":c1(20)}, {"starting_time": 1610156122645, "ending_time": 1610156382482, "color":c2(20), "label": "8m 6s \/ 2.4 GB"}, {"starting_time": 1610156382482, "ending_time": 1610156602749, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_VHL-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156205152, "ending_time": 1610156212633, "color":c1(20)}, {"starting_time": 1610156212633, "ending_time": 1610156481564, "color":c2(20), "label": "8m 7s \/ 2.5 GB"}, {"starting_time": 1610156481564, "ending_time": 1610156692577, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_VHL-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156715066, "ending_time": 1610156722488, "color":c1(20)}, {"starting_time": 1610156722488, "ending_time": 1610156985236, "color":c2(20), "label": "7m 57s \/ 2.6 GB"}, {"starting_time": 1610156985236, "ending_time": 1610157192281, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_DMSO-MEF2C_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156865295, "ending_time": 1610156872740, "color":c1(20)}, {"starting_time": 1610156872740, "ending_time": 1610157119802, "color":c2(20), "label": "7m 27s \/ 2.5 GB"}, {"starting_time": 1610157119802, "ending_time": 1610157312247, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156895180, "ending_time": 1610156902645, "color":c1(20)}, {"starting_time": 1610156902645, "ending_time": 1610157075964, "color":c2(20), "label": "6m 17s \/ 2.5 GB"}, {"starting_time": 1610157075964, "ending_time": 1610157272245, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_DMSO-MED1_R1 vs INPUT_R1)", "times": [{"starting_time": 1610156985338, "ending_time": 1610156992593, "color":c1(20)}, {"starting_time": 1610156992593, "ending_time": 1610157254426, "color":c2(20), "label": "8m 7s \/ 2.5 GB"}, {"starting_time": 1610157254426, "ending_time": 1610157472137, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_DMSO-MYC_R1 vs INPUT_R1)", "times": [{"starting_time": 1610157144919, "ending_time": 1610157152424, "color":c1(20)}, {"starting_time": 1610157152424, "ending_time": 1610157412965, "color":c2(20), "label": "7m 47s \/ 2.6 GB"}, {"starting_time": 1610157412965, "ending_time": 1610157612100, "color":c1(20)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_DMSO-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610157235121, "ending_time": 1610157242397, "color":c1(20)}, {"starting_time": 1610157242397, "ending_time": 1610157414030, "color":c2(20), "label": "6m 17s \/ 2.5 GB"}, {"starting_time": 1610157414030, "ending_time": 1610157612539, "color":c1(20)}]},
+{"label": "CONSENSUS_PEAKS (MEF2C)", "times": [{"starting_time": 1610157293975, "ending_time": 1610157302283, "color":c1(21)}, {"starting_time": 1610157302283, "ending_time": 1610157305438, "color":c2(21), "label": "3m 8s \/ 86.1 MB"}, {"starting_time": 1610157305438, "ending_time": 1610157482356, "color":c1(21)}]},
+{"label": "CONSENSUS_PEAKS (FLAG_MEF2D)", "times": [{"starting_time": 1610157294413, "ending_time": 1610157302435, "color":c1(21)}, {"starting_time": 1610157302435, "ending_time": 1610157304978, "color":c2(21), "label": "3m 18s \/ 69.6 MB"}, {"starting_time": 1610157304978, "ending_time": 1610157492209, "color":c1(21)}]},
+{"label": "CONSENSUS_PEAKS (POLII_total)", "times": [{"starting_time": 1610157294949, "ending_time": 1610157302570, "color":c1(21)}, {"starting_time": 1610157302570, "ending_time": 1610157307407, "color":c2(21), "label": "3m 37s \/ 71.6 MB"}, {"starting_time": 1610157307407, "ending_time": 1610157512233, "color":c1(21)}]},
+{"label": "CONSENSUS_PEAKS (MED1)", "times": [{"starting_time": 1610157295400, "ending_time": 1610157302676, "color":c1(21)}, {"starting_time": 1610157302676, "ending_time": 1610157305494, "color":c2(21), "label": "3m 19s \/ 119.2 MB"}, {"starting_time": 1610157305494, "ending_time": 1610157493993, "color":c1(21)}]},
+{"label": "CONSENSUS_PEAKS (MYC)", "times": [{"starting_time": 1610157295818, "ending_time": 1610157302780, "color":c1(21)}, {"starting_time": 1610157302780, "ending_time": 1610157308672, "color":c2(21), "label": "2m 57s \/ 71.9 MB"}, {"starting_time": 1610157308672, "ending_time": 1610157473182, "color":c1(21)}]},
+{"label": "MACS2_ANNOTATE (MV411_MEF2D_NT_SC_63_VHL-POLII_total_R1 vs INPUT_R1)", "times": [{"starting_time": 1610157296283, "ending_time": 1610157302898, "color":c1(20)}, {"starting_time": 1610157302898, "ending_time": 1610157476360, "color":c2(20), "label": "6m 16s \/ 2.5 GB"}, {"starting_time": 1610157476360, "ending_time": 1610157672112, "color":c1(20)}]},
+{"label": "CONSENSUS_PEAKS_COUNTS (MYC)", "times": [{"starting_time": 1610157475464, "ending_time": 1610157484248, "color":c1(22)}, {"starting_time": 1610157484248, "ending_time": 1610157761934, "color":c2(22), "label": "11m 7s \/ 65.9 MB"}, {"starting_time": 1610157761934, "ending_time": 1610158142147, "color":c1(22)}]},
+{"label": "CONSENSUS_PEAKS_ANNOTATE (MYC)", "times": [{"starting_time": 1610157476276, "ending_time": 1610157484405, "color":c1(23)}, {"starting_time": 1610157484405, "ending_time": 1610157757365, "color":c2(23), "label": "8m 46s \/ 2.6 GB"}, {"starting_time": 1610157757365, "ending_time": 1610158002167, "color":c1(23)}]},
+{"label": "CONSENSUS_PEAKS_COUNTS (MEF2C)", "times": [{"starting_time": 1610157484462, "ending_time": 1610157495627, "color":c1(22)}, {"starting_time": 1610157495627, "ending_time": 1610157710608, "color":c2(22), "label": "9m 18s \/ 56.3 MB"}, {"starting_time": 1610157710608, "ending_time": 1610158042334, "color":c1(22)}]},
+{"label": "CONSENSUS_PEAKS_ANNOTATE (MEF2C)", "times": [{"starting_time": 1610157485263, "ending_time": 1610157495735, "color":c1(23)}, {"starting_time": 1610157495735, "ending_time": 1610157759184, "color":c2(23), "label": "8m 28s \/ 2.5 GB"}, {"starting_time": 1610157759184, "ending_time": 1610157992767, "color":c1(23)}]},
+{"label": "CONSENSUS_PEAKS_COUNTS (FLAG_MEF2D)", "times": [{"starting_time": 1610157494225, "ending_time": 1610157502466, "color":c1(22)}, {"starting_time": 1610157502466, "ending_time": 1610157731218, "color":c2(22), "label": "8m 48s \/ 53.6 MB"}, {"starting_time": 1610157731218, "ending_time": 1610158022416, "color":c1(22)}]},
+{"label": "CONSENSUS_PEAKS_ANNOTATE (FLAG_MEF2D)", "times": [{"starting_time": 1610157495174, "ending_time": 1610157502733, "color":c1(23)}, {"starting_time": 1610157502733, "ending_time": 1610157672674, "color":c2(23), "label": "6m 7s \/ 2.4 GB"}, {"starting_time": 1610157672674, "ending_time": 1610157862544, "color":c1(23)}]},
+{"label": "CONSENSUS_PEAKS_COUNTS (MED1)", "times": [{"starting_time": 1610157496022, "ending_time": 1610157502831, "color":c1(22)}, {"starting_time": 1610157502831, "ending_time": 1610157753291, "color":c2(22), "label": "9m 36s \/ 54.3 MB"}, {"starting_time": 1610157753291, "ending_time": 1610158072340, "color":c1(22)}]},
+{"label": "CONSENSUS_PEAKS_ANNOTATE (MED1)", "times": [{"starting_time": 1610157496517, "ending_time": 1610157502936, "color":c1(23)}, {"starting_time": 1610157502936, "ending_time": 1610157764085, "color":c2(23), "label": "8m 17s \/ 2.5 GB"}, {"starting_time": 1610157764085, "ending_time": 1610157993618, "color":c1(23)}]},
+{"label": "CONSENSUS_PEAKS_COUNTS (POLII_total)", "times": [{"starting_time": 1610157514255, "ending_time": 1610157522786, "color":c1(22)}, {"starting_time": 1610157522786, "ending_time": 1610157834579, "color":c2(22), "label": "10m 48s \/ 60.6 MB"}, {"starting_time": 1610157834579, "ending_time": 1610158162119, "color":c1(22)}]},
+{"label": "CONSENSUS_PEAKS_ANNOTATE (POLII_total)", "times": [{"starting_time": 1610157515050, "ending_time": 1610157522888, "color":c1(23)}, {"starting_time": 1610157522888, "ending_time": 1610157764539, "color":c2(23), "label": "7m 18s \/ 2.5 GB"}, {"starting_time": 1610157764539, "ending_time": 1610157953138, "color":c1(23)}]},
+{"label": "MACS2_QC", "times": [{"starting_time": 1610157673882, "ending_time": 1610157682575, "color":c1(24)}, {"starting_time": 1610157682575, "ending_time": 1610157720339, "color":c2(24), "label": "3m 49s \/ 267.3 MB"}, {"starting_time": 1610157720339, "ending_time": 1610157902759, "color":c1(24)}]},
+{"label": "IGV", "times": [{"starting_time": 1610158165003, "ending_time": 1610158172223, "color":c1(25)}, {"starting_time": 1610158172223, "ending_time": 1610158172587, "color":c2(25), "label": "4m 57s \/ 3.6 MB"}, {"starting_time": 1610158172587, "ending_time": 1610158462172, "color":c1(25)}]},
+{"label": "MULTIQC (1)", "times": [{"starting_time": 1610158175656, "ending_time": 1610158182270, "color":c1(26)}, {"starting_time": 1610158182270, "ending_time": 1610158216974, "color":c2(26), "label": "11m 27s \/ 1 GB"}, {"starting_time": 1610158216974, "ending_time": 1610158862212, "color":c1(26)}]}
+]
+
+
+function getTickFormat() {
+  var MIN = 1000 * 60
+  var HOUR = MIN * 60
+  var DAY = HOUR * 24
+  var delta = (endingMillis - beginningMillis)
+
+  if( delta < 2 * MIN ) {
+    return {
+      format: d3.time.format("%S"),
+      tickTime: d3.time.seconds,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * HOUR ) {
+    return {
+      format: d3.time.format("%M"),
+      tickTime: d3.time.minutes,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * DAY ) {
+    return {
+      format: d3.time.format("%H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 1,
+      tickSize: 6
+    }
+  }
+
+  if( delta <= 7 * DAY ) {
+    return {
+      format: d3.time.format("%b %e %H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 6,
+      tickSize: 6
+    }
+  }
+
+  return {
+    format: d3.time.format("%b %e"),
+    tickTime: d3.time.days,
+    tickInterval: 1,
+    tickSize: 6
+  }
+}
+
+function getLabelMargin(scale) {
+    $('<span class="labelSpan" style="display: none"></span>').appendTo('body');
+
+    var labelMargin = 0
+    $.each(data, function (key, value) {
+      labelMargin = Math.max(labelMargin, $('.labelSpan').html(value.label).width());
+    });
+
+    $('.labelSpan').remove();
+
+    return (labelMargin * scale);
+}
+
+function render() {
+  handler=null;
+  $("#timeline").empty()
+  $('#label_elapsed').text(elapsed)
+  $('#label_launch').text( d3.time.format('%d %b %Y %H:%M')(new Date(beginningMillis)) )
+
+  var width = $(window).width();
+  var chart = d3.timeline()
+    .stack() // toggles graph stacking
+    .margin({left:getLabelMargin(0.85), right:100, top:0, bottom:0})
+    .tickFormat( getTickFormat() )
+    .rowSeperators('#f5f5f5')
+    .showTimeAxisTick()
+    ;
+  var svg = d3.select("#timeline").append("svg").attr("width", width).datum(data).call(chart);
+}
+
+function hrz() {
+if( handler != null ) clearTimeout(handler)
+  handler = setTimeout(render, 150);
+}
+
+$(document).ready(render)
+$(window).resize(hrz); // resize the applet on window resize
+</script>
+</head>
+
+<body>
+<div>
+  <h3>Processes execution timeline</h3>
+  <p>
+    Launch time: <span id='label_launch'> </span><br>
+    Elapsed time: <span id='label_elapsed'> </span><br>
+    Legend: job wall time / memory usage (RAM) <span id='label_legend'> </span>
+  </p>
+  <div id="timeline"></div>
+</div>
+
+<div id='footer'>
+  Created with Nextflow -- <a href='http://www.nextflow.io' target='_blank'>http://nextflow.io</a>
+</div>
+
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Clink href='" + prot + "fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' %3E%3C/link%3E"));
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+group,replicate,fastq_1,fastq_2,antibody,control
+mp916-MV411-E2F3,1,gs://amlproject/Chip/fastqs/paired_end/mp916-MV411-E2F3-r1_R1_001.fastq.gz, gs://amlproject/Chip/fastqs/paired_end/mp916-MV411-E2F3-r1_R2_001.fastq.gz,E2F3,mp845-MV411-INPUT
+mp917-MV411-SREBP1,1,gs://amlproject/Chip/fastqs/paired_end/mp917-MV411-SREBP1-r1_R1_001.fastq.gz, gs://amlproject/Chip/fastqs/paired_end/mp917-MV411-SREBP1-r1_R2_001.fastq.gz,SREBP1,mp845-MV411-INPUT
+mp918-MV411_GFI_SC-FLAG_GFI,1,gs://amlproject/Chip/fastqs/paired_end/mp918-MV411_GFI_SC-FLAG_GFI-r1_R1_001.fastq.gz, gs://amlproject/Chip/fastqs/paired_end/mp918-MV411_GFI_SC-FLAG_GFI-r1_R2_001.fastq.gz,FLAG_GFI,mp845-MV411-INPUT
+mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D,1,gs://amlproject/Chip/fastqs/paired_end/mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D-r3_R1_001.fastq.gz, gs://amlproject/Chip/fastqs/paired_end/mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D-r3_R2_001.fastq.gz,FLAF_MEF2D,mp845-MV411-INPUT
+mp920-MV411-STAT5B,1,gs://amlproject/Chip/fastqs/paired_end/mp920-MV411-STAT5B-r1_R1_001.fastq.gz, gs://amlproject/Chip/fastqs/paired_end/mp920-MV411-STAT5B-r1_R2_001.fastq.gz,STAT5B,mp845-MV411-INPUT
+mp845-MV411-INPUT,1,gs://amlproject/Chip/fastqs/paired_end/mp845-MV411-INPUT-r2_R1.fastq.gz,gs://amlproject/Chip/fastqs/paired_end/mp845-MV411-INPUT-r2_R2.fastq.gz,,

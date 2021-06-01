@@ -1,0 +1,14 @@
+group,replicate,fastq_1,fastq_2,antibody,control
+MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D,1,chipseq_MEF2D_degraded/fastqs/mp881-MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D-r3_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp881-MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D-r3_R2_001.fastq.gz,FLAG_MEF2D,INPUT
+MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D,1,chipseq_MEF2D_degraded/fastqs/mp882-MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp882-MV411_MEF2D_NT_SC_63_VHL-FLAG_MEF2D-r1_R2_001.fastq.gz,FLAG_MEF2D,INPUT
+MV411_MEF2D_NT_SC_63_DMSO-IFR8,1,chipseq_MEF2D_degraded/fastqs/mp883-MV411_MEF2D_NT_SC_63_DMSO-IFR8-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp883-MV411_MEF2D_NT_SC_63_DMSO-IFR8-r1_R2_001.fastq.gz,IFR8,INPUT
+MV411_MEF2D_NT_SC_63_VHL-IFR8,1,chipseq_MEF2D_degraded/fastqs/mp884-MV411_MEF2D_NT_SC_63_VHL-IFR8-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp884-MV411_MEF2D_NT_SC_63_VHL-IFR8-r1_R2_001.fastq.gz,IFR8,INPUT
+MV411_MEF2D_NT_SC_63_DMSO-MED1,1,chipseq_MEF2D_degraded/fastqs/mp885-MV411_MEF2D_NT_SC_63_DMSO-MED1-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp885-MV411_MEF2D_NT_SC_63_DMSO-MED1-r1_R2_001.fastq.gz,MED1,INPUT
+MV411_MEF2D_NT_SC_63_VHL-MED1,1,chipseq_MEF2D_degraded/fastqs/mp886-MV411_MEF2D_NT_SC_63_VHL-MED1-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp886-MV411_MEF2D_NT_SC_63_VHL-MED1-r1_R2_001.fastq.gz,MED1,INPUT
+MV411_MEF2D_NT_SC_63_DMSO-MEF2C,1,chipseq_MEF2D_degraded/fastqs/mp887-MV411_MEF2D_NT_SC_63_DMSO-MEF2C-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp887-MV411_MEF2D_NT_SC_63_DMSO-MEF2C-r1_R2_001.fastq.gz,MEF2C,INPUT
+MV411_MEF2D_NT_SC_63_VHL-MEF2C,1,chipseq_MEF2D_degraded/fastqs/mp888-MV411_MEF2D_NT_SC_63_VHL-MEF2C-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp888-MV411_MEF2D_NT_SC_63_VHL-MEF2C-r1_R2_001.fastq.gz,MEF2C,INPUT
+MV411_MEF2D_NT_SC_63_DMSO-MYC,1,chipseq_MEF2D_degraded/fastqs/mp889-MV411_MEF2D_NT_SC_63_DMSO-MYC-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp889-MV411_MEF2D_NT_SC_63_DMSO-MYC-r1_R2_001.fastq.gz,MYC,INPUT
+MV411_MEF2D_NT_SC_63_VHL-MYC,1,chipseq_MEF2D_degraded/fastqs/mp890-MV411_MEF2D_NT_SC_63_VHL-MYC-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp890-MV411_MEF2D_NT_SC_63_VHL-MYC-r1_R2_001.fastq.gz,MYC,INPUT
+MV411_MEF2D_NT_SC_63_DMSO-POLII,1,chipseq_MEF2D_degraded/fastqs/mp891-MV411_MEF2D_NT_SC_63_DMSO-POLII-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp891-MV411_MEF2D_NT_SC_63_DMSO-POLII-r1_R2_001.fastq.gz,POLII,INPUT
+MV411_MEF2D_NT_SC_63_VHL-POLII,1,chipseq_MEF2D_degraded/fastqs/mp892-MV411_MEF2D_NT_SC_63_VHL-POLII-r1_R1_001.fastq.gz,chipseq_MEF2D_degraded/fastqs/mp892-MV411_MEF2D_NT_SC_63_VHL-POLII-r1_R2_001.fastq.gz,POLII,INPUT
+INPUT,1,ref/mp845-MV411-INPUT-r2_R1.fastq.gz,ref/mp845-MV411-INPUT-r2_R2.fastq.gz,,

@@ -1,0 +1,7 @@
+group,replicate,fastq_1,fastq_2,antibody,control
+MV411-ZFP281,1,fastqs/../../data/fastqs/mp876-MV411-ZFP281-r1_R1_001.fastq.gz,fastqs/../../data/fastqs/mp876-MV411-ZFP281-r1_R2_001.fastq.gz,ZFP281,INPUT
+MV411-PLAGL2,1,fastqs/../../data/fastqs/mp877-MV411-PLAGL2-r1_R1_001.fastq.gz,fastqs/../../data/fastqs/mp877-MV411-PLAGL2-r1_R2_001.fastq.gz,PLAGL2,INPUT
+MV411-HEX,1,fastqs/../../data/fastqs/mp878-MV411-HEX-r1_R1_001.fastq.gz,fastqs/../../data/fastqs/mp878-MV411-HEX-r1_R2_001.fastq.gz,HEX,INPUT
+MV411-FOSL2,1,fastqs/../../data/fastqs/mp879-MV411-FOSL2-r1_R1_001.fastq.gz,fastqs/../../data/fastqs/mp879-MV411-FOSL2-r1_R2_001.fastq.gz,FOSL2,INPUT
+MV411-RARA,1,fastqs/../../data/fastqs/mp880-MV411-RARA-r1_R1_001.fastq.gz,fastqs/../../data/fastqs/mp880-MV411-RARA-r1_R2_001.fastq.gz,RARA,INPUT
+INPUT,1,ref/mp845-MV411-INPUT-r2_R1.fastq.gz,ref/mp845-MV411-INPUT-r2_R2.fastq.gz,,

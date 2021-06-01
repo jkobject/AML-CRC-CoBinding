@@ -1,0 +1,15 @@
+work/8a/d8395d07b6573e4cab79c0f8a0bd71/MV411_IRF2BP2_DMSO_R1_T7.Lb.sorted.bam
+work/b1/bb98700db76b6f636aabc2e2af5f2a/MV411_IRF2BP2_DMSO_R1_T1.Lb.sorted.bam
+work/b9/cda23adcf26f855a4d1245ff50ddbb/MV411_IRF2BP2_DMSO_R1_T4.Lb.sorted.bam
+work/bd/7597ea5aeee5b7fd108be52602a874/MV411_IRF2BP2_DMSO_R1_T8.Lb.sorted.bam
+work/c2/9ff3ea6ecebe58ba52a1ae44a30fc9/MV411_IRF2BP2_VHL_R1_T5.Lb.sorted.bam
+work/c6/33d2b2396185cc32405c8c11b85c07/MV411_IRF2BP2_VHL_R1_T2.Lb.sorted.bam
+work/e7/b6339d3da2be7d7992a553022db452/MV411_IRF2BP2_DMSO_R1_T5.Lb.sorted.bam
+work/0c/4b6b26c142e3124210e4fb11fb53fb/MV411_IRF2BP2_VHL_R1_T1.Lb.sorted.bam
+work/19/e008c484666ea85f06ea0a3123bcf5/MV411_IRF2BP2_DMSO_R1_T2.Lb.sorted.bam
+work/22/20c5b529ee9df39c1f52d0a47a17b9/MV411_IRF2BP2_VHL_R1_T7.Lb.sorted.bam
+work/2c/b624e5efd79f6533edd158f84136ad/MV411_IRF2BP2_DMSO_R1_T3.Lb.sorted.bam
+work/39/9b4ef51c82d79833a27dd162fbdbb0/MV411_IRF2BP2_VHL_R1_T3.Lb.sorted.bam
+work/3c/213e216a3dbdcec0b5ef0c8e70e9d1/MV411_IRF2BP2_VHL_R1_T4.Lb.sorted.bam
+work/61/7164bac8f9fd3f0472093a00094925/MV411_IRF2BP2_DMSO_R1_T6.Lb.sorted.bam
+work/62/dea19b9d946f13e6f1d8ff05619ee3/MV411_IRF2BP2_VHL_R1_T8.Lb.sorted.bam

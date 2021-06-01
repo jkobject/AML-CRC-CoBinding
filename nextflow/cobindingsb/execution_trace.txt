@@ -1,0 +1,4 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	88/223cc4	13618430863933641012	CHECK_DESIGN (Cobinding_ChIP_single_end_design_bp.csv)	ABORTED	-	2021-02-03 18:37:24.025	-	-	-	-	-	-	-
+3	41/50dc14	17737041303728638209	get_software_versions	ABORTED	-	2021-02-03 18:37:24.935	-	-	-	-	-	-	-
+4	1b/3236ce	1832240311262223825	output_documentation	ABORTED	-	2021-02-03 18:37:27.881	-	-	-	-	-	-	-

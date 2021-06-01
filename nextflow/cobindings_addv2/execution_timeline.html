@@ -1,0 +1,303 @@
+<!doctype html>
+<!--
+  ~ Copyright 2013-2019, Centre for Genomic Regulation (CRG)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + prot + "code.jquery.com/jquery-latest.min.js' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "d3js.org/d3.v3.min.js' charset='utf-8' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "cdn.rawgit.com/nextflow-io/d3-timeline/82622c4cc35bac7283b3a317826b0709ac1ae476/src/d3-timeline.js' type='text/javascript' %3E%3C/script%3E"));
+</script>
+<style type="text/css">
+* {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+div#timeline g text {
+  font-size: 13px;
+}
+
+text.timeline-label {
+  font-size: 13px;
+}
+
+#timeline2 .axis {
+  transform: translate(0px,30px);
+  -ms-transform: translate(0px,30px); /* IE 9 */
+  -webkit-transform: translate(0px,30px); /* Safari and Chrome */
+  -o-transform: translate(0px,30px); /* Opera */
+  -moz-transform: translate(0px,30px); /* Firefox */
+}
+
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+
+#footer {
+  padding-top: 3em; color: #bfbfbf; font-size: 13px;
+}
+
+#footer a:visited {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+var handler=null;
+// see https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c
+var colors = d3.scale.category20c().domain(d3.range(0,20)).range()
+
+function c0(index) { return "#9c9c9c"; }
+function c1(index) { return "#bdbdbd"; }
+function c2(index) { return colors[index % 16]; } // <-- note: uses only the first 16 colors
+
+var elapsed="8h 35m 51s"
+var beginningMillis=1605218287557;
+var endingMillis=1605312875570;
+var data=[
+{"label": "CHECK_DESIGN (additional_cobinding_v2.csv)", "times": [{"starting_time": 1605218287557, "ending_time": 1605218293270, "color":c1(0)}, {"starting_time": 1605218293270, "ending_time": 1605218293345, "color":c0(0), "label": "3m 6s \/ 3 MB \/ CACHED"}, {"starting_time": 1605218293345, "ending_time": 1605218473377, "color":c1(0)}]},
+{"label": "output_documentation", "times": [{"starting_time": 1605218290141, "ending_time": 1605218293562, "color":c1(1)}, {"starting_time": 1605218293562, "ending_time": 1605218293909, "color":c0(1), "label": "2m 53s \/ 14.8 MB \/ CACHED"}, {"starting_time": 1605218293909, "ending_time": 1605218463121, "color":c1(1)}]},
+{"label": "get_software_versions", "times": [{"starting_time": 1605281935435, "ending_time": 1605281940608, "color":c1(2)}, {"starting_time": 1605281940608, "ending_time": 1605281945414, "color":c2(2), "label": "3m 35s \/ 69.2 MB"}, {"starting_time": 1605281945414, "ending_time": 1605282150696, "color":c1(2)}]},
+{"label": "FASTQC (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605218476777, "ending_time": 1605218483564, "color":c1(3)}, {"starting_time": 1605218483564, "ending_time": 1605219254644, "color":c0(3), "label": "18m 17s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1605219254644, "ending_time": 1605219573278, "color":c1(3)}]},
+{"label": "FASTQC (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1605218475363, "ending_time": 1605218483104, "color":c1(3)}, {"starting_time": 1605218483104, "ending_time": 1605219194119, "color":c0(3), "label": "15m 58s \/ 1 GB \/ CACHED"}, {"starting_time": 1605219194119, "ending_time": 1605219433142, "color":c1(3)}]},
+{"label": "FASTQC (mp917-MV411-SREBP1_R1_T1)", "times": [{"starting_time": 1605218477183, "ending_time": 1605218483680, "color":c1(3)}, {"starting_time": 1605218483680, "ending_time": 1605219245551, "color":c0(3), "label": "17m 6s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1605219245551, "ending_time": 1605219503587, "color":c1(3)}]},
+{"label": "MAKE_GENOME_FILTER (genome.fa)", "times": [{"starting_time": 1605218523676, "ending_time": 1605218534378, "color":c1(4)}, {"starting_time": 1605218534378, "ending_time": 1605218553561, "color":c0(4), "label": "4m 51s \/ 4.6 MB \/ CACHED"}, {"starting_time": 1605218553561, "ending_time": 1605218814315, "color":c1(4)}]},
+{"label": "FASTQC (mp918-MV411_GFI_SC-FLAG_GFI_R1_T1)", "times": [{"starting_time": 1605218478933, "ending_time": 1605218484416, "color":c1(3)}, {"starting_time": 1605218484416, "ending_time": 1605219469375, "color":c0(3), "label": "21m 44s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1605219469375, "ending_time": 1605219783250, "color":c1(3)}]},
+{"label": "FASTQC (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1_T1)", "times": [{"starting_time": 1605218479352, "ending_time": 1605218484548, "color":c1(3)}, {"starting_time": 1605218484548, "ending_time": 1605219262350, "color":c0(3), "label": "17m 14s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1605219262350, "ending_time": 1605219513572, "color":c1(3)}]},
+{"label": "TRIMGALORE (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1605281936218, "ending_time": 1605281941111, "color":c1(5)}, {"starting_time": 1605281941111, "ending_time": 1605283717632, "color":c2(5), "label": "34m 35s \/ 4 GB"}, {"starting_time": 1605283717632, "ending_time": 1605284010831, "color":c1(5)}]},
+{"label": "FASTQC (mp920-MV411-STAT5B_R1_T1)", "times": [{"starting_time": 1605218480512, "ending_time": 1605218485423, "color":c1(3)}, {"starting_time": 1605218485423, "ending_time": 1605219337454, "color":c0(3), "label": "19m 33s \/ 1.1 GB \/ CACHED"}, {"starting_time": 1605219337454, "ending_time": 1605219653661, "color":c1(3)}]},
+{"label": "TRIMGALORE (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605281936849, "ending_time": 1605281941498, "color":c1(5)}, {"starting_time": 1605281941498, "ending_time": 1605283200849, "color":c2(5), "label": "21m 4s \/ -"}]},
+{"label": "TRIMGALORE (mp918-MV411_GFI_SC-FLAG_GFI_R1_T1)", "times": [{"starting_time": 1605281937696, "ending_time": 1605281942019, "color":c1(5)}, {"starting_time": 1605281942019, "ending_time": 1605284479357, "color":c2(5), "label": "47m 43s \/ 4.1 GB"}, {"starting_time": 1605284479357, "ending_time": 1605284800944, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp917-MV411-SREBP1_R1_T1)", "times": [{"starting_time": 1605281938434, "ending_time": 1605281942490, "color":c1(5)}, {"starting_time": 1605281942490, "ending_time": 1605284209826, "color":c2(5), "label": "43m 3s \/ 4 GB"}, {"starting_time": 1605284209826, "ending_time": 1605284520953, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1_T1)", "times": [{"starting_time": 1605281939136, "ending_time": 1605281942919, "color":c1(5)}, {"starting_time": 1605281942919, "ending_time": 1605284296016, "color":c2(5), "label": "46m 12s \/ 4.1 GB"}, {"starting_time": 1605284296016, "ending_time": 1605284710995, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp920-MV411-STAT5B_R1_T1)", "times": [{"starting_time": 1605281939851, "ending_time": 1605281943044, "color":c1(5)}, {"starting_time": 1605281943044, "ending_time": 1605284254328, "color":c2(5), "label": "43m 41s \/ 4.1 GB"}, {"starting_time": 1605284254328, "ending_time": 1605284560864, "color":c1(5)}]},
+{"label": "TRIMGALORE (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605283201611, "ending_time": 1605283210954, "color":c1(5)}, {"starting_time": 1605283210954, "ending_time": 1605284740788, "color":c2(5), "label": "25m 39s \/ -"}]},
+{"label": "TRIMGALORE (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605284741552, "ending_time": 1605284750883, "color":c1(5)}, {"starting_time": 1605284750883, "ending_time": 1605286968906, "color":c2(5), "label": "42m 9s \/ 4 GB"}, {"starting_time": 1605286968906, "ending_time": 1605287271017, "color":c1(5)}]},
+{"label": "BWA_MEM (mp920-MV411-STAT5B_R1_T1)", "times": [{"starting_time": 1605288447479, "ending_time": 1605288451011, "color":c1(6)}, {"starting_time": 1605288451011, "ending_time": 1605294431342, "color":c2(6), "label": "1h 56m 35s \/ 7.9 GB"}, {"starting_time": 1605294431342, "ending_time": 1605295442236, "color":c1(6)}]},
+{"label": "BWA_MEM (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1_T1)", "times": [{"starting_time": 1605288448284, "ending_time": 1605288451432, "color":c1(6)}, {"starting_time": 1605288451432, "ending_time": 1605295211691, "color":c2(6), "label": "2h 9m 44s \/ 7.9 GB"}, {"starting_time": 1605295211691, "ending_time": 1605296232386, "color":c1(6)}]},
+{"label": "BWA_MEM (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1605288448787, "ending_time": 1605288451791, "color":c1(6)}, {"starting_time": 1605288451791, "ending_time": 1605296513720, "color":c2(6), "label": "2h 28m 4s \/ 12.5 GB"}, {"starting_time": 1605296513720, "ending_time": 1605297332399, "color":c1(6)}]},
+{"label": "BWA_MEM (mp918-MV411_GFI_SC-FLAG_GFI_R1_T1)", "times": [{"starting_time": 1605288449303, "ending_time": 1605288452096, "color":c1(6)}, {"starting_time": 1605288452096, "ending_time": 1605295394383, "color":c2(6), "label": "2h 10m 43s \/ 7.9 GB"}, {"starting_time": 1605295394383, "ending_time": 1605296292432, "color":c1(6)}]},
+{"label": "BWA_MEM (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605288449771, "ending_time": 1605288452259, "color":c1(6)}, {"starting_time": 1605288452259, "ending_time": 1605292383099, "color":c2(6), "label": "1h 20m 13s \/ 7 GB"}, {"starting_time": 1605292383099, "ending_time": 1605293262356, "color":c1(6)}]},
+{"label": "BWA_MEM (mp917-MV411-SREBP1_R1_T1)", "times": [{"starting_time": 1605288450344, "ending_time": 1605288452532, "color":c1(6)}, {"starting_time": 1605288452532, "ending_time": 1605292562598, "color":c2(6), "label": "1h 22m 42s \/ 7.4 GB"}, {"starting_time": 1605292562598, "ending_time": 1605293412116, "color":c1(6)}]},
+{"label": "SORT_BAM (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605293264328, "ending_time": 1605293272185, "color":c1(7)}, {"starting_time": 1605293272185, "ending_time": 1605293969740, "color":c2(7), "label": "17m 18s \/ 5.2 GB"}, {"starting_time": 1605293969740, "ending_time": 1605294302465, "color":c1(7)}]},
+{"label": "SORT_BAM (mp917-MV411-SREBP1_R1_T1)", "times": [{"starting_time": 1605293413549, "ending_time": 1605293422464, "color":c1(7)}, {"starting_time": 1605293422464, "ending_time": 1605294192881, "color":c2(7), "label": "18m 59s \/ 5.2 GB"}, {"starting_time": 1605294192881, "ending_time": 1605294552225, "color":c1(7)}]},
+{"label": "COUNTS (mp916-MV411-E2F3_R1_T1)", "times": [{"starting_time": 1605294304965, "ending_time": 1605294312526, "color":c1(8)}, {"starting_time": 1605294312526, "ending_time": 1605294312543, "color":c2(8), "label": "4m 57s \/ 3.2 MB"}, {"starting_time": 1605294312543, "ending_time": 1605294602392, "color":c1(8)}]},
+{"label": "COUNTS (mp917-MV411-SREBP1_R1_T1)", "times": [{"starting_time": 1605294553908, "ending_time": 1605294562362, "color":c1(8)}, {"starting_time": 1605294562362, "ending_time": 1605294562380, "color":c2(8), "label": "4m 28s \/ 3 MB"}, {"starting_time": 1605294562380, "ending_time": 1605294822218, "color":c1(8)}]},
+{"label": "SORT_BAM (mp920-MV411-STAT5B_R1_T1)", "times": [{"starting_time": 1605295443216, "ending_time": 1605295452355, "color":c1(7)}, {"starting_time": 1605295452355, "ending_time": 1605296163903, "color":c2(7), "label": "17m 39s \/ 5.2 GB"}, {"starting_time": 1605296163903, "ending_time": 1605296502300, "color":c1(7)}]},
+{"label": "SORT_BAM (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1_T1)", "times": [{"starting_time": 1605296233590, "ending_time": 1605296242779, "color":c1(7)}, {"starting_time": 1605296242779, "ending_time": 1605297199198, "color":c2(7), "label": "22m 49s \/ 5.1 GB"}, {"starting_time": 1605297199198, "ending_time": 1605297602416, "color":c1(7)}]},
+{"label": "SORT_BAM (mp918-MV411_GFI_SC-FLAG_GFI_R1_T1)", "times": [{"starting_time": 1605296293316, "ending_time": 1605296302652, "color":c1(7)}, {"starting_time": 1605296302652, "ending_time": 1605297162332, "color":c2(7), "label": "21m 9s \/ 5.1 GB"}, {"starting_time": 1605297162332, "ending_time": 1605297562615, "color":c1(7)}]},
+{"label": "COUNTS (mp920-MV411-STAT5B_R1_T1)", "times": [{"starting_time": 1605296503926, "ending_time": 1605296512753, "color":c1(8)}, {"starting_time": 1605296512753, "ending_time": 1605296512771, "color":c2(8), "label": "4m 29s \/ 3.1 MB"}, {"starting_time": 1605296512771, "ending_time": 1605296772854, "color":c1(8)}]},
+{"label": "SORT_BAM (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1605297333471, "ending_time": 1605297342583, "color":c1(7)}, {"starting_time": 1605297342583, "ending_time": 1605298264546, "color":c2(7), "label": "22m 49s \/ 5.3 GB"}, {"starting_time": 1605298264546, "ending_time": 1605298702315, "color":c1(7)}]},
+{"label": "COUNTS (mp918-MV411_GFI_SC-FLAG_GFI_R1_T1)", "times": [{"starting_time": 1605297564056, "ending_time": 1605297572566, "color":c1(8)}, {"starting_time": 1605297572566, "ending_time": 1605297572586, "color":c2(8), "label": "5m 8s \/ 3 MB"}, {"starting_time": 1605297572586, "ending_time": 1605297872470, "color":c1(8)}]},
+{"label": "COUNTS (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1_T1)", "times": [{"starting_time": 1605297603775, "ending_time": 1605297612740, "color":c1(8)}, {"starting_time": 1605297612740, "ending_time": 1605297612759, "color":c2(8), "label": "5m 59s \/ 3.1 MB"}, {"starting_time": 1605297612759, "ending_time": 1605297962455, "color":c1(8)}]},
+{"label": "COUNTS (mp845-MV411-INPUT_R1_T1)", "times": [{"starting_time": 1605298703951, "ending_time": 1605298712348, "color":c1(8)}, {"starting_time": 1605298712348, "ending_time": 1605298712365, "color":c2(8), "label": "4m 49s \/ 3 MB"}, {"starting_time": 1605298712365, "ending_time": 1605298992469, "color":c1(8)}]},
+{"label": "MERGED_BAM (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605298704508, "ending_time": 1605298712795, "color":c1(9)}, {"starting_time": 1605298712795, "ending_time": 1605301465158, "color":c2(9), "label": "51m 48s \/ 26.8 GB"}, {"starting_time": 1605301465158, "ending_time": 1605301812634, "color":c1(9)}]},
+{"label": "MERGED_BAM (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605298704939, "ending_time": 1605298713107, "color":c1(9)}, {"starting_time": 1605298713107, "ending_time": 1605300554934, "color":c2(9), "label": "36m 8s \/ 19.7 GB"}, {"starting_time": 1605300554934, "ending_time": 1605300872527, "color":c1(9)}]},
+{"label": "MERGED_BAM (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605298705463, "ending_time": 1605298713405, "color":c1(9)}, {"starting_time": 1605298713405, "ending_time": 1605300814188, "color":c2(9), "label": "40m 27s \/ 22.8 GB"}, {"starting_time": 1605300814188, "ending_time": 1605301132488, "color":c1(9)}]},
+{"label": "MERGED_BAM (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605298706070, "ending_time": 1605298713689, "color":c1(9)}, {"starting_time": 1605298713689, "ending_time": 1605299892541, "color":c2(9), "label": "19m 46s \/ -"}]},
+{"label": "MERGED_BAM (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605298706670, "ending_time": 1605298714033, "color":c1(9)}, {"starting_time": 1605298714033, "ending_time": 1605301448312, "color":c2(9), "label": "51m 26s \/ 22.1 GB"}, {"starting_time": 1605301448312, "ending_time": 1605301792610, "color":c1(9)}]},
+{"label": "MERGED_BAM (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605298707240, "ending_time": 1605298714442, "color":c1(9)}, {"starting_time": 1605298714442, "ending_time": 1605301039902, "color":c2(9), "label": "44m 35s \/ 32.6 GB"}, {"starting_time": 1605301039902, "ending_time": 1605301382574, "color":c1(9)}]},
+{"label": "MERGED_BAM (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605299893268, "ending_time": 1605299902589, "color":c1(9)}, {"starting_time": 1605299902589, "ending_time": 1605302680405, "color":c2(9), "label": "52m 19s \/ 47 GB"}, {"starting_time": 1605302680405, "ending_time": 1605303032515, "color":c1(9)}]},
+{"label": "PRESEQ (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605300874527, "ending_time": 1605300882815, "color":c1(10)}, {"starting_time": 1605300882815, "ending_time": 1605302260774, "color":c2(10), "label": "28m 38s \/ 20.8 MB"}, {"starting_time": 1605302260774, "ending_time": 1605302592540, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605300875126, "ending_time": 1605300883249, "color":c1(11)}, {"starting_time": 1605300883249, "ending_time": 1605301754098, "color":c2(11), "label": "21m 7s \/ 5.1 GB"}, {"starting_time": 1605301754098, "ending_time": 1605302142594, "color":c1(11)}]},
+{"label": "PRESEQ (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605301134473, "ending_time": 1605301143026, "color":c1(10)}, {"starting_time": 1605301143026, "ending_time": 1605302780342, "color":c2(10), "label": "32m 8s \/ 38.3 MB"}, {"starting_time": 1605302780342, "ending_time": 1605303062533, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605301135072, "ending_time": 1605301143302, "color":c1(11)}, {"starting_time": 1605301143302, "ending_time": 1605301881262, "color":c2(11), "label": "18m 18s \/ 5.1 GB"}, {"starting_time": 1605301881262, "ending_time": 1605302232812, "color":c1(11)}]},
+{"label": "PRESEQ (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605301384624, "ending_time": 1605301392939, "color":c1(10)}, {"starting_time": 1605301392939, "ending_time": 1605303220314, "color":c2(10), "label": "36m 8s \/ 21.8 MB"}, {"starting_time": 1605303220314, "ending_time": 1605303552692, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605301385333, "ending_time": 1605301393088, "color":c1(11)}, {"starting_time": 1605301393088, "ending_time": 1605303096672, "color":c2(11), "label": "36m 57s \/ 5.1 GB"}, {"starting_time": 1605303096672, "ending_time": 1605303602581, "color":c1(11)}]},
+{"label": "PRESEQ (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605301794452, "ending_time": 1605301803002, "color":c1(10)}, {"starting_time": 1605301803002, "ending_time": 1605304429477, "color":c2(10), "label": "48m 38s \/ 63.9 MB"}, {"starting_time": 1605304429477, "ending_time": 1605304712614, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605301795023, "ending_time": 1605301803293, "color":c1(11)}, {"starting_time": 1605301803293, "ending_time": 1605305151011, "color":c2(11), "label": "1h 5m 58s \/ 5.3 GB"}, {"starting_time": 1605305151011, "ending_time": 1605305752807, "color":c1(11)}]},
+{"label": "PRESEQ (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605301814467, "ending_time": 1605301823027, "color":c1(10)}, {"starting_time": 1605301823027, "ending_time": 1605303510821, "color":c2(10), "label": "32m 48s \/ 27 MB"}, {"starting_time": 1605303510821, "ending_time": 1605303782664, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605301815065, "ending_time": 1605301823297, "color":c1(11)}, {"starting_time": 1605301823297, "ending_time": 1605304742047, "color":c2(11), "label": "57m 18s \/ 5.1 GB"}, {"starting_time": 1605304742047, "ending_time": 1605305252670, "color":c1(11)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605302144675, "ending_time": 1605302153265, "color":c1(12)}, {"starting_time": 1605302153265, "ending_time": 1605302598951, "color":c2(12), "label": "12m 38s \/ 5.1 GB"}, {"starting_time": 1605302598951, "ending_time": 1605302903027, "color":c1(12)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605302234853, "ending_time": 1605302243639, "color":c1(12)}, {"starting_time": 1605302243639, "ending_time": 1605302634021, "color":c2(12), "label": "12m 8s \/ 5.1 GB"}, {"starting_time": 1605302634021, "ending_time": 1605302963289, "color":c1(12)}]},
+{"label": "BIGWIG (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605302905172, "ending_time": 1605302912979, "color":c1(13)}, {"starting_time": 1605302912979, "ending_time": 1605303147737, "color":c2(13), "label": "7m 48s \/ 1.9 GB"}, {"starting_time": 1605303147737, "ending_time": 1605303373227, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605302905829, "ending_time": 1605302913282, "color":c1(14)}, {"starting_time": 1605302913282, "ending_time": 1605303526793, "color":c2(14), "label": "13m 37s \/ 1.2 GB"}, {"starting_time": 1605303526793, "ending_time": 1605303723130, "color":c1(14)}]},
+{"label": "PICARD_METRICS (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605302906363, "ending_time": 1605302913395, "color":c1(15)}, {"starting_time": 1605302913395, "ending_time": 1605303159917, "color":c2(15), "label": "8m 37s \/ 1.2 GB"}, {"starting_time": 1605303159917, "ending_time": 1605303423857, "color":c1(15)}]},
+{"label": "BIGWIG (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605302965778, "ending_time": 1605302973452, "color":c1(13)}, {"starting_time": 1605302973452, "ending_time": 1605303172682, "color":c2(13), "label": "6m 8s \/ 1.9 GB"}, {"starting_time": 1605303172682, "ending_time": 1605303333651, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605302966482, "ending_time": 1605302973868, "color":c1(14)}, {"starting_time": 1605302973868, "ending_time": 1605303532730, "color":c2(14), "label": "12m 26s \/ 1.1 GB"}, {"starting_time": 1605303532730, "ending_time": 1605303712901, "color":c1(14)}]},
+{"label": "PICARD_METRICS (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605302966927, "ending_time": 1605302974080, "color":c1(15)}, {"starting_time": 1605302974080, "ending_time": 1605303207931, "color":c2(15), "label": "8m 36s \/ 1.6 GB"}, {"starting_time": 1605303207931, "ending_time": 1605303482973, "color":c1(15)}]},
+{"label": "PRESEQ (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605303034131, "ending_time": 1605303043607, "color":c1(10)}, {"starting_time": 1605303043607, "ending_time": 1605305366246, "color":c2(10), "label": "43m 39s \/ 24.6 MB"}, {"starting_time": 1605305366246, "ending_time": 1605305652887, "color":c1(10)}]},
+{"label": "MERGED_BAM_FILTER (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605303034854, "ending_time": 1605303044001, "color":c1(11)}, {"starting_time": 1605303044001, "ending_time": 1605306235843, "color":c2(11), "label": "1h 2m 8s \/ 5.1 GB"}, {"starting_time": 1605306235843, "ending_time": 1605306762914, "color":c1(11)}]},
+{"label": "PLOTPROFILE (mp917-MV411-SREBP1_R1)", "times": [{"starting_time": 1605303337704, "ending_time": 1605303343490, "color":c1(16)}, {"starting_time": 1605303343490, "ending_time": 1605304236011, "color":c2(16), "label": "17m 26s \/ 3.6 GB"}, {"starting_time": 1605304236011, "ending_time": 1605304383563, "color":c1(16)}]},
+{"label": "PLOTPROFILE (mp916-MV411-E2F3_R1)", "times": [{"starting_time": 1605303375343, "ending_time": 1605303383559, "color":c1(16)}, {"starting_time": 1605303383559, "ending_time": 1605304331656, "color":c2(16), "label": "19m 8s \/ 3.5 GB"}, {"starting_time": 1605304331656, "ending_time": 1605304523438, "color":c1(16)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605303604334, "ending_time": 1605303613398, "color":c1(12)}, {"starting_time": 1605303613398, "ending_time": 1605304621007, "color":c2(12), "label": "24m 59s \/ 5.1 GB"}, {"starting_time": 1605304621007, "ending_time": 1605305103100, "color":c1(12)}]},
+{"label": "BIGWIG (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605305105218, "ending_time": 1605305113079, "color":c1(13)}, {"starting_time": 1605305113079, "ending_time": 1605305660104, "color":c2(13), "label": "13m 58s \/ 1.9 GB"}, {"starting_time": 1605305660104, "ending_time": 1605305942951, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605305105931, "ending_time": 1605305113222, "color":c1(14)}, {"starting_time": 1605305113222, "ending_time": 1605306496615, "color":c2(14), "label": "26m 37s \/ 2.4 GB"}, {"starting_time": 1605306496615, "ending_time": 1605306702990, "color":c1(14)}]},
+{"label": "PICARD_METRICS (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605305106637, "ending_time": 1605305113369, "color":c1(15)}, {"starting_time": 1605305113369, "ending_time": 1605305643339, "color":c2(15), "label": "14m 56s \/ 1.3 GB"}, {"starting_time": 1605305643339, "ending_time": 1605306003018, "color":c1(15)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605305254653, "ending_time": 1605305263352, "color":c1(12)}, {"starting_time": 1605305263352, "ending_time": 1605306888205, "color":c2(12), "label": "40m 38s \/ 5.1 GB"}, {"starting_time": 1605306888205, "ending_time": 1605307693022, "color":c1(12)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605305755104, "ending_time": 1605305763025, "color":c1(12)}, {"starting_time": 1605305763025, "ending_time": 1605307481835, "color":c2(12), "label": "38m 28s \/ 5.3 GB"}, {"starting_time": 1605307481835, "ending_time": 1605308062784, "color":c1(12)}]},
+{"label": "PLOTPROFILE (mp920-MV411-STAT5B_R1)", "times": [{"starting_time": 1605305945460, "ending_time": 1605305953435, "color":c1(16)}, {"starting_time": 1605305953435, "ending_time": 1605306661691, "color":c2(16), "label": "14m 27s \/ 3.6 GB"}, {"starting_time": 1605306661691, "ending_time": 1605306812891, "color":c1(16)}]},
+{"label": "MERGED_BAM_REMOVE_ORPHAN (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605306764963, "ending_time": 1605306773146, "color":c1(12)}, {"starting_time": 1605306773146, "ending_time": 1605308498767, "color":c2(12), "label": "39m 28s \/ 5.1 GB"}, {"starting_time": 1605308498767, "ending_time": 1605309132865, "color":c1(12)}]},
+{"label": "BIGWIG (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605307695430, "ending_time": 1605307703270, "color":c1(13)}, {"starting_time": 1605307703270, "ending_time": 1605308615272, "color":c2(13), "label": "20m 8s \/ 1.9 GB"}, {"starting_time": 1605308615272, "ending_time": 1605308903051, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605307696193, "ending_time": 1605307703692, "color":c1(14)}, {"starting_time": 1605307703692, "ending_time": 1605310000731, "color":c2(14), "label": "42m 57s \/ 3.9 GB"}, {"starting_time": 1605310000731, "ending_time": 1605310273072, "color":c1(14)}]},
+{"label": "PICARD_METRICS (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605307696771, "ending_time": 1605307704015, "color":c1(15)}, {"starting_time": 1605307704015, "ending_time": 1605308581550, "color":c2(15), "label": "21m 16s \/ 1.2 GB"}, {"starting_time": 1605308581550, "ending_time": 1605308973124, "color":c1(15)}]},
+{"label": "BIGWIG (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308064786, "ending_time": 1605308073527, "color":c1(13)}, {"starting_time": 1605308073527, "ending_time": 1605309205006, "color":c2(13), "label": "23m 18s \/ 1.9 GB"}, {"starting_time": 1605309205006, "ending_time": 1605309463075, "color":c1(13)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308065501, "ending_time": 1605308073843, "color":c1(14)}, {"starting_time": 1605308073843, "ending_time": 1605311490291, "color":c2(14), "label": "1h 2m 8s \/ 5.9 GB"}, {"starting_time": 1605311490291, "ending_time": 1605311793025, "color":c1(14)}]},
+{"label": "PLOTFINGERPRINT (mp920-MV411-STAT5B_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308066198, "ending_time": 1605308074258, "color":c1(17)}, {"starting_time": 1605308074258, "ending_time": 1605308324891, "color":c2(17), "label": "9m 37s \/ 1.2 GB"}, {"starting_time": 1605308324891, "ending_time": 1605308643607, "color":c1(17)}]},
+{"label": "PLOTFINGERPRINT (mp917-MV411-SREBP1_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308066779, "ending_time": 1605308074530, "color":c1(17)}, {"starting_time": 1605308074530, "ending_time": 1605308354212, "color":c2(17), "label": "10m 47s \/ 1.2 GB"}, {"starting_time": 1605308354212, "ending_time": 1605308713645, "color":c1(17)}]},
+{"label": "PLOTFINGERPRINT (mp916-MV411-E2F3_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308067589, "ending_time": 1605308074953, "color":c1(17)}, {"starting_time": 1605308074953, "ending_time": 1605308285966, "color":c2(17), "label": "8m 26s \/ 1.2 GB"}, {"starting_time": 1605308285966, "ending_time": 1605308574021, "color":c1(17)}]},
+{"label": "PLOTFINGERPRINT (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308068221, "ending_time": 1605308075395, "color":c1(17)}, {"starting_time": 1605308075395, "ending_time": 1605308673904, "color":c2(17), "label": "10m 6s \/ -"}]},
+{"label": "MACS2 (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308068817, "ending_time": 1605308075538, "color":c1(18)}, {"starting_time": 1605308075538, "ending_time": 1605311406193, "color":c2(18), "label": "1h 2m 34s \/ 4.4 GB"}, {"starting_time": 1605311406193, "ending_time": 1605311823209, "color":c1(18)}]},
+{"label": "MACS2 (mp916-MV411-E2F3_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308069244, "ending_time": 1605308075856, "color":c1(18)}, {"starting_time": 1605308075856, "ending_time": 1605309511668, "color":c2(18), "label": "29m 24s \/ 3.9 GB"}, {"starting_time": 1605309511668, "ending_time": 1605309833381, "color":c1(18)}]},
+{"label": "MACS2 (mp920-MV411-STAT5B_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308070013, "ending_time": 1605308076275, "color":c1(18)}, {"starting_time": 1605308076275, "ending_time": 1605310902474, "color":c2(18), "label": "54m 3s \/ 4 GB"}, {"starting_time": 1605310902474, "ending_time": 1605311313179, "color":c1(18)}]},
+{"label": "MACS2 (mp917-MV411-SREBP1_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308070644, "ending_time": 1605308076536, "color":c1(18)}, {"starting_time": 1605308076536, "ending_time": 1605309482952, "color":c2(18), "label": "28m 33s \/ 3.8 GB"}, {"starting_time": 1605309482952, "ending_time": 1605309783475, "color":c1(18)}]},
+{"label": "PICARD_METRICS (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308071171, "ending_time": 1605308076648, "color":c1(15)}, {"starting_time": 1605308076648, "ending_time": 1605308860889, "color":c2(15), "label": "18m 32s \/ 1.2 GB"}, {"starting_time": 1605308860889, "ending_time": 1605309183618, "color":c1(15)}]},
+{"label": "PLOTFINGERPRINT (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605308674624, "ending_time": 1605308684672, "color":c1(17)}, {"starting_time": 1605308684672, "ending_time": 1605308928733, "color":c2(17), "label": "11m 39s \/ 1.2 GB"}, {"starting_time": 1605308928733, "ending_time": 1605309373803, "color":c1(17)}]},
+{"label": "PLOTPROFILE (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1)", "times": [{"starting_time": 1605308905463, "ending_time": 1605308914248, "color":c1(16)}, {"starting_time": 1605308914248, "ending_time": 1605309895350, "color":c2(16), "label": "19m 48s \/ 3.6 GB"}, {"starting_time": 1605309895350, "ending_time": 1605310093361, "color":c1(16)}]},
+{"label": "BIGWIG (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605309134850, "ending_time": 1605309144126, "color":c1(13)}, {"starting_time": 1605309144126, "ending_time": 1605309977578, "color":c2(13), "label": "18m 18s \/ 1.9 GB"}, {"starting_time": 1605309977578, "ending_time": 1605310233177, "color":c1(13)}]},
+{"label": "PLOTFINGERPRINT (mp918-MV411_GFI_SC-FLAG_GFI_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605309135404, "ending_time": 1605309144246, "color":c1(17)}, {"starting_time": 1605309144246, "ending_time": 1605309484307, "color":c2(17), "label": "12m 8s \/ 1.2 GB"}, {"starting_time": 1605309484307, "ending_time": 1605309863823, "color":c1(17)}]},
+{"label": "PHANTOMPEAKQUALTOOLS (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605309135922, "ending_time": 1605309144506, "color":c1(14)}, {"starting_time": 1605309144506, "ending_time": 1605311590627, "color":c2(14), "label": "46m 7s \/ 4.4 GB"}, {"starting_time": 1605311590627, "ending_time": 1605311903081, "color":c1(14)}]},
+{"label": "MACS2 (mp918-MV411_GFI_SC-FLAG_GFI_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605309136450, "ending_time": 1605309144808, "color":c1(18)}, {"starting_time": 1605309144808, "ending_time": 1605311288206, "color":c2(18), "label": "42m 7s \/ 4.5 GB"}, {"starting_time": 1605311288206, "ending_time": 1605311663832, "color":c1(18)}]},
+{"label": "PICARD_METRICS (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605309137045, "ending_time": 1605309145066, "color":c1(15)}, {"starting_time": 1605309145066, "ending_time": 1605309995748, "color":c2(15), "label": "19m 56s \/ 1 GB"}, {"starting_time": 1605309995748, "ending_time": 1605310333536, "color":c1(15)}]},
+{"label": "PLOTPROFILE (mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605309465201, "ending_time": 1605309473754, "color":c1(16)}, {"starting_time": 1605309473754, "ending_time": 1605310436037, "color":c2(16), "label": "19m 28s \/ 3.6 GB"}, {"starting_time": 1605310436037, "ending_time": 1605310633546, "color":c1(16)}]},
+{"label": "MACS2_ANNOTATE (mp917-MV411-SREBP1_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605309802583, "ending_time": 1605309803937, "color":c1(19)}, {"starting_time": 1605309803937, "ending_time": 1605310058074, "color":c2(19), "label": "8m 31s \/ 2.4 GB"}, {"starting_time": 1605310058074, "ending_time": 1605310313742, "color":c1(19)}]},
+{"label": "MACS2_ANNOTATE (mp916-MV411-E2F3_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605309836532, "ending_time": 1605309844550, "color":c1(19)}, {"starting_time": 1605309844550, "ending_time": 1605310024666, "color":c2(19), "label": "6m 28s \/ 2.5 GB"}, {"starting_time": 1605310024666, "ending_time": 1605310224132, "color":c1(19)}]},
+{"label": "PLOTPROFILE (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605310235525, "ending_time": 1605310243820, "color":c1(16)}, {"starting_time": 1605310243820, "ending_time": 1605310953399, "color":c2(16), "label": "11m 58s \/ -"}]},
+{"label": "PLOTPROFILE (mp918-MV411_GFI_SC-FLAG_GFI_R1)", "times": [{"starting_time": 1605310954123, "ending_time": 1605310963161, "color":c1(16)}, {"starting_time": 1605310963161, "ending_time": 1605311551239, "color":c2(16), "label": "12m 49s \/ 4.3 GB"}, {"starting_time": 1605311551239, "ending_time": 1605311723485, "color":c1(16)}]},
+{"label": "MACS2_ANNOTATE (mp920-MV411-STAT5B_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605311316469, "ending_time": 1605311323429, "color":c1(19)}, {"starting_time": 1605311323429, "ending_time": 1605311500819, "color":c2(19), "label": "6m 27s \/ 2.5 GB"}, {"starting_time": 1605311500819, "ending_time": 1605311703449, "color":c1(19)}]},
+{"label": "MACS2_ANNOTATE (mp918-MV411_GFI_SC-FLAG_GFI_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605311667071, "ending_time": 1605311673522, "color":c1(19)}, {"starting_time": 1605311673522, "ending_time": 1605311957363, "color":c2(19), "label": "9m 6s \/ 2.5 GB"}, {"starting_time": 1605311957363, "ending_time": 1605312213246, "color":c1(19)}]},
+{"label": "MACS2_ANNOTATE (mp919-MV411_MEF2D_NT_SC_63-FLAF_MEF2D_R1 vs mp845-MV411-INPUT_R1)", "times": [{"starting_time": 1605311825990, "ending_time": 1605311833199, "color":c1(19)}, {"starting_time": 1605311833199, "ending_time": 1605312013529, "color":c2(19), "label": "6m 28s \/ 2.4 GB"}, {"starting_time": 1605312013529, "ending_time": 1605312213954, "color":c1(19)}]},
+{"label": "IGV", "times": [{"starting_time": 1605311826823, "ending_time": 1605311833339, "color":c1(20)}, {"starting_time": 1605311833339, "ending_time": 1605311833722, "color":c2(20), "label": "4m 47s \/ 9.9 MB"}, {"starting_time": 1605311833722, "ending_time": 1605312113340, "color":c1(20)}]},
+{"label": "MACS2_QC", "times": [{"starting_time": 1605312215631, "ending_time": 1605312222968, "color":c1(21)}, {"starting_time": 1605312222968, "ending_time": 1605312236067, "color":c2(21), "label": "3m 8s \/ 191.6 MB"}, {"starting_time": 1605312236067, "ending_time": 1605312403244, "color":c1(21)}]},
+{"label": "MULTIQC (1)", "times": [{"starting_time": 1605312412296, "ending_time": 1605312413135, "color":c1(22)}, {"starting_time": 1605312413135, "ending_time": 1605312432842, "color":c2(22), "label": "7m 41s \/ 640.4 MB"}, {"starting_time": 1605312432842, "ending_time": 1605312873112, "color":c1(22)}]}
+]
+
+
+function getTickFormat() {
+  var MIN = 1000 * 60
+  var HOUR = MIN * 60
+  var DAY = HOUR * 24
+  var delta = (endingMillis - beginningMillis)
+
+  if( delta < 2 * MIN ) {
+    return {
+      format: d3.time.format("%S"),
+      tickTime: d3.time.seconds,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * HOUR ) {
+    return {
+      format: d3.time.format("%M"),
+      tickTime: d3.time.minutes,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * DAY ) {
+    return {
+      format: d3.time.format("%H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 1,
+      tickSize: 6
+    }
+  }
+
+  if( delta <= 7 * DAY ) {
+    return {
+      format: d3.time.format("%b %e %H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 6,
+      tickSize: 6
+    }
+  }
+
+  return {
+    format: d3.time.format("%b %e"),
+    tickTime: d3.time.days,
+    tickInterval: 1,
+    tickSize: 6
+  }
+}
+
+function getLabelMargin(scale) {
+    $('<span class="labelSpan" style="display: none"></span>').appendTo('body');
+
+    var labelMargin = 0
+    $.each(data, function (key, value) {
+      labelMargin = Math.max(labelMargin, $('.labelSpan').html(value.label).width());
+    });
+
+    $('.labelSpan').remove();
+
+    return (labelMargin * scale);
+}
+
+function render() {
+  handler=null;
+  $("#timeline").empty()
+  $('#label_elapsed').text(elapsed)
+  $('#label_launch').text( d3.time.format('%d %b %Y %H:%M')(new Date(beginningMillis)) )
+
+  var width = $(window).width();
+  var chart = d3.timeline()
+    .stack() // toggles graph stacking
+    .margin({left:getLabelMargin(0.85), right:100, top:0, bottom:0})
+    .tickFormat( getTickFormat() )
+    .rowSeperators('#f5f5f5')
+    .showTimeAxisTick()
+    ;
+  var svg = d3.select("#timeline").append("svg").attr("width", width).datum(data).call(chart);
+}
+
+function hrz() {
+if( handler != null ) clearTimeout(handler)
+  handler = setTimeout(render, 150);
+}
+
+$(document).ready(render)
+$(window).resize(hrz); // resize the applet on window resize
+</script>
+</head>
+
+<body>
+<div>
+  <h3>Processes execution timeline</h3>
+  <p>
+    Launch time: <span id='label_launch'> </span><br>
+    Elapsed time: <span id='label_elapsed'> </span><br>
+    Legend: job wall time / memory usage (RAM) <span id='label_legend'> </span>
+  </p>
+  <div id="timeline"></div>
+</div>
+
+<div id='footer'>
+  Created with Nextflow -- <a href='http://www.nextflow.io' target='_blank'>http://nextflow.io</a>
+</div>
+
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Clink href='" + prot + "fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' %3E%3C/link%3E"));
+</script>
+</body>
+</html>

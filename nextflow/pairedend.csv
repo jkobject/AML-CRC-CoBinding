@@ -1,0 +1,9 @@
+group,replicate,fastq_1,fastq_2,antibody,control
+RUNX1,1,data/seqs/mp300-MV411-RUNX1-r3_R1.fastq.gz,data/seqs/mp300-MV411-RUNX1-r3_R2.fastq.gz,BCATENIN,INPUT
+GFI1,1,data/seqs/mp321-MV411-GFI1-r4_R1.fastq.gz,data/seqs/mp321-MV411-GFI1-r4_R2.fastq.gz,BCATENIN,INPUT
+MEF2D,1,data/seqs/mp324-MV411-MEF2D-r1_R1.fastq.gz,data/seqs/mp324-MV411-MEF2D-r1_R2.fastq.gz,BCATENIN,INPUT
+SP1,1,data/seqs/mp325-MV411-SP1-r2_R1.fastq.gz,data/seqs/mp325-MV411-SP1-r2_R2.fastq.gz,BCATENIN,INPUT
+FLI1,1,data/seqs/mp319-MV411-FLI1-r1_R1.fastq.gz,data/seqs/mp319-MV411-FLI1-r1_R2.fastq.gz,BCATENIN,INPUT
+PU1,1,data/seqs/mp301-MV411-PU1-r2_R1.fastq.gz,data/seqs/mp301-MV411-PU1-r2_R2.fastq.gz,BCATENIN,INPUT
+ZEB2,1,data/seqs/mp320-MV411-ZEB2-r1_R1.fastq.gz,data/seqs/mp320-MV411-ZEB2-r1_R2.fastq.gz,BCATENIN,INPUT
+INPUT,1,data/seqs/mp99-MV411-INPUT-r1.fastq.gz,,,
