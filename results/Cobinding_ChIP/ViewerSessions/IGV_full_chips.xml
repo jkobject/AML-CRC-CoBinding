@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="gs://amlproject/Chip/results/reference_genome/genome.fa" hasGeneTrack="true" hasSequenceTrack="true" locus="All" version="8">
+	<Resources>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp106-MV411-MYB-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp106-MV411-MYB-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp109-M6-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp109-M6-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp112-MV411-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp112-MV411-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp115-MV411-PU1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp115-MV411-PU1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp116-MV411-MYB-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp116-MV411-MYB-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp117-MV411-POLII-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp117-MV411-POLII-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp118-MV411-SP1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp118-MV411-SP1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp122-M6-CEBPA-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp122-M6-CEBPA-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp123-M6-RUNX1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp123-M6-RUNX1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp124-M6-MYB-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp124-M6-MYB-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp125-M6-ETV6-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp125-M6-ETV6-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp127-M6-SP1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp127-M6-SP1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp128-M6-MED1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp128-M6-MED1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp129-MV411-RUNX1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp129-MV411-RUNX1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp136-MV411-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp136-MV411-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp137-MV411-H3K4me3-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp137-MV411-H3K4me3-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp138-MV411-H3K36me3-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp138-MV411-H3K36me3-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp153-D9-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp153-D9-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp154-D9-PU1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp154-D9-PU1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp155-D9-MYB-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp155-D9-MYB-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp156-D9-SP1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp156-D9-SP1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp157-D9-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp157-D9-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp160-D9-MED1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp160-D9-MED1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp168-OCIAML2-PU1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp168-OCIAML2-PU1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp171-M6-PU1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp171-M6-PU1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp183-MV411_DMSO-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp183-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp186-NOMO1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp186-NOMO1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp187-UT7-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp187-UT7-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp188-UCSDAML1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp188-UCSDAML1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp193-NB4-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp193-NB4-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp194-TF1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp194-TF1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp195-OCIAML3-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp195-OCIAML3-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp196-MONOMAC6-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp196-MONOMAC6-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp197-SKNO1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp197-SKNO1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp2-D9-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp2-D9-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp203-NB4-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp203-NB4-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp204-TF1-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp204-TF1-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp205-OCIAML3-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp205-OCIAML3-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp206-MONOMAC6-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp206-MONOMAC6-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp207-KG1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp207-KG1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp213-U937-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp213-U937-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp214-UT7-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp214-UT7-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp216-SKNO1-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp216-SKNO1-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp230-SKNO1-MYB-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp230-SKNO1-MYB-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp231-SKNO1-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp231-SKNO1-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp232-SKNO1-ETV6-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp232-SKNO1-ETV6-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp233-SKNO1-RUNX1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp233-SKNO1-RUNX1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp27-D9-CEBPA-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp27-D9-CEBPA-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp293-MV411-H3K79me2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp293-MV411-H3K79me2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp299-MV411-CEBPA-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp299-MV411-CEBPA-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp300-MV411-RUNX1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp300-MV411-RUNX1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp301-MV411-PU1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp301-MV411-PU1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp302-M6-MYB-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp302-M6-MYB-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp304-D9-PU1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp304-D9-PU1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp305-SKNO1-PU1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp305-SKNO1-PU1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp308-SKNO1-RUNX1_RUNX1T1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp308-SKNO1-RUNX1_RUNX1T1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp319-MV411-FLI1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp319-MV411-FLI1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp320-MV411-ZEB2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp320-MV411-ZEB2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp321-MV411-GFI1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp321-MV411-GFI1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp324-MV411-MEF2D-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp324-MV411-MEF2D-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp325-MV411-SP1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp325-MV411-SP1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp351-D0-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp351-D0-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp352-D0-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp352-D0-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp353-D9-H3K27ac-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp353-D9-H3K27ac-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp354-D9-H3K27ac-r4.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp354-D9-H3K27ac-r4.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp355-M6-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp355-M6-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp356-M6-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp356-M6-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp357-MV411-ZMYND8-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp357-MV411-ZMYND8-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp358-MV411-ZMYND8-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp358-MV411-ZMYND8-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp359-MV411-LMO2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp359-MV411-LMO2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp41-OCIAML2-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp41-OCIAML2-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp424-MV411-RUNX1-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp424-MV411-RUNX1-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp425-MV411-ETV6-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp425-MV411-ETV6-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp426-MV411-SP1-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp426-MV411-SP1-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp427-MV411-LMO2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp427-MV411-LMO2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp428-MV411-PU1-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp428-MV411-PU1-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp429-MV411-IRF8-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp429-MV411-IRF8-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp430-MV411-IRF2BP2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp430-MV411-IRF2BP2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp431-MV411-IRF2BP2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp431-MV411-IRF2BP2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp433-MV411-GSE1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp433-MV411-GSE1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp435-MV411-MED1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp435-MV411-MED1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp45-OCIAML2-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp45-OCIAML2-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp48-MOLM13-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp48-MOLM13-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp50-OCIAML2-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp50-OCIAML2-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp53-HL60-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp53-HL60-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp56-Kasumi1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp56-Kasumi1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp565-MV411-CDK13-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp565-MV411-CDK13-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp568-MV411-ZEB2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp568-MV411-ZEB2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp569-MV411-ETV6-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp569-MV411-ETV6-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp570-MV411-CTCF-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp570-MV411-CTCF-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp575-MV411-IRF2BP2-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp575-MV411-IRF2BP2-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp577-MV411-SMC1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp577-MV411-SMC1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp58-KG1-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp58-KG1-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp581-MV411-MEF2C-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp581-MV411-MEF2C-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp582-MV411-MEIS1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp582-MV411-MEIS1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp583-MV411-ELF2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp583-MV411-ELF2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp584-MV411-MYC-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp584-MV411-MYC-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp585-MV411-MYC-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp585-MV411-MYC-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp587-MV411-IKZF1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp587-MV411-IKZF1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp589-MV411-ETV6-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp589-MV411-ETV6-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp590-MV411-GATA2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp590-MV411-GATA2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp591-MONOMAC1-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp591-MONOMAC1-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp592-MONOMAC1-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp592-MONOMAC1-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp593-HEL9217-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp593-HEL9217-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp594-HEL9217-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp594-HEL9217-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp597-PLB985-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp597-PLB985-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp598-PLB985-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp598-PLB985-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp601-MV411-RUNX2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp601-MV411-RUNX2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp604-MV411-IKZF1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp604-MV411-IKZF1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp607-MV411-ELF2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp607-MV411-ELF2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp614-MV411-MEF2C-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp614-MV411-MEF2C-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp623-MV411-MEF2D-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp623-MV411-MEF2D-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp627-MV411-MEF2C-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp627-MV411-MEF2C-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp631-SKNO1-PU1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp631-SKNO1-PU1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp633-SKNO1-FLI1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp633-SKNO1-FLI1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp635-SKNO1-ERG-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp635-SKNO1-ERG-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp636-SKNO1-MYC-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp636-SKNO1-MYC-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp637-SKNO1-ERG-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp637-SKNO1-ERG-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp638-SKNO1-MAX-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp638-SKNO1-MAX-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp639-MV411-MAX-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp639-MV411-MAX-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp640-MV411-LYL1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp640-MV411-LYL1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp650-MV411-LDB1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp650-MV411-LDB1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp67-OCIAML2-H3K27ac-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp67-OCIAML2-H3K27ac-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp690-MV411_DMSO-MAX-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp690-MV411_DMSO-MAX-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp7-D0-EZH2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp7-D0-EZH2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp70-MV411-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp70-MV411-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp702-MV411_DMSO-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp702-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp71-MV411-H3K27me3-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp71-MV411-H3K27me3-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp714-MV411-ZEB2-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp714-MV411-ZEB2-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp715-MV411-ZEB2-r4.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp715-MV411-ZEB2-r4.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp716-MV411-GSE1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp716-MV411-GSE1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp717-MV411-GATA2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp717-MV411-GATA2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp718-MV411-IRF2BP2-r4.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp718-MV411-IRF2BP2-r4.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp72-MV411-CEBPA-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp72-MV411-CEBPA-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp724-MV411_DMSO-MYC-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp724-MV411_DMSO-MYC-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp728-MV411_DMSO-CEBPA-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp728-MV411_DMSO-CEBPA-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp73-U937-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp73-U937-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp734-MV411_DMSO-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp734-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp739-DFAM71927V3-RUNX1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp739-DFAM71927V3-RUNX1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp741-DFAM71927V3-MYB-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp741-DFAM71927V3-MYB-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp742-DFAM71927V3-MYC-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp742-DFAM71927V3-MYC-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp743-DFAM71927V3-SP1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp743-DFAM71927V3-SP1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp745-DFAM71927V3-GFI1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp745-DFAM71927V3-GFI1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp748-DFAM71927V3-ELF2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp748-DFAM71927V3-ELF2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp750-DFAM71927V3-GATA2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp750-DFAM71927V3-GATA2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp751-DFAM71927V3-FLI1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp751-DFAM71927V3-FLI1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp760-MV411_MEF2D_NT_SC_63-FLAG-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp760-MV411_MEF2D_NT_SC_63-FLAG-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp761-MV411_PU1_NT_SC_1-FLAG-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp761-MV411_PU1_NT_SC_1-FLAG-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp763-MV411-RUNX2-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp763-MV411-RUNX2-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp764-MV411-RUNX2-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp764-MV411-RUNX2-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp765-MV411-RUNX2-r4.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp765-MV411-RUNX2-r4.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp767-MV411-FOXP1-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp767-MV411-FOXP1-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp768-MV411-FOXP1-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp768-MV411-FOXP1-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp77-HL60-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp77-HL60-H3K27ac-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp770-MV411-MYBL2-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp770-MV411-MYBL2-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp771-MV411-JUND-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp771-MV411-JUND-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp772-MV411-JUND-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp772-MV411-JUND-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp773-MV411-HOXA9-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp773-MV411-HOXA9-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp774-MV411-HOXA9-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp774-MV411-HOXA9-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp776-P31FUJ-H3K27ac-r1.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp776-P31FUJ-H3K27ac-r1.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp777-MONOMAC1-H3K27ac-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp777-MONOMAC1-H3K27ac-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp778-MONOMAC1-H3K27ac-r4.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp778-MONOMAC1-H3K27ac-r4.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp88-MV411-H3K27ac-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp88-MV411-H3K27ac-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp89-MV411-H3K36me3-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp89-MV411-H3K36me3-r2.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp90-U937-H3K27ac-r3.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp90-U937-H3K27ac-r3.mLb.clN.bigWig"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp92-NOMO1-H3K27ac-r2.narrowPeak"/>
+		<Resource path="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp92-NOMO1-H3K27ac-r2.mLb.clN.bigWig"/>
+	</Resources>
+	<Panel height="1160" name="DataPanel" width="1897">
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp106-MV411-MYB-r1.narrowPeak" name="mp106-MV411-MYB-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp106-MV411-MYB-r1.mLb.clN.bigWig" name="mp106-MV411-MYB-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp109-M6-CEBPA-r1.narrowPeak" name="mp109-M6-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp109-M6-CEBPA-r1.mLb.clN.bigWig" name="mp109-M6-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp112-MV411-CEBPA-r1.narrowPeak" name="mp112-MV411-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp112-MV411-CEBPA-r1.mLb.clN.bigWig" name="mp112-MV411-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp115-MV411-PU1-r1.narrowPeak" name="mp115-MV411-PU1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp115-MV411-PU1-r1.mLb.clN.bigWig" name="mp115-MV411-PU1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp116-MV411-MYB-r2.narrowPeak" name="mp116-MV411-MYB-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp116-MV411-MYB-r2.mLb.clN.bigWig" name="mp116-MV411-MYB-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp117-MV411-POLII-r1.narrowPeak" name="mp117-MV411-POLII-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp117-MV411-POLII-r1.mLb.clN.bigWig" name="mp117-MV411-POLII-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp118-MV411-SP1-r1.narrowPeak" name="mp118-MV411-SP1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp118-MV411-SP1-r1.mLb.clN.bigWig" name="mp118-MV411-SP1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp122-M6-CEBPA-r2.narrowPeak" name="mp122-M6-CEBPA-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp122-M6-CEBPA-r2.mLb.clN.bigWig" name="mp122-M6-CEBPA-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp123-M6-RUNX1-r1.narrowPeak" name="mp123-M6-RUNX1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp123-M6-RUNX1-r1.mLb.clN.bigWig" name="mp123-M6-RUNX1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp124-M6-MYB-r1.narrowPeak" name="mp124-M6-MYB-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp124-M6-MYB-r1.mLb.clN.bigWig" name="mp124-M6-MYB-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp125-M6-ETV6-r1.narrowPeak" name="mp125-M6-ETV6-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp125-M6-ETV6-r1.mLb.clN.bigWig" name="mp125-M6-ETV6-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp127-M6-SP1-r1.narrowPeak" name="mp127-M6-SP1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp127-M6-SP1-r1.mLb.clN.bigWig" name="mp127-M6-SP1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp128-M6-MED1-r1.narrowPeak" name="mp128-M6-MED1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp128-M6-MED1-r1.mLb.clN.bigWig" name="mp128-M6-MED1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp129-MV411-RUNX1-r1.narrowPeak" name="mp129-MV411-RUNX1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp129-MV411-RUNX1-r1.mLb.clN.bigWig" name="mp129-MV411-RUNX1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp136-MV411-H3K27ac-r1.narrowPeak" name="mp136-MV411-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp136-MV411-H3K27ac-r1.mLb.clN.bigWig" name="mp136-MV411-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp137-MV411-H3K4me3-r1.narrowPeak" name="mp137-MV411-H3K4me3-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp137-MV411-H3K4me3-r1.mLb.clN.bigWig" name="mp137-MV411-H3K4me3-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp138-MV411-H3K36me3-r1.narrowPeak" name="mp138-MV411-H3K36me3-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp138-MV411-H3K36me3-r1.mLb.clN.bigWig" name="mp138-MV411-H3K36me3-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp153-D9-CEBPA-r1.narrowPeak" name="mp153-D9-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp153-D9-CEBPA-r1.mLb.clN.bigWig" name="mp153-D9-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp154-D9-PU1-r1.narrowPeak" name="mp154-D9-PU1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp154-D9-PU1-r1.mLb.clN.bigWig" name="mp154-D9-PU1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp155-D9-MYB-r1.narrowPeak" name="mp155-D9-MYB-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp155-D9-MYB-r1.mLb.clN.bigWig" name="mp155-D9-MYB-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp156-D9-SP1-r1.narrowPeak" name="mp156-D9-SP1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp156-D9-SP1-r1.mLb.clN.bigWig" name="mp156-D9-SP1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp157-D9-H3K27ac-r1.narrowPeak" name="mp157-D9-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp157-D9-H3K27ac-r1.mLb.clN.bigWig" name="mp157-D9-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp160-D9-MED1-r1.narrowPeak" name="mp160-D9-MED1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp160-D9-MED1-r1.mLb.clN.bigWig" name="mp160-D9-MED1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp168-OCIAML2-PU1-r1.narrowPeak" name="mp168-OCIAML2-PU1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp168-OCIAML2-PU1-r1.mLb.clN.bigWig" name="mp168-OCIAML2-PU1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp171-M6-PU1-r1.narrowPeak" name="mp171-M6-PU1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp171-M6-PU1-r1.mLb.clN.bigWig" name="mp171-M6-PU1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp183-MV411_DMSO-H3K27ac-r1.narrowPeak" name="mp183-MV411_DMSO-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp183-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig" name="mp183-MV411_DMSO-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp186-NOMO1-H3K27ac-r1.narrowPeak" name="mp186-NOMO1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp186-NOMO1-H3K27ac-r1.mLb.clN.bigWig" name="mp186-NOMO1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp187-UT7-H3K27ac-r1.narrowPeak" name="mp187-UT7-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp187-UT7-H3K27ac-r1.mLb.clN.bigWig" name="mp187-UT7-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp188-UCSDAML1-H3K27ac-r1.narrowPeak" name="mp188-UCSDAML1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp188-UCSDAML1-H3K27ac-r1.mLb.clN.bigWig" name="mp188-UCSDAML1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp193-NB4-H3K27ac-r1.narrowPeak" name="mp193-NB4-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp193-NB4-H3K27ac-r1.mLb.clN.bigWig" name="mp193-NB4-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp194-TF1-H3K27ac-r1.narrowPeak" name="mp194-TF1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp194-TF1-H3K27ac-r1.mLb.clN.bigWig" name="mp194-TF1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp195-OCIAML3-H3K27ac-r1.narrowPeak" name="mp195-OCIAML3-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp195-OCIAML3-H3K27ac-r1.mLb.clN.bigWig" name="mp195-OCIAML3-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp196-MONOMAC6-H3K27ac-r1.narrowPeak" name="mp196-MONOMAC6-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp196-MONOMAC6-H3K27ac-r1.mLb.clN.bigWig" name="mp196-MONOMAC6-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp197-SKNO1-H3K27ac-r1.narrowPeak" name="mp197-SKNO1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp197-SKNO1-H3K27ac-r1.mLb.clN.bigWig" name="mp197-SKNO1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp2-D9-H3K27ac-r2.narrowPeak" name="mp2-D9-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp2-D9-H3K27ac-r2.mLb.clN.bigWig" name="mp2-D9-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp203-NB4-H3K27ac-r2.narrowPeak" name="mp203-NB4-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp203-NB4-H3K27ac-r2.mLb.clN.bigWig" name="mp203-NB4-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp204-TF1-H3K27ac-r2.narrowPeak" name="mp204-TF1-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp204-TF1-H3K27ac-r2.mLb.clN.bigWig" name="mp204-TF1-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp205-OCIAML3-H3K27ac-r2.narrowPeak" name="mp205-OCIAML3-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp205-OCIAML3-H3K27ac-r2.mLb.clN.bigWig" name="mp205-OCIAML3-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp206-MONOMAC6-H3K27ac-r2.narrowPeak" name="mp206-MONOMAC6-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp206-MONOMAC6-H3K27ac-r2.mLb.clN.bigWig" name="mp206-MONOMAC6-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp207-KG1-H3K27ac-r1.narrowPeak" name="mp207-KG1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp207-KG1-H3K27ac-r1.mLb.clN.bigWig" name="mp207-KG1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp213-U937-H3K27ac-r1.narrowPeak" name="mp213-U937-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp213-U937-H3K27ac-r1.mLb.clN.bigWig" name="mp213-U937-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp214-UT7-H3K27ac-r2.narrowPeak" name="mp214-UT7-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp214-UT7-H3K27ac-r2.mLb.clN.bigWig" name="mp214-UT7-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp216-SKNO1-H3K27ac-r2.narrowPeak" name="mp216-SKNO1-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp216-SKNO1-H3K27ac-r2.mLb.clN.bigWig" name="mp216-SKNO1-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp230-SKNO1-MYB-r1.narrowPeak" name="mp230-SKNO1-MYB-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp230-SKNO1-MYB-r1.mLb.clN.bigWig" name="mp230-SKNO1-MYB-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp231-SKNO1-CEBPA-r1.narrowPeak" name="mp231-SKNO1-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp231-SKNO1-CEBPA-r1.mLb.clN.bigWig" name="mp231-SKNO1-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp232-SKNO1-ETV6-r1.narrowPeak" name="mp232-SKNO1-ETV6-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp232-SKNO1-ETV6-r1.mLb.clN.bigWig" name="mp232-SKNO1-ETV6-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp233-SKNO1-RUNX1-r1.narrowPeak" name="mp233-SKNO1-RUNX1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp233-SKNO1-RUNX1-r1.mLb.clN.bigWig" name="mp233-SKNO1-RUNX1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp27-D9-CEBPA-r2.narrowPeak" name="mp27-D9-CEBPA-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp27-D9-CEBPA-r2.mLb.clN.bigWig" name="mp27-D9-CEBPA-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp293-MV411-H3K79me2-r1.narrowPeak" name="mp293-MV411-H3K79me2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp293-MV411-H3K79me2-r1.mLb.clN.bigWig" name="mp293-MV411-H3K79me2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp299-MV411-CEBPA-r2.narrowPeak" name="mp299-MV411-CEBPA-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp299-MV411-CEBPA-r2.mLb.clN.bigWig" name="mp299-MV411-CEBPA-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp300-MV411-RUNX1-r2.narrowPeak" name="mp300-MV411-RUNX1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp300-MV411-RUNX1-r2.mLb.clN.bigWig" name="mp300-MV411-RUNX1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp301-MV411-PU1-r2.narrowPeak" name="mp301-MV411-PU1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp301-MV411-PU1-r2.mLb.clN.bigWig" name="mp301-MV411-PU1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp302-M6-MYB-r2.narrowPeak" name="mp302-M6-MYB-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp302-M6-MYB-r2.mLb.clN.bigWig" name="mp302-M6-MYB-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp304-D9-PU1-r2.narrowPeak" name="mp304-D9-PU1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp304-D9-PU1-r2.mLb.clN.bigWig" name="mp304-D9-PU1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp305-SKNO1-PU1-r1.narrowPeak" name="mp305-SKNO1-PU1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp305-SKNO1-PU1-r1.mLb.clN.bigWig" name="mp305-SKNO1-PU1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp308-SKNO1-RUNX1_RUNX1T1-r1.narrowPeak" name="mp308-SKNO1-RUNX1_RUNX1T1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp308-SKNO1-RUNX1_RUNX1T1-r1.mLb.clN.bigWig" name="mp308-SKNO1-RUNX1_RUNX1T1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp319-MV411-FLI1-r1.narrowPeak" name="mp319-MV411-FLI1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp319-MV411-FLI1-r1.mLb.clN.bigWig" name="mp319-MV411-FLI1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp320-MV411-ZEB2-r1.narrowPeak" name="mp320-MV411-ZEB2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp320-MV411-ZEB2-r1.mLb.clN.bigWig" name="mp320-MV411-ZEB2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp321-MV411-GFI1-r1.narrowPeak" name="mp321-MV411-GFI1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp321-MV411-GFI1-r1.mLb.clN.bigWig" name="mp321-MV411-GFI1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp324-MV411-MEF2D-r1.narrowPeak" name="mp324-MV411-MEF2D-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp324-MV411-MEF2D-r1.mLb.clN.bigWig" name="mp324-MV411-MEF2D-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp325-MV411-SP1-r2.narrowPeak" name="mp325-MV411-SP1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp325-MV411-SP1-r2.mLb.clN.bigWig" name="mp325-MV411-SP1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp351-D0-H3K27ac-r1.narrowPeak" name="mp351-D0-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp351-D0-H3K27ac-r1.mLb.clN.bigWig" name="mp351-D0-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp352-D0-H3K27ac-r2.narrowPeak" name="mp352-D0-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp352-D0-H3K27ac-r2.mLb.clN.bigWig" name="mp352-D0-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp353-D9-H3K27ac-r3.narrowPeak" name="mp353-D9-H3K27ac-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp353-D9-H3K27ac-r3.mLb.clN.bigWig" name="mp353-D9-H3K27ac-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp354-D9-H3K27ac-r4.narrowPeak" name="mp354-D9-H3K27ac-r4-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp354-D9-H3K27ac-r4.mLb.clN.bigWig" name="mp354-D9-H3K27ac-r4-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp355-M6-H3K27ac-r1.narrowPeak" name="mp355-M6-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp355-M6-H3K27ac-r1.mLb.clN.bigWig" name="mp355-M6-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp356-M6-H3K27ac-r2.narrowPeak" name="mp356-M6-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp356-M6-H3K27ac-r2.mLb.clN.bigWig" name="mp356-M6-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp357-MV411-ZMYND8-r1.narrowPeak" name="mp357-MV411-ZMYND8-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp357-MV411-ZMYND8-r1.mLb.clN.bigWig" name="mp357-MV411-ZMYND8-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp358-MV411-ZMYND8-r2.narrowPeak" name="mp358-MV411-ZMYND8-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp358-MV411-ZMYND8-r2.mLb.clN.bigWig" name="mp358-MV411-ZMYND8-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp359-MV411-LMO2-r1.narrowPeak" name="mp359-MV411-LMO2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp359-MV411-LMO2-r1.mLb.clN.bigWig" name="mp359-MV411-LMO2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp41-OCIAML2-CEBPA-r1.narrowPeak" name="mp41-OCIAML2-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp41-OCIAML2-CEBPA-r1.mLb.clN.bigWig" name="mp41-OCIAML2-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp424-MV411-RUNX1-r3.narrowPeak" name="mp424-MV411-RUNX1-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp424-MV411-RUNX1-r3.mLb.clN.bigWig" name="mp424-MV411-RUNX1-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp425-MV411-ETV6-r1.narrowPeak" name="mp425-MV411-ETV6-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp425-MV411-ETV6-r1.mLb.clN.bigWig" name="mp425-MV411-ETV6-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp426-MV411-SP1-r3.narrowPeak" name="mp426-MV411-SP1-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp426-MV411-SP1-r3.mLb.clN.bigWig" name="mp426-MV411-SP1-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp427-MV411-LMO2-r2.narrowPeak" name="mp427-MV411-LMO2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp427-MV411-LMO2-r2.mLb.clN.bigWig" name="mp427-MV411-LMO2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp428-MV411-PU1-r3.narrowPeak" name="mp428-MV411-PU1-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp428-MV411-PU1-r3.mLb.clN.bigWig" name="mp428-MV411-PU1-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp429-MV411-IRF8-r1.narrowPeak" name="mp429-MV411-IRF8-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp429-MV411-IRF8-r1.mLb.clN.bigWig" name="mp429-MV411-IRF8-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp430-MV411-IRF2BP2-r1.narrowPeak" name="mp430-MV411-IRF2BP2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp430-MV411-IRF2BP2-r1.mLb.clN.bigWig" name="mp430-MV411-IRF2BP2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp431-MV411-IRF2BP2-r2.narrowPeak" name="mp431-MV411-IRF2BP2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp431-MV411-IRF2BP2-r2.mLb.clN.bigWig" name="mp431-MV411-IRF2BP2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp433-MV411-GSE1-r1.narrowPeak" name="mp433-MV411-GSE1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp433-MV411-GSE1-r1.mLb.clN.bigWig" name="mp433-MV411-GSE1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp435-MV411-MED1-r1.narrowPeak" name="mp435-MV411-MED1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp435-MV411-MED1-r1.mLb.clN.bigWig" name="mp435-MV411-MED1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp45-OCIAML2-H3K27ac-r1.narrowPeak" name="mp45-OCIAML2-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp45-OCIAML2-H3K27ac-r1.mLb.clN.bigWig" name="mp45-OCIAML2-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp48-MOLM13-H3K27ac-r1.narrowPeak" name="mp48-MOLM13-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp48-MOLM13-H3K27ac-r1.mLb.clN.bigWig" name="mp48-MOLM13-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp50-OCIAML2-H3K27ac-r2.narrowPeak" name="mp50-OCIAML2-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp50-OCIAML2-H3K27ac-r2.mLb.clN.bigWig" name="mp50-OCIAML2-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp53-HL60-H3K27ac-r1.narrowPeak" name="mp53-HL60-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp53-HL60-H3K27ac-r1.mLb.clN.bigWig" name="mp53-HL60-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp56-Kasumi1-H3K27ac-r1.narrowPeak" name="mp56-Kasumi1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp56-Kasumi1-H3K27ac-r1.mLb.clN.bigWig" name="mp56-Kasumi1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp565-MV411-CDK13-r1.narrowPeak" name="mp565-MV411-CDK13-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp565-MV411-CDK13-r1.mLb.clN.bigWig" name="mp565-MV411-CDK13-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp568-MV411-ZEB2-r2.narrowPeak" name="mp568-MV411-ZEB2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp568-MV411-ZEB2-r2.mLb.clN.bigWig" name="mp568-MV411-ZEB2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp569-MV411-ETV6-r2.narrowPeak" name="mp569-MV411-ETV6-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp569-MV411-ETV6-r2.mLb.clN.bigWig" name="mp569-MV411-ETV6-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp570-MV411-CTCF-r1.narrowPeak" name="mp570-MV411-CTCF-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp570-MV411-CTCF-r1.mLb.clN.bigWig" name="mp570-MV411-CTCF-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp575-MV411-IRF2BP2-r3.narrowPeak" name="mp575-MV411-IRF2BP2-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp575-MV411-IRF2BP2-r3.mLb.clN.bigWig" name="mp575-MV411-IRF2BP2-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp577-MV411-SMC1-r1.narrowPeak" name="mp577-MV411-SMC1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp577-MV411-SMC1-r1.mLb.clN.bigWig" name="mp577-MV411-SMC1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp58-KG1-H3K27ac-r2.narrowPeak" name="mp58-KG1-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp58-KG1-H3K27ac-r2.mLb.clN.bigWig" name="mp58-KG1-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp581-MV411-MEF2C-r1.narrowPeak" name="mp581-MV411-MEF2C-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp581-MV411-MEF2C-r1.mLb.clN.bigWig" name="mp581-MV411-MEF2C-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp582-MV411-MEIS1-r1.narrowPeak" name="mp582-MV411-MEIS1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp582-MV411-MEIS1-r1.mLb.clN.bigWig" name="mp582-MV411-MEIS1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp583-MV411-ELF2-r1.narrowPeak" name="mp583-MV411-ELF2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp583-MV411-ELF2-r1.mLb.clN.bigWig" name="mp583-MV411-ELF2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp584-MV411-MYC-r1.narrowPeak" name="mp584-MV411-MYC-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp584-MV411-MYC-r1.mLb.clN.bigWig" name="mp584-MV411-MYC-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp585-MV411-MYC-r2.narrowPeak" name="mp585-MV411-MYC-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp585-MV411-MYC-r2.mLb.clN.bigWig" name="mp585-MV411-MYC-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp587-MV411-IKZF1-r1.narrowPeak" name="mp587-MV411-IKZF1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp587-MV411-IKZF1-r1.mLb.clN.bigWig" name="mp587-MV411-IKZF1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp589-MV411-ETV6-r3.narrowPeak" name="mp589-MV411-ETV6-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp589-MV411-ETV6-r3.mLb.clN.bigWig" name="mp589-MV411-ETV6-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp590-MV411-GATA2-r1.narrowPeak" name="mp590-MV411-GATA2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp590-MV411-GATA2-r1.mLb.clN.bigWig" name="mp590-MV411-GATA2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp591-MONOMAC1-H3K27ac-r1.narrowPeak" name="mp591-MONOMAC1-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp591-MONOMAC1-H3K27ac-r1.mLb.clN.bigWig" name="mp591-MONOMAC1-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp592-MONOMAC1-H3K27ac-r2.narrowPeak" name="mp592-MONOMAC1-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp592-MONOMAC1-H3K27ac-r2.mLb.clN.bigWig" name="mp592-MONOMAC1-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp593-HEL9217-H3K27ac-r1.narrowPeak" name="mp593-HEL9217-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp593-HEL9217-H3K27ac-r1.mLb.clN.bigWig" name="mp593-HEL9217-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp594-HEL9217-H3K27ac-r2.narrowPeak" name="mp594-HEL9217-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp594-HEL9217-H3K27ac-r2.mLb.clN.bigWig" name="mp594-HEL9217-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp597-PLB985-H3K27ac-r1.narrowPeak" name="mp597-PLB985-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp597-PLB985-H3K27ac-r1.mLb.clN.bigWig" name="mp597-PLB985-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp598-PLB985-H3K27ac-r2.narrowPeak" name="mp598-PLB985-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp598-PLB985-H3K27ac-r2.mLb.clN.bigWig" name="mp598-PLB985-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp601-MV411-RUNX2-r1.narrowPeak" name="mp601-MV411-RUNX2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp601-MV411-RUNX2-r1.mLb.clN.bigWig" name="mp601-MV411-RUNX2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp604-MV411-IKZF1-r2.narrowPeak" name="mp604-MV411-IKZF1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp604-MV411-IKZF1-r2.mLb.clN.bigWig" name="mp604-MV411-IKZF1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp607-MV411-ELF2-r2.narrowPeak" name="mp607-MV411-ELF2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp607-MV411-ELF2-r2.mLb.clN.bigWig" name="mp607-MV411-ELF2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp614-MV411-MEF2C-r2.narrowPeak" name="mp614-MV411-MEF2C-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp614-MV411-MEF2C-r2.mLb.clN.bigWig" name="mp614-MV411-MEF2C-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp623-MV411-MEF2D-r2.narrowPeak" name="mp623-MV411-MEF2D-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp623-MV411-MEF2D-r2.mLb.clN.bigWig" name="mp623-MV411-MEF2D-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp627-MV411-MEF2C-r3.narrowPeak" name="mp627-MV411-MEF2C-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp627-MV411-MEF2C-r3.mLb.clN.bigWig" name="mp627-MV411-MEF2C-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp631-SKNO1-PU1-r2.narrowPeak" name="mp631-SKNO1-PU1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp631-SKNO1-PU1-r2.mLb.clN.bigWig" name="mp631-SKNO1-PU1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp633-SKNO1-FLI1-r1.narrowPeak" name="mp633-SKNO1-FLI1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp633-SKNO1-FLI1-r1.mLb.clN.bigWig" name="mp633-SKNO1-FLI1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp635-SKNO1-ERG-r1.narrowPeak" name="mp635-SKNO1-ERG-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp635-SKNO1-ERG-r1.mLb.clN.bigWig" name="mp635-SKNO1-ERG-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp636-SKNO1-MYC-r1.narrowPeak" name="mp636-SKNO1-MYC-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp636-SKNO1-MYC-r1.mLb.clN.bigWig" name="mp636-SKNO1-MYC-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp637-SKNO1-ERG-r2.narrowPeak" name="mp637-SKNO1-ERG-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp637-SKNO1-ERG-r2.mLb.clN.bigWig" name="mp637-SKNO1-ERG-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp638-SKNO1-MAX-r1.narrowPeak" name="mp638-SKNO1-MAX-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp638-SKNO1-MAX-r1.mLb.clN.bigWig" name="mp638-SKNO1-MAX-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp639-MV411-MAX-r1.narrowPeak" name="mp639-MV411-MAX-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp639-MV411-MAX-r1.mLb.clN.bigWig" name="mp639-MV411-MAX-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp640-MV411-LYL1-r1.narrowPeak" name="mp640-MV411-LYL1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp640-MV411-LYL1-r1.mLb.clN.bigWig" name="mp640-MV411-LYL1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp650-MV411-LDB1-r1.narrowPeak" name="mp650-MV411-LDB1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp650-MV411-LDB1-r1.mLb.clN.bigWig" name="mp650-MV411-LDB1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp67-OCIAML2-H3K27ac-r3.narrowPeak" name="mp67-OCIAML2-H3K27ac-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp67-OCIAML2-H3K27ac-r3.mLb.clN.bigWig" name="mp67-OCIAML2-H3K27ac-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp690-MV411_DMSO-MAX-r1.narrowPeak" name="mp690-MV411_DMSO-MAX-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp690-MV411_DMSO-MAX-r1.mLb.clN.bigWig" name="mp690-MV411_DMSO-MAX-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp7-D0-EZH2-r1.narrowPeak" name="mp7-D0-EZH2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp7-D0-EZH2-r1.mLb.clN.bigWig" name="mp7-D0-EZH2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp70-MV411-H3K27ac-r2.narrowPeak" name="mp70-MV411-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp70-MV411-H3K27ac-r2.mLb.clN.bigWig" name="mp70-MV411-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp702-MV411_DMSO-H3K27ac-r1.narrowPeak" name="mp702-MV411_DMSO-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp702-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig" name="mp702-MV411_DMSO-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp71-MV411-H3K27me3-r1.narrowPeak" name="mp71-MV411-H3K27me3-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp71-MV411-H3K27me3-r1.mLb.clN.bigWig" name="mp71-MV411-H3K27me3-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp714-MV411-ZEB2-r3.narrowPeak" name="mp714-MV411-ZEB2-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp714-MV411-ZEB2-r3.mLb.clN.bigWig" name="mp714-MV411-ZEB2-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp715-MV411-ZEB2-r4.narrowPeak" name="mp715-MV411-ZEB2-r4-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp715-MV411-ZEB2-r4.mLb.clN.bigWig" name="mp715-MV411-ZEB2-r4-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp716-MV411-GSE1-r2.narrowPeak" name="mp716-MV411-GSE1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp716-MV411-GSE1-r2.mLb.clN.bigWig" name="mp716-MV411-GSE1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp717-MV411-GATA2-r2.narrowPeak" name="mp717-MV411-GATA2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp717-MV411-GATA2-r2.mLb.clN.bigWig" name="mp717-MV411-GATA2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp718-MV411-IRF2BP2-r4.narrowPeak" name="mp718-MV411-IRF2BP2-r4-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp718-MV411-IRF2BP2-r4.mLb.clN.bigWig" name="mp718-MV411-IRF2BP2-r4-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp72-MV411-CEBPA-r3.narrowPeak" name="mp72-MV411-CEBPA-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp72-MV411-CEBPA-r3.mLb.clN.bigWig" name="mp72-MV411-CEBPA-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp724-MV411_DMSO-MYC-r1.narrowPeak" name="mp724-MV411_DMSO-MYC-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp724-MV411_DMSO-MYC-r1.mLb.clN.bigWig" name="mp724-MV411_DMSO-MYC-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp728-MV411_DMSO-CEBPA-r1.narrowPeak" name="mp728-MV411_DMSO-CEBPA-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp728-MV411_DMSO-CEBPA-r1.mLb.clN.bigWig" name="mp728-MV411_DMSO-CEBPA-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp73-U937-H3K27ac-r2.narrowPeak" name="mp73-U937-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp73-U937-H3K27ac-r2.mLb.clN.bigWig" name="mp73-U937-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp734-MV411_DMSO-H3K27ac-r1.narrowPeak" name="mp734-MV411_DMSO-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp734-MV411_DMSO-H3K27ac-r1.mLb.clN.bigWig" name="mp734-MV411_DMSO-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp739-DFAM71927V3-RUNX1-r1.narrowPeak" name="mp739-DFAM71927V3-RUNX1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp739-DFAM71927V3-RUNX1-r1.mLb.clN.bigWig" name="mp739-DFAM71927V3-RUNX1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp741-DFAM71927V3-MYB-r1.narrowPeak" name="mp741-DFAM71927V3-MYB-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp741-DFAM71927V3-MYB-r1.mLb.clN.bigWig" name="mp741-DFAM71927V3-MYB-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp742-DFAM71927V3-MYC-r1.narrowPeak" name="mp742-DFAM71927V3-MYC-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp742-DFAM71927V3-MYC-r1.mLb.clN.bigWig" name="mp742-DFAM71927V3-MYC-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp743-DFAM71927V3-SP1-r1.narrowPeak" name="mp743-DFAM71927V3-SP1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp743-DFAM71927V3-SP1-r1.mLb.clN.bigWig" name="mp743-DFAM71927V3-SP1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp745-DFAM71927V3-GFI1-r1.narrowPeak" name="mp745-DFAM71927V3-GFI1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp745-DFAM71927V3-GFI1-r1.mLb.clN.bigWig" name="mp745-DFAM71927V3-GFI1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp748-DFAM71927V3-ELF2-r1.narrowPeak" name="mp748-DFAM71927V3-ELF2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp748-DFAM71927V3-ELF2-r1.mLb.clN.bigWig" name="mp748-DFAM71927V3-ELF2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp750-DFAM71927V3-GATA2-r1.narrowPeak" name="mp750-DFAM71927V3-GATA2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp750-DFAM71927V3-GATA2-r1.mLb.clN.bigWig" name="mp750-DFAM71927V3-GATA2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp751-DFAM71927V3-FLI1-r1.narrowPeak" name="mp751-DFAM71927V3-FLI1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp751-DFAM71927V3-FLI1-r1.mLb.clN.bigWig" name="mp751-DFAM71927V3-FLI1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp760-MV411_MEF2D_NT_SC_63-FLAG-r1.narrowPeak" name="mp760-MV411_MEF2D_NT_SC_63-FLAG-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp760-MV411_MEF2D_NT_SC_63-FLAG-r1.mLb.clN.bigWig" name="mp760-MV411_MEF2D_NT_SC_63-FLAG-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp761-MV411_PU1_NT_SC_1-FLAG-r1.narrowPeak" name="mp761-MV411_PU1_NT_SC_1-FLAG-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp761-MV411_PU1_NT_SC_1-FLAG-r1.mLb.clN.bigWig" name="mp761-MV411_PU1_NT_SC_1-FLAG-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1.narrowPeak" name="mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1.mLb.clN.bigWig" name="mp762-MV411_IRF2BP2_CT_GFP_8-FLAG-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp763-MV411-RUNX2-r2.narrowPeak" name="mp763-MV411-RUNX2-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp763-MV411-RUNX2-r2.mLb.clN.bigWig" name="mp763-MV411-RUNX2-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp764-MV411-RUNX2-r3.narrowPeak" name="mp764-MV411-RUNX2-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp764-MV411-RUNX2-r3.mLb.clN.bigWig" name="mp764-MV411-RUNX2-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp765-MV411-RUNX2-r4.narrowPeak" name="mp765-MV411-RUNX2-r4-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp765-MV411-RUNX2-r4.mLb.clN.bigWig" name="mp765-MV411-RUNX2-r4-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp767-MV411-FOXP1-r1.narrowPeak" name="mp767-MV411-FOXP1-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp767-MV411-FOXP1-r1.mLb.clN.bigWig" name="mp767-MV411-FOXP1-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp768-MV411-FOXP1-r2.narrowPeak" name="mp768-MV411-FOXP1-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp768-MV411-FOXP1-r2.mLb.clN.bigWig" name="mp768-MV411-FOXP1-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp77-HL60-H3K27ac-r2.narrowPeak" name="mp77-HL60-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp77-HL60-H3K27ac-r2.mLb.clN.bigWig" name="mp77-HL60-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp770-MV411-MYBL2-r1.narrowPeak" name="mp770-MV411-MYBL2-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp770-MV411-MYBL2-r1.mLb.clN.bigWig" name="mp770-MV411-MYBL2-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp771-MV411-JUND-r1.narrowPeak" name="mp771-MV411-JUND-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp771-MV411-JUND-r1.mLb.clN.bigWig" name="mp771-MV411-JUND-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp772-MV411-JUND-r2.narrowPeak" name="mp772-MV411-JUND-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp772-MV411-JUND-r2.mLb.clN.bigWig" name="mp772-MV411-JUND-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp773-MV411-HOXA9-r1.narrowPeak" name="mp773-MV411-HOXA9-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp773-MV411-HOXA9-r1.mLb.clN.bigWig" name="mp773-MV411-HOXA9-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp774-MV411-HOXA9-r2.narrowPeak" name="mp774-MV411-HOXA9-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp774-MV411-HOXA9-r2.mLb.clN.bigWig" name="mp774-MV411-HOXA9-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp776-P31FUJ-H3K27ac-r1.narrowPeak" name="mp776-P31FUJ-H3K27ac-r1-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp776-P31FUJ-H3K27ac-r1.mLb.clN.bigWig" name="mp776-P31FUJ-H3K27ac-r1-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp777-MONOMAC1-H3K27ac-r3.narrowPeak" name="mp777-MONOMAC1-H3K27ac-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp777-MONOMAC1-H3K27ac-r3.mLb.clN.bigWig" name="mp777-MONOMAC1-H3K27ac-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp778-MONOMAC1-H3K27ac-r4.narrowPeak" name="mp778-MONOMAC1-H3K27ac-r4-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp778-MONOMAC1-H3K27ac-r4.mLb.clN.bigWig" name="mp778-MONOMAC1-H3K27ac-r4-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp88-MV411-H3K27ac-r3.narrowPeak" name="mp88-MV411-H3K27ac-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp88-MV411-H3K27ac-r3.mLb.clN.bigWig" name="mp88-MV411-H3K27ac-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp89-MV411-H3K36me3-r2.narrowPeak" name="mp89-MV411-H3K36me3-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp89-MV411-H3K36me3-r2.mLb.clN.bigWig" name="mp89-MV411-H3K36me3-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp90-U937-H3K27ac-r3.narrowPeak" name="mp90-U937-H3K27ac-r3-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp90-U937-H3K27ac-r3.mLb.clN.bigWig" name="mp90-U937-H3K27ac-r3-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+		<Track altColor="0,0,178" autoScale="false" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" displayMode="SQUISHED" featureVisibilityWindow="-1" fontSize="10" height="20" id="gs://amlproject/Chip/results/bwa/mergedLibrary/macs/narrowPeak/mp92-NOMO1-H3K27ac-r2.narrowPeak" name="mp92-NOMO1-H3K27ac-r2-PK" renderer="BASIC_FEATURE" sortable="false" visible="true" windowFunction="count"/>
+		<Track altColor="0,0,178" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" displayMode="COLLAPSED" featureVisibilityWindow="-1" fontSize="10" height="30" id="gs://amlproject/Chip/results/bwa/mergedLibrary/bigwig/mp92-NOMO1-H3K27ac-r2.mLb.clN.bigWig" name="mp92-NOMO1-H3K27ac-r2-BW" normalize="false" renderer="BAR_CHART" sortable="true" visible="true" windowFunction="mean">
+			<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10" minimum="0.0" type="LINEAR"/>
+		</Track>
+	</Panel>
+</Session>

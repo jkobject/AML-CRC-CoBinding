@@ -1,0 +1,634 @@
+_____________________________________________________
+merging CEBPA peaks
+--> finish first overlaps lookup
+-> main rep is: mp299-MV411-CEBPA
+- mp72-MV411-CEBPA
+  overlap: 35.98035802627481%
+  min,max from newly found peaks: (6.948566109005787, 53.410173862691714)
+ --> enough overlap
+  min,max from newly found peaks: (0.28636953439154, 434.9651003907645)
+  we have recovered 1848 peaks, equal to 1.1169200084615152% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+- mp728-MV411_DMSO-CEBPA
+  overlap: 18.088205654396543%
+ --> not enough overlap
+  min,max from newly found peaks: (8.064517310805096, 14.330487294057402)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 1850 peaks, equal to 1.1181287963494606% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+- mp112-MV411-CEBPA
+  overlap: 15.510807360854084%
+ --> not enough overlap
+  min,max from newly found peaks: (7.727579703914391, 60.32500524641245)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 1944 peaks, equal to 1.1749418270828926% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('CEBPA', 165942)
+_____________________________________________________
+merging ELF2 peaks
+--> finish first overlaps lookup
+-> main rep is: mp583-MV411-ELF2
+- mp607-MV411-ELF2
+  overlap: 11.744718228468402%
+ --> not enough overlap
+  min,max from newly found peaks: (8.660037108107248, 46.186857002214666)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (0.5046197113308386, 191.78091218569563)
+  we have recovered 77 peaks, equal to 0.17773058812667344% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('ELF2', 43324)
+_____________________________________________________
+merging JUND peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: JUND
+-> main rep is: mp771-MV411-JUND
+- mp772-MV411-JUND
+  overlap: 8.53548966756514%
+ --> not enough overlap
+  min,max from newly found peaks: (5.553420101735967, 26.166475217490035)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (6.447604368774627, 79.70097316269296)
+  we have recovered 401 peaks, equal to 11.902641733452063% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('JUND', 3369)
+_____________________________________________________
+merging HOXA9 peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: HOXA9
+-> main rep is: mp773-MV411-HOXA9
+- mp774-MV411-HOXA9
+  overlap: 15.562649640861931%
+ --> not enough overlap
+  min,max from newly found peaks: (7.4967794810971, 21.811470002104883)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (5.616635313077553, 69.07236248863505)
+  we have recovered 103 peaks, equal to 7.844630616907844% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('HOXA9', 1313)
+_____________________________________________________
+we only have one replicate for SMC1 .. pass
+_____________________________________________________
+we only have one replicate for PLAGL2 .. pass
+_____________________________________________________
+merging IRF2BP2 peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: IRF2BP2
+-> main rep is: mp718-MV411-IRF2BP2
+- mp430-MV411-IRF2BP2
+  overlap: 36.36098130841122%
+  min,max from newly found peaks: (5.377302341753139, 74.54312104621668)
+ --> enough overlap
+  min,max from newly found peaks: (6.561096283218694, 95.2656348730189)
+  we have recovered 266 peaks, equal to 2.5633612797533005% of the peaks in main replicate
+- mp431-MV411-IRF2BP2
+  overlap: 29.916277258566975%
+  min,max from newly found peaks: (5.691659637936655, 39.09551385417364)
+ --> enough overlap
+  we have recovered 399 peaks, equal to 3.845041919629951% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+- mp575-MV411-IRF2BP2
+  overlap: 14.894859813084112%
+ --> not enough overlap
+  min,max from newly found peaks: (6.665923757047722, 37.3130776115444)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 440 peaks, equal to 4.240146477787414% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 15.55362821624747%
+                              new overlap: 15.55362821624747%
+('IRF2BP2', 10377)
+_____________________________________________________
+we only have one replicate for MEIS1 .. pass
+_____________________________________________________
+we only have one replicate for FLAG_GFI .. pass
+_____________________________________________________
+we only have one replicate for FLAG_IRF2BP2 .. pass
+_____________________________________________________
+we only have one replicate for LDB1 .. pass
+_____________________________________________________
+we only have one replicate for H3K79me2 .. pass
+_____________________________________________________
+merging ETV6 peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: ETV6
+-> main rep is: mp425-MV411-ETV6
+- mp589-MV411-ETV6
+  overlap: 17.74814814814815%
+ --> not enough overlap
+  not using this replicate from the peakmatrix
+- mp569-MV411-ETV6
+  overlap: 41.88148148148148%
+  min,max from newly found peaks: (7.917139199532557, 152.28127083248265)
+ --> enough overlap
+  min,max from newly found peaks: (0.775410196634037, 30.10431222953313)
+  we have recovered 451 peaks, equal to 6.287466889725359% of the peaks in main replicate
+('ETV6', 7173)
+_____________________________________________________
+merging WDR5 peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: WDR5
+-> main rep is: db41-MV411-WDR5_D9E1
+- db42-MV411-WDR5_D9E1
+  overlap: 19.56989247311828%
+ --> not enough overlap
+  min,max from newly found peaks: (1.1703628235721901, 11.638413889775174)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (5.4154525625379515, 17.371028849213786)
+  we have recovered 43 peaks, equal to 4.579339723109691% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 22.688172043010752%
+                              new overlap: 23.322683706070286%
+- db40-MV411-WDR5_D9E1
+  overlap: 14.946236559139786%
+ --> not enough overlap
+  min,max from newly found peaks: (5.98098604389558, 101.60991505981025)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 115 peaks, equal to 12.247071352502662% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 19.808306709265175%
+                              new overlap: 19.808306709265175%
+- db38-MV411-WDR5_429A
+  overlap: 12.688172043010754%
+ --> not enough overlap
+  min,max from newly found peaks: (0.7463893782594477, 41.93444630201859)
+ --> enough overlap
+  we have recovered 341 peaks, equal to 36.315228966986155% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 27.15654952076677%
+                              new overlap: 27.15654952076677%
+- db37-MV411-WDR5_429A
+  overlap: 9.56989247311828%
+ --> not enough overlap
+  min,max from newly found peaks: (5.071487799987212, 50.60928508080302)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 478 peaks, equal to 50.905218317358894% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 17.57188498402556%
+                              new overlap: 17.57188498402556%
+('WDR5', 939)
+_____________________________________________________
+we only have one replicate for GFI1 .. pass
+_____________________________________________________
+merging H3K27ac peaks
+--> finish first overlaps lookup
+-> main rep is: mp70-MV411-H3K27ac
+- mp183-MV411_DMSO-H3K27ac
+  overlap: 25.76804710230701%
+  min,max from newly found peaks: (4.697831724650783, 66.19761217804854)
+ --> enough overlap
+  min,max from newly found peaks: (3.7739455688995034, 34.76695754125517)
+  we have recovered 12127 peaks, equal to 8.838792437428026% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 28.250693017892463%
+                              new overlap: 29.324645413332167%
+- mp702-MV411_DMSO-H3K27ac
+  overlap: 21.402225293816677%
+ --> not enough overlap
+  min,max from newly found peaks: (0.17103892143839006, 77.5703333062761)
+ --> enough overlap
+  we have recovered 51603 peaks, equal to 37.610967770149124% of the peaks in main replicate
+- mp734-MV411_DMSO-H3K27ac
+  overlap: 21.91311121123491%
+ --> not enough overlap
+  min,max from newly found peaks: (0.1604623861741988, 109.47993573921214)
+ --> enough overlap
+  we have recovered 102170 peaks, equal to 74.46684450663984% of the peaks in main replicate
+- mp88-MV411-H3K27ac
+  overlap: 34.52794599424203%
+  min,max from newly found peaks: (4.722269533409959, 57.2233044202433)
+ --> enough overlap
+  we have recovered 104279 peaks, equal to 76.00399411087302% of the peaks in main replicate
+- mp136-MV411-H3K27ac
+  overlap: 10.526999060703021%
+ --> not enough overlap
+  min,max from newly found peaks: (5.549607608409157, 66.31397446936982)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 104393 peaks, equal to 76.08708327866941% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('H3K27ac', 171048)
+_____________________________________________________
+we only have one replicate for H3K27me3 .. pass
+_____________________________________________________
+we only have one replicate for HEX .. pass
+_____________________________________________________
+merging RUNX1 peaks
+--> finish first overlaps lookup
+-> main rep is: db55-MV411-RUNX1
+- mp300-MV411-RUNX1
+  overlap: 55.64986563544603%
+  min,max from newly found peaks: (0.46758449448145256, 343.6739061322267)
+ --> enough overlap
+  min,max from newly found peaks: (4.97864354585853, 72.99365636418248)
+  we have recovered 6472 peaks, equal to 10.536426536426536% of the peaks in main replicate
+- mp424-MV411-RUNX1
+  overlap: 52.8478731074261%
+  min,max from newly found peaks: (0.6671743911133177, 81.10407436970999)
+ --> enough overlap
+  we have recovered 8190 peaks, equal to 13.333333333333334% of the peaks in main replicate
+- mp129-MV411-RUNX1
+  overlap: 3.308317493609491%
+ --> not enough overlap
+  min,max from newly found peaks: (7.654237436952155, 76.7247539214099)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 8261 peaks, equal to 13.44892144892145% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('RUNX1', 61425)
+_____________________________________________________
+we only have one replicate for FOSL2 .. pass
+_____________________________________________________
+we only have one replicate for MYBL2 .. pass
+_____________________________________________________
+we only have one replicate for CDK9 .. pass
+_____________________________________________________
+we only have one replicate for H3K4me3 .. pass
+_____________________________________________________
+we only have one replicate for FLI1 .. pass
+_____________________________________________________
+merging FOXP1 peaks
+--> finish first overlaps lookup
+-> main rep is: mp767-MV411-FOXP1
+- mp768-MV411-FOXP1
+  overlap: 64.63863423556823%
+  min,max from newly found peaks: (4.143528534778386, 101.09725006794116)
+ --> enough overlap
+  min,max from newly found peaks: (1.0062192323146342, 84.91587831339996)
+  we have recovered 1620 peaks, equal to 3.497484833437682% of the peaks in main replicate
+('FOXP1', 46319)
+_____________________________________________________
+we only have one replicate for MLL_KTM2A .. pass
+_____________________________________________________
+we only have one replicate for RARA .. pass
+_____________________________________________________
+merging GATA2 peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: GATA2
+-> main rep is: mp717-MV411-GATA2
+- mp590-MV411-GATA2
+  overlap: 0.46940578749723877%
+ --> not enough overlap
+  not using this replicate from the peakmatrix
+('GATA2', 18108)
+_____________________________________________________
+merging IKZF1 peaks
+--> finish first overlaps lookup
+-> main rep is: mp587-MV411-IKZF1
+- mp604-MV411-IKZF1
+  overlap: 6.4988241803845614%
+ --> not enough overlap
+  min,max from newly found peaks: (6.777888672671017, 30.58047930489978)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (13.007377917857431, 113.94384245604697)
+  we have recovered 218 peaks, equal to 0.6022099447513812% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('IKZF1', 36200)
+_____________________________________________________
+we only have one replicate for AFF4 .. pass
+_____________________________________________________
+we only have one replicate for CTCF .. pass
+_____________________________________________________
+merging BRD4 peaks
+--> finish first overlaps lookup
+-> main rep is: db46-MV411-BRD4
+- db47-MV411-BRD4
+  overlap: 49.79775574112735%
+  min,max from newly found peaks: (5.305181697194204, 73.05909127906831)
+ --> enough overlap
+  min,max from newly found peaks: (1.0029430550860114, 123.34353299865842)
+  we have recovered 5368 peaks, equal to 10.484375% of the peaks in main replicate
+('BRD4', 51200)
+_____________________________________________________
+merging SP1 peaks
+--> finish first overlaps lookup
+-> main rep is: mp325-MV411-SP1
+- mp426-MV411-SP1
+  overlap: 41.246200607902736%
+  min,max from newly found peaks: (0.37307290440033736, 167.1336139658586)
+ --> enough overlap
+  min,max from newly found peaks: (0.7048765996940883, 695.2056325632972)
+  we have recovered 3958 peaks, equal to 14.769758937234123% of the peaks in main replicate
+- mp118-MV411-SP1
+  overlap: 8.905775075987842%
+ --> not enough overlap
+  min,max from newly found peaks: (0.6870233493767378, 39.6254183721475)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 4774 peaks, equal to 17.814762295693708% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('SP1', 26798)
+_____________________________________________________
+we only have one replicate for SREBP1 .. pass
+_____________________________________________________
+we only have one replicate for H3K18 .. pass
+_____________________________________________________
+we only have one replicate for E2F3 .. pass
+_____________________________________________________
+we only have one replicate for CEBPB .. pass
+_____________________________________________________
+merging PU1 peaks
+--> finish first overlaps lookup
+-> main rep is: mp301-MV411-PU1
+- mp428-MV411-PU1
+  overlap: 78.82224513311905%
+  min,max from newly found peaks: (0.37974247597750904, 140.65132982111066)
+ --> enough overlap
+  min,max from newly found peaks: (0.46660366646959744, 207.39154795156728)
+  we have recovered 17354 peaks, equal to 16.276801290588832% of the peaks in main replicate
+- mp115-MV411-PU1
+  overlap: 7.210867851294803%
+ --> not enough overlap
+  min,max from newly found peaks: (6.175040097165498, 20.281215215713456)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 17365 peaks, equal to 16.287118497814628% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('PU1', 106618)
+_____________________________________________________
+merging LMO2 peaks
+--> finish first overlaps lookup
+-> main rep is: mp359-MV411-LMO2
+- mp427-MV411-LMO2
+  overlap: 16.33126119481614%
+ --> not enough overlap
+  min,max from newly found peaks: (6.428105372122856, 15.98414903939718)
+  we did not had enough initial overlap.
+ --> enough overlap
+  min,max from newly found peaks: (9.917975744529173, 59.029113963084804)
+  we have recovered 77 peaks, equal to 0.40475189234650966% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 16.51564640185439%
+                              new overlap: 16.69995794785534%
+('LMO2', 19024)
+_____________________________________________________
+we only have one replicate for H3K36me2 .. pass
+_____________________________________________________
+we only have one replicate for PSER2 .. pass
+_____________________________________________________
+we only have one replicate for TFP4 .. pass
+_____________________________________________________
+we only have one replicate for STAT5B .. pass
+_____________________________________________________
+merging ZMYND8 peaks
+--> finish first overlaps lookup
+-> main rep is: mp357-MV411-ZMYND8
+- mp358-MV411-ZMYND8
+  overlap: 29.05325702302416%
+  min,max from newly found peaks: (6.141529978669944, 23.58823795843151)
+ --> enough overlap
+  min,max from newly found peaks: (4.460962114302586, 56.3274184418172)
+  we have recovered 311 peaks, equal to 1.344864864864865% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('ZMYND8', 23125)
+_____________________________________________________
+we only have one replicate for FLAG_MEF2C .. pass
+_____________________________________________________
+merging MEF2D peaks
+--> finish first overlaps lookup
+-> main rep is: mp907-MV411_IRF8_NT_DMSO-MEF2D-r1
+- mp324-MV411-MEF2D
+  overlap: 5.810810810810811%
+ --> not enough overlap
+  not using this replicate from the peakmatrix
+- mp623-MV411-MEF2D
+  overlap: 1.891891891891892%
+ --> not enough overlap
+  not using this replicate from the peakmatrix
+('MEF2D', 740)
+_____________________________________________________
+we only have one replicate for ZFP281 .. pass
+_____________________________________________________
+we only have one replicate for LYL1 .. pass
+_____________________________________________________
+merging MYC peaks
+--> finish first overlaps lookup
+-> main rep is: mp889-MV411_MEF2D_NT_SC_63_DMSO-MYC-r1
+- mp584-MV411-MYC
+  overlap: 54.23261862797105%
+  min,max from newly found peaks: (0.5366007178714792, 97.29502077559025)
+ --> enough overlap
+  min,max from newly found peaks: (0.2617646975227812, 163.07946316978945)
+  we have recovered 10489 peaks, equal to 16.15456883672935% of the peaks in main replicate
+- mp909-MV411_IRF8_NT_DMSO-MYC-r1
+  overlap: 62.05273875322986%
+  min,max from newly found peaks: (0.4046566058382876, 426.1037242010353)
+ --> enough overlap
+  we have recovered 15596 peaks, equal to 24.02008347579664% of the peaks in main replicate
+- mp724-MV411_DMSO-MYC
+  overlap: 37.33465665052448%
+  min,max from newly found peaks: (6.881924940535211, 62.01872764516589)
+ --> enough overlap
+  we have recovered 15751 peaks, equal to 24.258805772459148% of the peaks in main replicate
+- mp585-MV411-MYC
+  overlap: 24.062697855883915%
+ --> not enough overlap
+  min,max from newly found peaks: (7.056340951526409, 43.22822277940829)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 15793 peaks, equal to 24.32349181413544% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('MYC', 69049)
+_____________________________________________________
+we only have one replicate for H3K36me3 .. pass
+_____________________________________________________
+we only have one replicate for H3K9ac .. pass
+_____________________________________________________
+merging RUNX2 peaks
+--> finish first overlaps lookup
+-> main rep is: mp764-MV411-RUNX2
+- mp763-MV411-RUNX2
+  overlap: 84.52219128185502%
+  min,max from newly found peaks: (0.7196078886424635, 82.36721645920606)
+ --> enough overlap
+  min,max from newly found peaks: (0.6342788987161722, 96.87099533805838)
+  we have recovered 7936 peaks, equal to 9.983394555426962% of the peaks in main replicate
+- mp765-MV411-RUNX2
+  overlap: 81.67025193670568%
+  min,max from newly found peaks: (0.9852834982266135, 82.77871117095)
+ --> enough overlap
+  we have recovered 11698 peaks, equal to 14.715946258743019% of the peaks in main replicate
+- mp601-MV411-RUNX2
+  overlap: 0.5978382801261662%
+ --> not enough overlap
+  min,max from newly found peaks: (9.295258862699995, 42.36290990891203)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 11708 peaks, equal to 14.72852614099532% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('RUNX2', 82572)
+_____________________________________________________
+merging MAX peaks
+--> finish first overlaps lookup
+no peaks were good enough quality
+bad TF: MAX
+-> main rep is: mp639-MV411-MAX
+- mp690-MV411_DMSO-MAX
+  overlap: 64.79946879150067%
+ --> enough overlap
+  min,max from newly found peaks: (0.45240950033573735, 112.96018420089315)
+  we have recovered 1846 peaks, equal to 2.392865475850984% of the peaks in main replicate
+('MAX', 77146)
+_____________________________________________________
+merging IRF8 peaks
+--> finish first overlaps lookup
+-> main rep is: mp429-MV411-IRF8
+- mp901-MV411_IRF8_NT_DMSO-IRF8-r1
+  overlap: 67.23505626430116%
+  min,max from newly found peaks: (0.44264264133570413, 906.2895864541807)
+ --> enough overlap
+  min,max from newly found peaks: (0.43715212215428534, 33.54477375027297)
+  we have recovered 9386 peaks, equal to 13.580657763373027% of the peaks in main replicate
+- mp883-MV411_MEF2D_NT_SC_63_DMSO-IRF8-r1
+  overlap: 45.034949691251605%
+  min,max from newly found peaks: (0.23282805777493068, 848.507572106734)
+ --> enough overlap
+  we have recovered 14297 peaks, equal to 20.686412107707667% of the peaks in main replicate
+('IRF8', 70521)
+_____________________________________________________
+merging GSE1 peaks
+--> finish first overlaps lookup
+!TF has less than 1000 PEAKS!
+no peaks were good enough quality
+bad TF: GSE1
+-> main rep is: mp716-MV411-GSE1
+- mp433-MV411-GSE1
+  overlap: 16.687898089171973%
+ --> not enough overlap
+  min,max from newly found peaks: (6.8258870411537815, 66.2275190278784)
+ --> enough overlap
+  we have recovered 159 peaks, equal to 20.254777070063696% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('GSE1', 785)
+_____________________________________________________
+merging MYB peaks
+--> finish first overlaps lookup
+-> main rep is: mp106-MV411-MYB
+- mp116-MV411-MYB
+  overlap: 53.46391830846904%
+  min,max from newly found peaks: (5.517242386831424, 52.193216210232755)
+ --> enough overlap
+  min,max from newly found peaks: (1.984072985958636, 97.18043008499754)
+  we have recovered 167 peaks, equal to 0.6322644152500663% of the peaks in main replicate
+('MYB', 26413)
+_____________________________________________________
+we only have one replicate for CDK13 .. pass
+_____________________________________________________
+merging ZEB2 peaks
+--> finish first overlaps lookup
+-> main rep is: mp320-MV411-ZEB2
+- mp715-MV411-ZEB2
+  overlap: 60.09620523784073%
+  min,max from newly found peaks: (0.9927667140755397, 131.75168857512313)
+ --> enough overlap
+  min,max from newly found peaks: (6.125162451077117, 274.662095142638)
+  we have recovered 723 peaks, equal to 7.623365668494306% of the peaks in main replicate
+- mp714-MV411-ZEB2
+  overlap: 17.252805986103688%
+ --> not enough overlap
+  min,max from newly found peaks: (0.8595596947916059, 60.518031100427045)
+ --> enough overlap
+  we have recovered 3648 peaks, equal to 38.46478279207086% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 34.985238296077604%
+                              new overlap: 34.985238296077604%
+- mp568-MV411-ZEB2
+  overlap: 1.8278995189738105%
+ --> not enough overlap
+  not using this replicate from the peakmatrix
+('ZEB2', 9484)
+_____________________________________________________
+we only have one replicate for RXRA .. pass
+_____________________________________________________
+we only have one replicate for FLAG_PU1 .. pass
+_____________________________________________________
+we only have one replicate for H3K4me1 .. pass
+_____________________________________________________
+merging MEF2C peaks
+--> finish first overlaps lookup
+-> main rep is: mp887-MV411_MEF2D_NT_SC_63_DMSO-MEF2C-r1
+- mp905-MV411_IRF8_NT_DMSO-MEF2C-r1
+  overlap: 3.2635554702003717%
+ --> not enough overlap
+  Wrong TF: MEF2C
+('MEF2C', 78105)
+_____________________________________________________
+merging FLAG_MEF2D peaks
+--> finish first overlaps lookup
+-> main rep is: mp760-MV411_MEF2D_NT_SC_63-FLAG_MEF2D
+- mp881-MV411_MEF2D_NT_SC_63_DMSO-FLAG_MEF2D-r3
+  overlap: 46.46422044144524%
+  min,max from newly found peaks: (0.5844265211923699, 97.13184450946757)
+ --> enough overlap
+  min,max from newly found peaks: (0.3891348214101603, 55.44424937859321)
+  we have recovered 3720 peaks, equal to 16.45580819251526% of the peaks in main replicate
+- mp919-MV411_MEF2D_NT_SC_63-FLAG_MEF2D
+  overlap: 37.26041520221191%
+  min,max from newly found peaks: (4.247554865630983, 63.01453912699982)
+ --> enough overlap
+  we have recovered 4107 peaks, equal to 18.16774307705919% of the peaks in main replicate
+- mp874-MV411_MEF2D_NT_SC_63-FLAG_MEF2D
+  overlap: 13.740100285861567%
+ --> not enough overlap
+  min,max from newly found peaks: (0.36347193846033954, 105.99330008535313)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 4328 peaks, equal to 19.145359639033884% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 14.37671414668672%
+                              new overlap: 14.37671414668672%
+('FLAG_MEF2D', 24413)
+_____________________________________________________
+merging POLII peaks
+--> finish first overlaps lookup
+-> main rep is: mp891-MV411_MEF2D_NT_SC_63_DMSO-POLII-r1
+- mp911-MV411_IRF8_NT_DMSO-POLII_total-r1
+  overlap: 40.846948229498565%
+  min,max from newly found peaks: (0.21452064468541798, 435.5285438072072)
+ --> enough overlap
+  min,max from newly found peaks: (0.9181072825297126, 97.6915620655112)
+  we have recovered 21658 peaks, equal to 38.09138555700165% of the peaks in main replicate
+- mp117-MV411-POLII
+  overlap: 5.398504056222177%
+ --> not enough overlap
+  min,max from newly found peaks: (16.748980109579175, 59.520087307935874)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 21665 peaks, equal to 38.103696929192026% of the peaks in main replicate
+  not enough overlap to advice to merge the bams.
+  oldnew overlap: 4.736360758380527%
+                              new overlap: 4.736360758380527%
+('POLII', 56858)
+_____________________________________________________
+merging MED1 peaks
+--> finish first overlaps lookup
+-> main rep is: mp903-MV411_IRF8_NT_DMSO-MED1-r1
+- mp435-MV411-MED1
+  overlap: 58.861267040898156%
+  min,max from newly found peaks: (0.7080980202707489, 59.08050876406083)
+ --> enough overlap
+  min,max from newly found peaks: (4.981217345940083, 163.61536593143296)
+  we have recovered 2368 peaks, equal to 6.771131190666819% of the peaks in main replicate
+- mp885-MV411_MEF2D_NT_SC_63_DMSO-MED1-r1
+  overlap: 21.72918708604354%
+ --> not enough overlap
+  min,max from newly found peaks: (3.8679026520857027, 48.88505846458401)
+  we did not had enough initial overlap.
+ --> enough overlap
+  we have recovered 2786 peaks, equal to 7.966373098478783% of the peaks in main replicate
+  enough from small overlap to advice to merge the peaks
+('MED1', 35313)
