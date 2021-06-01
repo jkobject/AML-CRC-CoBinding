@@ -1,0 +1,11 @@
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp763-MV411-RUNX2-r6.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp764-MV411-RUNX2-r7.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp765-MV411-RUNX2-r8.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp767-MV411-FOXP1-r1.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp768-MV411-FOXP1-r2.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp770-MV411-MYBL2-r2.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp771-MV411-JUND-r1.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp772-MV411-JUND-r2.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp773-MV411-HOXA9-r1.fastq
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20190924/mp774-MV411-HOXA9-r2.fastq
+

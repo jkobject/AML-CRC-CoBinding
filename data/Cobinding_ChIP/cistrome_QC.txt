@@ -1,0 +1,39 @@
+AFF1_69559
+
+Raw sequence median quality score	37
+% Reads uniquely mapped	72.7%
+PCR bottleneck coefficient (PBC)	97.8%
+Number of merged Total/Fold 10/Fold 20 peaks	1139 / 189 / 52
+Fraction of reads in peaks (FRiP)	0.6%
+% Peaks in promoter/exon/intron/intergenic	13.9% / 20.2% / 27.5% / 38.4%
+% Top 5k peaks overlapping with union DHS	68.0%
+
+AFF1_73452
+
+Raw sequence median quality score	38
+% Reads uniquely mapped	84.2%
+PCR bottleneck coefficient (PBC)	98.8%
+Number of merged Total/Fold 10/Fold 20 peaks	504 / 253 / 40
+Fraction of reads in peaks (FRiP)	0.3%
+% Peaks in promoter/exon/intron/intergenic	8.4% / 4.2% / 4.7% / 82.7%
+% Top 5k peaks overlapping with union DHS	62.3%
+
+BRD4_92771
+
+Raw sequence median quality score	39
+% Reads uniquely mapped	85.8%
+PCR bottleneck coefficient (PBC)	95.1%
+Number of merged Total/Fold 10/Fold 20 peaks	97792 / 20476 / 193
+Fraction of reads in peaks (FRiP)	25.5%
+% Peaks in promoter/exon/intron/intergenic	9.7% / 7.1% / 39.0% / 44.2%
+% Top 5k peaks overlapping with union DHS	96.9%
+
+BRD4_92770
+
+Raw sequence median quality score	39
+% Reads uniquely mapped	79.9%
+PCR bottleneck coefficient (PBC)	99.1%
+Number of merged Total/Fold 10/Fold 20 peaks	26239 / 1023 / 13
+Fraction of reads in peaks (FRiP)	6.4%
+% Peaks in promoter/exon/intron/intergenic	12.7% / 11.3% / 35.2% / 40.8%
+% Top 5k peaks overlapping with union DHS	96.4%

@@ -1,0 +1,9 @@
+MV411,H3K27AC,../temp/MV411Merged/H3K27AC.bed
+MV411,ATAC,../temp/MV411Merged/ATAC.bed
+MV411,H3K27me3,../temp/MV411Merged/H3K27me3.bed
+MV411,SMC1,../temp/MV411Merged/SMC1.bed
+MV411,POLII,../temp/MV411Merged/POLII.bed
+MV411,MED1,../temp/MV411Merged/MED1.bed
+MV411,H3K79me2,../temp/MV411Merged/H3K79me2.bed
+MV411,H3K4me3,../temp/MV411Merged/H3K4me3.bed
+MV411,CTCF,../temp/MV411Merged/CTCF.bed

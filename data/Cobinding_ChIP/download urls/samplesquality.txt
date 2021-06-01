@@ -1,0 +1,16 @@
+not in my set {'mp137', 'mp138', 'mp18', 'mp293', 'mp565', 'mp7', 'mp71', 'mp734', 'mp89'}
+in my set not in max's {'mp100', 'mp101', 'mp102', 'mp120', 'mp309', 'mp310', 'mp311', 'mp312', 'mp313', 'mp314', 'mp315', 'mp326', 'mp590', 'mp601', 'mp609', 'mp610', 'mp611', 'mp612', 'mp643', 'mp702'}
+
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp609.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp137.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp138.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp18.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp293.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp565.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp7.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp71.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp734.fastq.gz
+https://shiek-db.wistar.upenn.edu/ucscTracks/downloads/pimkin/20191209/mp89.fastq.gz
+
+
+ mp609.fastq.gz mp137.fastq.gz mp138.fastq.gz mp18.fastq.gz mp293.fastq.gz mp565.fastq.gz mp7.fastq.gz mp71.fastq.gz mp734.fastq.gz mp89.fastq.gz
