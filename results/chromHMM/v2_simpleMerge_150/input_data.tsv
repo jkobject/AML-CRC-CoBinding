@@ -1,0 +1,14 @@
+MV411	H3K27ac	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K27ac.bed
+MV411	H3K27me3	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K27me3.bed
+MV411	H3K79me2	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K79me2.bed
+MV411	H3K18	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K18.bed
+MV411	H3K4me1	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K4me1.bed
+MV411	H3K36me3	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K36me3.bed
+MV411	H3K4me3	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K4me3.bed
+MV411	H3K9ac	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K9ac.bed
+MV411	H3K36me2	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/H3K36me2.bed
+MV411	CTCF	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/CTCF.bed
+MV411	SMC1	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/SMC1.bed
+MV411	POLII	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/POLII.bed
+MV411	MED1	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/MED1.bed
+MV411	ATAC	../results/Cobinding_ChIP/v2_simpleMerge_150_MV411Merged/ATAC.bed
